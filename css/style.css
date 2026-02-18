@@ -1,0 +1,198 @@
+:root {
+    --black: #24262d;
+    --white: #fff;
+    --gray-50: #f6f7f9;
+    --gray-100: #edeef1;
+    --gray-200: #d7dae0;
+    --gray-300: #b3bac6;
+    --gray-400: #8a94a6;
+    --gray-500: #687387;
+    --gray-600: #565f73;
+    --gray-700: #464d5e;
+    --gray-800: #3d434f;
+    --gray-900: #363a44;
+    --status-color-green-600: #36b37e;
+    --status-color-yellow-600: #ffab00;
+    --status-color-red-600: #ff5630;
+    --status-color-blue-600: #0065ff;
+    --primary-1-50: #f1f7fe;
+    --primary-1-100: #e3eefb;
+    --primary-1-200: #c0ddf7;
+    --primary-1-300: #89c1f0;
+    --primary-1-400: #4aa1e6;
+    --primary-1-500: #2285d5;
+    --primary-1-600: #1469b5;
+    --primary-1-700: #125492;
+    --primary-1-800: #134879;
+    --primary-1-900: #153d65;
+    --primary-1-950: #0e2743;
+    --primary-2-50: #edfcf4;
+    --primary-2-100: #d4f7e3;
+    --primary-2-200: #adedcc;
+    --primary-2-300: #77deae;
+    --primary-2-400: #42c88e;
+    --primary-2-500: #1cad73;
+    --primary-2-600: #108b5d;
+    --primary-2-700: #0d6f4c;
+    --primary-2-800: #0d583e;
+    --primary-2-900: #0b4935;
+    --primary-2-950: #05291e;
+    --driver-primary-50: #f6f4fe;
+    --driver-primary-100: #edebfc;
+    --driver-primary-200: #dfdbf9;
+    --driver-primary-300: #c7bdf5;
+    --driver-primary-400: #aa98ed;
+    --driver-primary-500: #8e6de5;
+    --driver-primary-600: #8154da;
+    --driver-primary-700: #6c3cc5;
+    --driver-primary-800: #5b32a5;
+    --driver-primary-900: #4c2b87;
+    --driver-primary-950: #2f1a5b;
+}
+
+html,
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+}
+
+/*=============== input ============*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+    box-shadow: 0 0 0 1000px transparent inset !important;
+    -webkit-text-fill-color: #ffffff !important;
+    transition: background-color 9999s ease-in-out 0s;
+}
+
+
+
+/*=============== hover animation ============*/
+.custom__border {
+    position: relative;
+    transition: .3s linear;
+}
+
+.custom__border::before {
+    position: absolute;
+    content: "";
+    background: var(--primary-1-600);
+    width: 0;
+    height: 1.5px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    transition: .3s linear;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.custom__border:hover {
+    color: var(--primary-1-600);
+}
+
+.custom__border:hover:before {
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.custom__border.active::before {
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.custom__border.active {
+    color: var(--primary-1-600);
+}
+
+
+/*=============== custom dropdown ============*/
+.custom__dropdown .drop__down {
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9;
+    transition: transform 0.25s ease, opacity 0.25s ease, visibility 0.25s ease;
+
+}
+
+.custom__dropdown .drop__down.active {
+    transform: scaleY(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/*=============== text rotate animation ============*/
+.explore-text {
+    transform: rotateX(90deg) translateY(-12px);
+    color: inherit;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.5s;
+    transform-origin: 50% 0;
+    transform-style: preserve-3d;
+}
+
+.explore-text::before {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: attr(data-text);
+    transition: transform 0.5s, color 0.5s;
+    transform: rotateX(-90deg);
+    transform-origin: 50% 0;
+    text-align: center;
+    z-index: -1;
+}
+
+a:hover .explore-text {
+    transform: rotateX(0deg) translateY(0);
+}
+
+a:hover .explore-text::before {
+    transform: rotateX(0deg);
+}
+
+.main-logo a {
+    position: relative;
+    display: inline-block;
+}
+
+
+
+/*=============== svg img animation ============*/
+.path-0 {
+    animation: pathAnim-0 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* @keyframes pathAnim-0 {
+    0% {
+        d: path("M 0,700 L 0,262 C 57.4166952937135,263.39058742700104 114.833390587427,264.7811748540021 180,271 C 245.166609412573,277.2188251459979 318.08313294400546,288.2658880109928 383,283 C 447.91686705599454,277.7341119890072 504.834077636551,256.1552731020268 581,209 C 657.165922363449,161.8447268979732 752.5805565097904,89.11301958090007 834,132 C 915.4194434902096,174.88698041909993 982.8436963242871,333.392648574373 1048,389 C 1113.156303675713,444.607351425627 1176.0446581930607,397.31638612160776 1241,359 C 1305.9553418069393,320.68361387839224 1372.9776709034695,291.3418069391961 1440,262 L 1440,700 L 0,700 Z");
+    }
+
+    25% {
+        d: path("M 0,700 L 0,262 C 68.62590175197528,203.54105118515974 137.25180350395055,145.08210237031946 197,149 C 256.74819649604945,152.91789762968054 307.6186877361732,219.21264170388184 383,268 C 458.3813122638268,316.78735829611816 558.2734455513569,348.0673308141532 627,356 C 695.7265544486431,363.9326691858468 733.287530058399,348.51803503950526 806,317 C 878.712469941601,285.48196496049474 986.5764342150464,237.8605290278255 1056,219 C 1125.4235657849536,200.1394709721745 1156.4067330814153,210.0398488491927 1214,222 C 1271.5932669185847,233.9601511508073 1355.7966334592925,247.98007557540365 1440,262 L 1440,700 L 0,700 Z");
+    }
+
+    50% {
+        d: path("M 0,700 L 0,262 C 59.19821367227756,323.49295774647885 118.39642734455512,384.98591549295776 177,364 C 235.60357265544488,343.01408450704224 293.61250429405703,239.54929577464785 379,224 C 464.38749570594297,208.45070422535215 577.1535554792167,280.81690140845075 644,322 C 710.8464445207833,363.18309859154925 731.7732737890759,373.1830985915493 799,369 C 866.2267262109241,364.8169014084507 979.7533493644796,346.45070422535207 1058,291 C 1136.2466506355204,235.5492957746479 1179.2133287530057,143.01408450704227 1237,132 C 1294.7866712469943,120.98591549295773 1367.393335623497,191.49295774647885 1440,262 L 1440,700 L 0,700 Z");
+    }
+
+    75% {
+        d: path("M 0,700 L 0,262 C 89.0443146684988,318.79148059086225 178.0886293369976,375.5829611817245 234,348 C 289.9113706630024,320.4170388182755 312.68979732050843,208.4596358639643 378,175 C 443.31020267949157,141.5403641360357 551.1521813809687,186.5784953624184 629,198 C 706.8478186190313,209.4215046375816 754.7014771556167,187.22638268636203 813,220 C 871.2985228443833,252.77361731363797 940.0419099965648,340.51597389213333 1015,325 C 1089.9580900034352,309.48402610786667 1171.1308828581246,190.70972174510476 1243,163 C 1314.8691171418754,135.29027825489524 1377.4345585709377,198.64513912744764 1440,262 L 1440,700 L 0,700 Z");
+    }
+
+    100% {
+        d: path("M 0,700 L 0,262 C 57.4166952937135,263.39058742700104 114.833390587427,264.7811748540021 180,271 C 245.166609412573,277.2188251459979 318.08313294400546,288.2658880109928 383,283 C 447.91686705599454,277.7341119890072 504.834077636551,256.1552731020268 581,209 C 657.165922363449,161.8447268979732 752.5805565097904,89.11301958090007 834,132 C 915.4194434902096,174.88698041909993 982.8436963242871,333.392648574373 1048,389 C 1113.156303675713,444.607351425627 1176.0446581930607,397.31638612160776 1241,359 C 1305.9553418069393,320.68361387839224 1372.9776709034695,291.3418069391961 1440,262 L 1440,700 L 0,700 Z");
+    }
+} */

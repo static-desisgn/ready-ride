@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready Ride</title>
+    <!-- font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- fav icon link -->
+    <link rel="shortcut icon" href="./assets/logo/ready-ride-favicon.png" type="image/x-icon">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+
+</head>
+
+<body>
+
+    <!-- header  -->
+    <header
+        class="header-area py-[21px] backdrop-blur-[24px] bg-[#ffffffc5] shadow-[0_1px_4px_0_rgba(0,0,0,0.06)] sticky top-0 z-[9]">
+        <div class="container max-w-2lg mx-auto px-4">
+            <div class="grid grid-cols-12 gap-10 items-center">
+
+                <!-- logo -->
+                <div class="col-span-2">
+                    <div class="main-logo">
+                        <a href="#">
+                            <img src="./assets/logo/ready-ride-main-logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- menu -->
+                <div class="col-span-8">
+                    <div class="main-menu">
+                        <nav>
+                            <ul class="flex items-center gap-10 justify-center">
+                                <li>
+                                    <a href="#"
+                                        class="text-base font-normal custom__border overflow-hidden py-[2px]  inline-block active">
+                                        <span class="explore-text" data-text="Home">Home</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block">
+                                        <span class="explore-text" data-text="Services">Services</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block">
+                                        <span class="explore-text" data-text="Blog">Blog</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block">
+                                        <span class="explore-text" data-text="About Us">About Us</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block">
+                                        <span class="explore-text" data-text="Contact Us">Contact Us</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- lang-btn -->
+                <div class="col-span-2">
+                    <div class="lang text-end custom__dropdown relative">
+                        <button class="lang-btn flex items-center gap-[6px] text-base font-normal relative">
+                            English
+                            <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                        <ul
+                            class="drop__down flex flex-col items-start gap-2 absolute top-[25px] left-0 bg-gray-50 p-2 rounded-[6px] min-w-max shadow-[0_1px_4px_0_rgba(0,0,0,0.06)]">
+                            <li>
+                                <a href="#" class="text-base font-normal custom__border active">English</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-base font-normal custom__border">Bangla</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-base font-normal custom__border">Arabic</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- hero -->
+    <section class="hero-area py-[136px] overflow-hidden relative">
+        <div class="container max-w-2lg mx-auto px-4">
+            <div class="grid grid-cols-12">
+
+                <div class="col-span-5">
+                    <div class="hero-content flex flex-col h-full justify-center">
+                        <h1 class="text-[56px] font-semibold leading-[143%] text-primary1-600 mb-6">
+                            <span class="block text-black">#1 World-Class</span>
+                            Ride Sharing App
+                        </h1>
+                        <p class="text-xl font-normal mb-8">
+                            ReadyRide helps you move across the city faster, <br> safer, and more affordably
+                        </p>
+                        <div class="common-btn flex items-center">
+                            <a href="#"
+                                class="group relative overflow-hidden text-base font-medium text-white h-[56px] bg-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700">
+                                <i
+                                    class="fa-solid fa-arrow-right transition-all duration-500 ease-out -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                                <span
+                                    class="transition-all translate-x-[-10px] duration-500 ease-out group-hover:translate-x-2">
+                                    Earn With ReadyRide
+                                </span>
+                                <i
+                                    class="fa-solid fa-arrow-right transition-all duration-500 ease-out group-hover:translate-x-4 translate-x-[-10px] group-hover:opacity-0">
+                                </i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-span-7 absolute right-0 top-[0] z-[-1] h-full">
+                    <div
+                        class="hero-img h-full relative after:absolute after:bg-[#ffffff] after:w-[60%] after:h-[70%] after:left-[-60px] after:top-0 after:z-[-2] before:absolute before:bg-[#3863A0] before:w-[105%] before:h-[100%] before:z-[-2] before:right-0 before:rounded-[0_0_0_0] pb-11">
+                        <img class="h-full" src="./assets/images/hero/hero-01.png" alt="">
+
+                        <!-- SVG wave background -->
+                        <svg width="150%" height="170%" id="svg" viewBox="0 0 1440 690"
+                            xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150 absolute right-[170px] bottom-[-230px] rotate-[135deg] z-[-1]">
+                            <path
+                                d="M 0,700 L 0,262 C 57.4166952937135,263.39058742700104 114.833390587427,264.7811748540021 180,271 C 245.166609412573,277.2188251459979 318.08313294400546,288.2658880109928 383,283 C 447.91686705599454,277.7341119890072 504.834077636551,256.1552731020268 581,209 C 657.165922363449,161.8447268979732 752.5805565097904,89.11301958090007 834,132 C 915.4194434902096,174.88698041909993 982.8436963242871,333.392648574373 1048,389 C 1113.156303675713,444.607351425627 1176.0446581930607,397.31638612160776 1241,359 C 1305.9553418069393,320.68361387839224 1372.9776709034695,291.3418069391961 1440,262 L 1440,700 L 0,700 Z"
+                                stroke="none" stroke-width="0" fill="#3863A0" fill-opacity="1"
+                                class="transition-all duration-300 ease-in-out delay-150 path-0"
+                                transform="rotate(-180 720 350)">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- count -->
+    <section class="count-area absolute translate-y-[-50px] left-0 right-0">
+        <div class="container max-w-2lg mx-auto px-4">
+            <div class="bg-white shadow-[0_2px_12px_0_rgba(0,0,0,0.18)] h-[162px]">
+                <div class="grid grid-cols-12 h-full">
+                    <div class="col-span-3 h-full">
+                        <div
+                            class="count-item hover hover:bg-primary1-600 hover:text-white transition duration-300 group h-full py-[17px] flex flex-col gap-2 items-center justify-center   rounded-[0] first:hover:translate-x-[-16px] hover:shadow-[0_2px_12px_0_rgba(0,0,0,0.18)]  hover:translate-y-[-16px] before:border-r before:border-[#EDEEF1] before:w-[1px] before:h-[70%] relative before:absolute before:top-1/2 before:-translate-y-1/2 before:right-0 hover:before:border-r hover:before:border-primary1-600 before:transition before:duration-300 ">
+                            <h2 class="counter font-bold text-2xl" data-target="15" data-suffix=" Million+">0 </h2>
+                            <span
+                                class="text-base font-normal group-hover:text-white text-gray-500 transition duration-300">App
+                                Download</span>
+                        </div>
+                    </div>
+                    <div class="col-span-3 h-full">
+                        <div
+                            class="count-item hover hover:bg-primary1-600 hover:text-white transition duration-300 group h-full py-[17px] flex flex-col gap-2 items-center justify-center   rounded-[0] hover:translate-x-[-10px] hover:shadow-[0_2px_12px_0_rgba(0,0,0,0.18)]  hover:translate-y-[-16px] before:border-r before:border-[#EDEEF1] before:w-[1px] before:h-[70%] relative before:absolute before:top-1/2 before:-translate-y-1/2 before:right-0 hover:before:border-r hover:before:border-primary1-600 before:transition before:duration-300 ">
+                            <h2 class="counter font-bold text-2xl" data-target="350" data-suffix=" Million+">0 </h2>
+                            <span
+                                class="text-base font-normal group-hover:text-white text-gray-500 transition duration-300">Successful
+                                Trips/Orders</span>
+                        </div>
+                    </div>
+                    <div class="col-span-3 h-full">
+                        <div
+                            class="count-item hover hover:bg-primary1-600 hover:text-white transition duration-300 group h-full py-[17px] flex flex-col gap-2 items-center justify-center   rounded-[0] hover:translate-x-[-10px] hover:shadow-[0_2px_12px_0_rgba(0,0,0,0.18)]  hover:translate-y-[-16px] before:border-r before:border-[#EDEEF1] before:w-[1px] before:h-[70%] relative before:absolute before:top-1/2 before:-translate-y-1/2 before:right-0 hover:before:border-r hover:before:border-primary1-600 before:transition before:duration-300 ">
+                            <h2 class="counter font-bold text-2xl" data-target="10" data-suffix=" Million+">0 </h2>
+                            <span
+                                class="text-base font-normal group-hover:text-white text-gray-500 transition duration-300">In
+                                the march of humanity</span>
+                        </div>
+                    </div>
+
+                    <!-- last child -->
+                    <div class="col-span-3 h-full">
+                        <div
+                            class="count-item hover hover:bg-primary1-600 hover:text-white transition duration-300 group h-full py-[17px] flex flex-col gap-2 items-center justify-center   rounded-[0] last:hover:translate-x-[-16px] hover:shadow-[0_2px_12px_0_rgba(0,0,0,0.18)]  hover:translate-y-[-16px] before:border-r before:border-[#EDEEF1] before:w-[1px] before:h-[70%] relative before:absolute before:top-1/2 before:-translate-y-1/2 before:right-0 hover:before:border-r hover:before:border-primary1-600 before:transition before:duration-300 last:before:border-r-0">
+                            <h2 class="counter font-bold text-2xl" data-target="10" data-suffix=" Million+">0 </h2>
+                            <span
+                                class="text-base font-normal group-hover:text-white text-gray-500 transition duration-300">In
+                                the march of humanity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ride Platform -->
+     <section class="platform-area mt-[230px] mb-[100px]">
+        <div class="container max-w-2lg mx-auto px-4">
+            <div class="wrapper text-center">
+                <h2 class="font-semibold text-[40px] leading-[120%] mb-3">The ReadyRide Platform</h2>
+                <p class="text-base font-normal text-[#5d6467]">Here’s everything ReadyRid offers just for you!</p>
+                <div class="tab-area">
+                    <button class="text-lg font-normal">
+                        <span>
+                            <img src="./assets/icons/bike.png" alt="">
+                        </span>
+                        Bike
+                    </button>
+                </div>
+            </div>
+            <div class="grid grid-cols-12">
+                <div class="col-span-7">
+                    
+                </div>
+                <div class="col-span-5"></div>
+            </div>
+        </div>
+     </section>
+
+    <!-- script link -->
+    <script src="./js/active-class-add.js"></script>
+    <script src="./js/countup.js"></script>
+</body>
+
+</html>
