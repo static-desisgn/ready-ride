@@ -1,3 +1,4 @@
+//====================== tab js ==========================//
 const buttons = document.querySelectorAll(".tab__button");
 const contents = document.querySelectorAll(".tab-content");
 

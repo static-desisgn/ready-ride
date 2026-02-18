@@ -23,6 +23,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
 
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
     <!-- custom CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/platform.css">
@@ -620,7 +623,8 @@
     </section>
 
     <!-- Download the app -->
-    <section class="download-area py-[60px] pb-[20px] bg-[#fbfbfb] mb-[100px] relative before:absolute before:w-[50%] before:h-[70px] before:bg-[#fbfbfb] before:right-0 before:bottom-[0] before:z-[1] overflow-hidden">
+    <section
+        class="download-area py-[60px] pb-[20px] bg-[#fbfbfb] mb-[100px] relative before:absolute before:w-[50%] before:h-[70px] before:bg-[#fbfbfb] before:right-0 before:bottom-[0] before:z-[1] overflow-hidden">
         <div class="container max-w-2lg mx-auto px-4">
             <div class="grid grid-cols-12">
                 <div class="col-span-7 flex flex-col h-full justify-center">
@@ -644,18 +648,20 @@
                                     <a href="#">
                                         <img src="./assets/icons/googlr-play.png" alt="">
                                     </a>
-    
+
                                     <a href="#"
                                         class="group relative overflow-hidden text-sm font-medium text-white h-[40px] bg-primary1-600 rounded-[8px] flex items-center justify-center px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700 pr-[18px]">
                                         <span class="transition-all duration-500 ease-out mr-4">
                                             Download
                                         </span>
-    
-                                        <i class="fa-solid fa-download transition-all duration-500 ease-out group-hover:translate-y-[35px]">
+
+                                        <i
+                                            class="fa-solid fa-download transition-all duration-500 ease-out group-hover:translate-y-[35px]">
                                         </i>
-    
-                                       
-                                        <i class="fa-solid fa-download transition-all duration-500 ease-out  translate-x-[-14px] translate-y-[-35px] group-hover:translate-y-[0]">
+
+
+                                        <i
+                                            class="fa-solid fa-download transition-all duration-500 ease-out  translate-x-[-14px] translate-y-[-35px] group-hover:translate-y-[0]">
                                         </i>
                                     </a>
                                 </div>
@@ -672,27 +678,29 @@
                                     <a href="#">
                                         <img src="./assets/icons/app-store.png" alt="">
                                     </a>
-    
+
                                     <a href="#"
                                         class="group relative overflow-hidden text-sm font-medium text-white h-[40px] bg-primary1-600 rounded-[8px] flex items-center justify-center px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700 pr-[18px]">
                                         <span class="transition-all duration-500 ease-out mr-4">
                                             Download
                                         </span>
-    
-                                        <i class="fa-solid fa-download transition-all duration-500 ease-out group-hover:translate-y-[35px]">
+
+                                        <i
+                                            class="fa-solid fa-download transition-all duration-500 ease-out group-hover:translate-y-[35px]">
                                         </i>
-    
-                                       
-                                        <i class="fa-solid fa-download transition-all duration-500 ease-out  translate-x-[-14px] translate-y-[-35px] group-hover:translate-y-[0]">
+
+
+                                        <i
+                                            class="fa-solid fa-download transition-all duration-500 ease-out  translate-x-[-14px] translate-y-[-35px] group-hover:translate-y-[0]">
                                         </i>
                                     </a>
                                 </div>
                             </div>
                         </div>
 
-                         <div class="download-items">
+                        <div class="download-items">
                             <h6 class="text-sm font-semibold mb-2">
-                               Drive app
+                                Drive app
                             </h6>
                             <div
                                 class="download-box flex items-center gap-4 bg-black backdrop-blur-[12px] border border-white/16 rounded-[12px] p-4">
@@ -703,18 +711,20 @@
                                     <a href="#">
                                         <img src="./assets/icons/googlr-play.png" alt="">
                                     </a>
-    
+
                                     <a href="#"
                                         class="group relative overflow-hidden text-sm font-medium text-white h-[40px] bg-primary1-600 rounded-[8px] flex items-center justify-center px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700 pr-[18px]">
                                         <span class="transition-all duration-500 ease-out mr-4">
                                             Download
                                         </span>
-    
-                                        <i class="fa-solid fa-download transition-all duration-500 ease-out group-hover:translate-y-[35px]">
+
+                                        <i
+                                            class="fa-solid fa-download transition-all duration-500 ease-out group-hover:translate-y-[35px]">
                                         </i>
-    
-                                       
-                                        <i class="fa-solid fa-download transition-all duration-500 ease-out  translate-x-[-14px] translate-y-[-35px] group-hover:translate-y-[0]">
+
+
+                                        <i
+                                            class="fa-solid fa-download transition-all duration-500 ease-out  translate-x-[-14px] translate-y-[-35px] group-hover:translate-y-[0]">
                                         </i>
                                     </a>
                                 </div>
@@ -734,6 +744,203 @@
     </section>
 
     <!-- rider-loved-section -->
+    <section class="rider-loved-area mb-[100px]">
+        <div class="container max-w-[1700px] mx-auto">
+            <div class="mb-10 text-center">
+                <h2 class="font-semibold text-[40px] leading-[120%] mb-2">Loved by Riders and Drivers Across the City
+                </h2>
+                <p class="text-base font-normal text-[#5d6467] mb-7">
+                    See why people choose ReadyRide for daily travel and income opportunities.
+                </p>
+            </div>
+
+            <!-- Swiper-top -->
+            <div class="swiper rider-slide mb-6">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="content-box h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
+                            <p class="mb-8 text-lg font-normal three__line">
+                                An average healthy 7 year old boy weighs about 50 lb (23
+                                kg). If we suppose the same amount of alcohol is absorbed, the BAC would be low.</p>
+                            <div class="author-info flex items-center gap-3">
+                                <img class="rounded-[12px]" src="./assets/images/author/author-01.png" alt="">
+                                <div class="name">
+                                    <h4>Kristin Watson</h4>
+                                    <span>Dog Trainer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="content-box h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
+                            <p class="mb-8 text-lg font-normal three__line">
+                                An interesting implication of the 2007 study concerns the use of hand sanitizers by
+                                observant Muslims, since some believe ethanol is haram.
+                            </p>
+                            <div class="author-info flex items-center gap-3">
+                                <img class="rounded-[12px]" src="./assets/images/author/author-02.png" alt="">
+                                <div class="name">
+                                    <h4>Kristin Watson</h4>
+                                    <span>Dog Trainer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="content-box h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
+                            <p class="mb-8 text-lg font-normal three__line">
+                                I found a 2007 study on effects of hand sanitizers on blood alcohol level in adults. The
+                                12 subjects showed a slight increase in BAC.</p>
+                            <div class="author-info flex items-center gap-3">
+                                <img class="rounded-[12px]" src="./assets/images/author/author-03.png" alt="">
+                                <div class="name">
+                                    <h4>Kristin Watson</h4>
+                                    <span>Dog Trainer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="content-box h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
+                            <p class="mb-8 text-lg font-normal three__line">
+                                An average healthy 7 year old boy weighs about 50 lb (23
+                                kg). If we suppose the same amount of alcohol is absorbed, the BAC would be low.</p>
+                            <div class="author-info flex items-center gap-3">
+                                <img class="rounded-[12px]" src="./assets/images/author/author-04.png" alt="">
+                                <div class="name">
+                                    <h4>Kristin Watson</h4>
+                                    <span>Dog Trainer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="content-box h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
+                            <p class="mb-8 text-lg font-normal three__line">
+                                An average healthy 7 year old boy weighs about 50 lb (23
+                                kg). If we suppose the same amount of alcohol is absorbed, the BAC would be low.</p>
+                            <div class="author-info flex items-center gap-3">
+                                <img class="rounded-[12px]" src="./assets/images/author/author-05.png" alt="">
+                                <div class="name">
+                                    <h4>Kristin Watson</h4>
+                                    <span>Dog Trainer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="content-box h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
+                            <p class="mb-8 text-lg font-normal three__line">
+                                An average healthy 7 year old boy weighs about 50 lb (23
+                                kg). If we suppose the same amount of alcohol is absorbed, the BAC would be low.</p>
+                            <div class="author-info flex items-center gap-3">
+                                <img class="rounded-[12px]" src="./assets/images/author/author-06.png" alt="">
+                                <div class="name">
+                                    <h4>Kristin Watson</h4>
+                                    <span>Dog Trainer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Swiper-bottom -->
+            <div class="swiper rider-slide-2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="content-box h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
+                            <p class="mb-8 text-lg font-normal three__line">
+                                An average healthy 7 year old boy weighs about 50 lb (23
+                                kg). If we suppose the same amount of alcohol is absorbed, the BAC would be low.</p>
+                            <div class="author-info flex items-center gap-3">
+                                <img class="rounded-[12px]" src="./assets/images/author/author-07.png" alt="">
+                                <div class="name">
+                                    <h4>Kristin Watson</h4>
+                                    <span>Dog Trainer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="content-box h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
+                            <p class="mb-8 text-lg font-normal three__line">
+                                I found a 2007 study on effects of hand sanitizers on blood alcohol level in adults. The
+                                12 subjects showed a slight increase in BAC.
+                            </p>
+                            <div class="author-info flex items-center gap-3">
+                                <img class="rounded-[12px]" src="./assets/images/author/author-08.png" alt="">
+                                <div class="name">
+                                    <h4>Kristin Watson</h4>
+                                    <span>Dog Trainer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="content-box h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
+                            <p class="mb-8 text-lg font-normal three__line">
+                                An average healthy 7 year old boy weighs about 50 lb (23
+                                kg). If we suppose the same amount of alcohol is absorbed, the BAC would be low.</p>
+                            <div class="author-info flex items-center gap-3">
+                                <img class="rounded-[12px]" src="./assets/images/author/author-09.png" alt="">
+                                <div class="name">
+                                    <h4>Kristin Watson</h4>
+                                    <span>Dog Trainer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="content-box h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
+                            <p class="mb-8 text-lg font-normal three__line">
+                                An average healthy 7 year old boy weighs about 50 lb (23
+                                kg). If we suppose the same amount of alcohol is absorbed, the BAC would be low.</p>
+                            <div class="author-info flex items-center gap-3">
+                                <img class="rounded-[12px]" src="./assets/images/author/author-10.png" alt="">
+                                <div class="name">
+                                    <h4>Kristin Watson</h4>
+                                    <span>Dog Trainer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="content-box h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
+                            <p class="mb-8 text-lg font-normal three__line">
+                                An average healthy 7 year old boy weighs about 50 lb (23
+                                kg). If we suppose the same amount of alcohol is absorbed, the BAC would be low.</p>
+                            <div class="author-info flex items-center gap-3">
+                                <img class="rounded-[12px]" src="./assets/images/author/author-11.png" alt="">
+                                <div class="name">
+                                    <h4>Kristin Watson</h4>
+                                    <span>Dog Trainer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="content-box h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
+                            <p class="mb-8 text-lg font-normal three__line">
+                                An interesting implication of the 2007 study concerns the use of hand sanitizers by
+                                observant Muslims, since some believe ethanol is haram.
+                            </p>
+                            <div class="author-info flex items-center gap-3">
+                                <img class="rounded-[12px]" src="./assets/images/author/author-12.png" alt="">
+                                <div class="name">
+                                    <h4>Kristin Watson</h4>
+                                    <span>Dog Trainer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
 
 
 
@@ -741,6 +948,11 @@
     <script src="./js/active-class-add.js"></script>
     <script src="./js/countup.js"></script>
     <script src="./js/tab.js"></script>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./js/Swiper.js"></script>
+
 </body>
 
 </html>
