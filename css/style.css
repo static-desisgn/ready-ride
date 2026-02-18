@@ -109,6 +109,15 @@ input:-webkit-autofill:active {
     color: var(--primary-1-600);
 }
 
+.item {
+    transition: all 0.4s ease;
+    transform-origin: center center !important;
+    transform: perspective(0) rotateX(0) rotateY(0) scaleX(1) scaleY(1) !important;
+}
+
+.item:hover {
+    transform: perspective(400px) rotateX(0.09deg) rotateY(0) scaleX(1.1) scaleY(1.1) !important;
+}
 
 /*=============== custom dropdown ============*/
 .custom__dropdown .drop__down {
@@ -167,6 +176,46 @@ a:hover .explore-text::before {
 }
 
 
+.border-rotate-box {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.border-rotate-box::after,
+.border-rotate-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    transition: opacity 0.6s ease;
+    z-index: -1;
+}
+
+.border-rotate-box::after {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.36) 20%, rgba(79, 124, 247, 0.5) 31%, #1469B5 53%, rgba(166, 118, 248, 0.3) 82%, rgba(255, 255, 255, 0.5) 94%);
+    opacity: 1;
+    padding: 3px;
+}
+
+.border-rotate-box::before {
+    background: linear-gradient(-20deg, rgba(255, 255, 255, 0.36) 20%, rgba(77, 88, 240, 0.5) 31%, #1469B5 53%, rgba(166, 118, 248, 0.3) 82%, rgba(255, 255, 255, 0.5) 94%);
+    opacity: 0;
+    padding: 3px;
+}
+
+.border-rotate-box:hover::after {
+    opacity: 0;
+}
+
+.border-rotate-box:hover::before {
+    opacity: 1;
+}
+
+
 
 /*=============== svg img animation ============*/
 .path-0 {
@@ -175,7 +224,7 @@ a:hover .explore-text::before {
     animation-iteration-count: infinite;
 }
 
-/* @keyframes pathAnim-0 {
+@keyframes pathAnim-0 {
     0% {
         d: path("M 0,700 L 0,262 C 57.4166952937135,263.39058742700104 114.833390587427,264.7811748540021 180,271 C 245.166609412573,277.2188251459979 318.08313294400546,288.2658880109928 383,283 C 447.91686705599454,277.7341119890072 504.834077636551,256.1552731020268 581,209 C 657.165922363449,161.8447268979732 752.5805565097904,89.11301958090007 834,132 C 915.4194434902096,174.88698041909993 982.8436963242871,333.392648574373 1048,389 C 1113.156303675713,444.607351425627 1176.0446581930607,397.31638612160776 1241,359 C 1305.9553418069393,320.68361387839224 1372.9776709034695,291.3418069391961 1440,262 L 1440,700 L 0,700 Z");
     }
@@ -195,4 +244,4 @@ a:hover .explore-text::before {
     100% {
         d: path("M 0,700 L 0,262 C 57.4166952937135,263.39058742700104 114.833390587427,264.7811748540021 180,271 C 245.166609412573,277.2188251459979 318.08313294400546,288.2658880109928 383,283 C 447.91686705599454,277.7341119890072 504.834077636551,256.1552731020268 581,209 C 657.165922363449,161.8447268979732 752.5805565097904,89.11301958090007 834,132 C 915.4194434902096,174.88698041909993 982.8436963242871,333.392648574373 1048,389 C 1113.156303675713,444.607351425627 1176.0446581930607,397.31638612160776 1241,359 C 1305.9553418069393,320.68361387839224 1372.9776709034695,291.3418069391961 1440,262 L 1440,700 L 0,700 Z");
     }
-} */
+}

@@ -1,0 +1,42 @@
+.tab-area button::before{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    background: var(--primary-1-600);
+    z-index: 2;
+}
+
+.tab-area button:hover::before{
+    width: 100%;
+}
+.tab-area button::after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: #e6e8eb;
+    z-index: 1;
+}
+
+.tab-area button:hover::before{
+    width: 100%;
+    transition: .6s linear;
+}
+.tab-area button.active::before{
+    width: 100%;
+    transition: 4s linear;
+}
+
+.tab__button.active span {
+    border-width: 2px;
+    border-color: var(--primary-1-600);
+}
+.tab__button.active{
+    color: var(--primary-1-600);
+}
+

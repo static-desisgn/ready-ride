@@ -25,6 +25,7 @@
 
     <!-- custom CSS -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/platform.css">
 
 
 </head>
@@ -149,7 +150,8 @@
 
                         <!-- SVG wave background -->
                         <svg width="150%" height="170%" id="svg" viewBox="0 0 1440 690"
-                            xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150 absolute right-[170px] bottom-[-230px] rotate-[135deg] z-[-1]">
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="transition duration-300 ease-in-out delay-150 absolute right-[170px] bottom-[-230px] rotate-[135deg] z-[-1]">
                             <path
                                 d="M 0,700 L 0,262 C 57.4166952937135,263.39058742700104 114.833390587427,264.7811748540021 180,271 C 245.166609412573,277.2188251459979 318.08313294400546,288.2658880109928 383,283 C 447.91686705599454,277.7341119890072 504.834077636551,256.1552731020268 581,209 C 657.165922363449,161.8447268979732 752.5805565097904,89.11301958090007 834,132 C 915.4194434902096,174.88698041909993 982.8436963242871,333.392648574373 1048,389 C 1113.156303675713,444.607351425627 1176.0446581930607,397.31638612160776 1241,359 C 1305.9553418069393,320.68361387839224 1372.9776709034695,291.3418069391961 1440,262 L 1440,700 L 0,700 Z"
                                 stroke="none" stroke-width="0" fill="#3863A0" fill-opacity="1"
@@ -213,32 +215,532 @@
     </section>
 
     <!-- Ride Platform -->
-     <section class="platform-area mt-[230px] mb-[100px]">
+    <section class="platform-area mt-[230px] mb-[100px]">
         <div class="container max-w-2lg mx-auto px-4">
-            <div class="wrapper text-center">
+            <div class="wrapper text-center mb-6">
                 <h2 class="font-semibold text-[40px] leading-[120%] mb-3">The ReadyRide Platform</h2>
                 <p class="text-base font-normal text-[#5d6467]">Here’s everything ReadyRid offers just for you!</p>
-                <div class="tab-area">
-                    <button class="text-lg font-normal">
-                        <span>
+
+                <div class="tab-area flex items-start justify-center gap-4 mt-10">
+
+                    <button data-tab="bike"
+                        class="tab__button group text-lg font-normal flex items-center gap-2 px-[46px] pb-4 relative transition duration-300 mb-0 hover:text-primary1-600 active">
+                        <span
+                            class="flex items-center justify-center  w-[46px] h-[46px] rounded-[6px] border border-[#E3E5E7] group-hover:border-2 group-hover:border-primary1-600 transition duration-300">
                             <img src="./assets/icons/bike.png" alt="">
                         </span>
                         Bike
                     </button>
+
+                    <button data-tab="car"
+                        class="tab__button group text-lg font-normal flex items-center gap-2 px-[46px] pb-4 relative transition duration-300 mb-0 hover:text-primary1-600">
+                        <span
+                            class="flex items-center justify-center  w-[46px] h-[46px] rounded-[6px] border border-[#E3E5E7] group-hover:border-2 group-hover:border-primary1-600 transition duration-300">
+                            <img src="./assets/icons/car.png" alt="">
+                        </span>
+                        Car
+                    </button>
+
+                    <button data-tab="parcel"
+                        class="tab__button group text-lg font-normal flex items-center gap-2 px-[46px] pb-4 relative transition duration-300 mb-0 hover:text-primary1-600">
+                        <span
+                            class="flex items-center justify-center  w-[46px] h-[46px] rounded-[6px] border border-[#E3E5E7] group-active-border-2 group-active-border-primary1-600 transition duration-300">
+                            <img src="./assets/icons/parcel.png" alt="">
+                        </span>
+                        Parcel
+                    </button>
+
+                    <button data-tab="food"
+                        class="tab__button group text-lg font-normal flex items-center gap-2 px-[46px] pb-4 relative transition duration-300 mb-0 hover:text-primary1-600">
+                        <span
+                            class="flex items-center justify-center  w-[46px] h-[46px] rounded-[6px] border border-[#E3E5E7] group-hover:border-2 group-hover:border-primary1-600 transition duration-300">
+                            <img src="./assets/icons/food.png" alt="">
+                        </span>
+                        Food
+                    </button>
+                </div>
+
+            </div>
+            <!-- bike -->
+            <div class="tab-content" id="bike">
+                <div class="grid grid-cols-12">
+                    <div class="col-span-7">
+                        <div class="tab-left-content flex flex-col justify-center h-full gap-10 ">
+                            <div class="items">
+                                <h3 class="text-[32px] font-semibold mb-2">
+                                    Travel at Your Convenience
+                                </h3>
+                                <p class="text-base font-normal text-[#646464]">
+                                    The only solution to escape unbearable traffic jams is to send a bike! Reach <br>
+                                    your destination on time, saving money and time.
+                                </p>
+                            </div>
+                            <div class="items">
+                                <h3 class="text-[32px] font-semibold mb-2">
+                                    We are with you
+                                </h3>
+                                <p class="text-base font-normal text-[#646464]">
+                                    Every ride we offer is safe and covered by safety services, ensuring that <br> each
+                                    ride with us is much safer.
+                                </p>
+                            </div>
+                            <div class="items">
+                                <h3 class="text-[32px] font-semibold mb-2">
+                                    Always Available
+                                </h3>
+                                <p class="text-base font-normal text-[#646464]">
+                                    Whether it's early morning or late at night, our trained riders are ready to <br>
+                                    ensure your safe ride.
+                                </p>
+                            </div>
+                            <div class="common-btn flex items-center">
+                                <a href="#"
+                                    class="group relative overflow-hidden text-base font-medium text-white h-[48px] bg-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700">
+                                    <i
+                                        class="fa-solid fa-arrow-right transition-all duration-500 ease-out -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                                    <span
+                                        class="transition-all translate-x-[-10px] duration-500 ease-out group-hover:translate-x-2">
+                                        Learn More
+                                    </span>
+                                    <i
+                                        class="fa-solid fa-arrow-right transition-all duration-500 ease-out group-hover:translate-x-4 translate-x-[-10px] group-hover:opacity-0">
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-5">
+                        <div class="right-content">
+                            <img src="./assets/images/platform/platform-01.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- car -->
+            <div class="tab-content hidden" id="car">
+                <div class="grid grid-cols-12">
+                    <!-- <div class="col-span-7">
+                        <div class="tab-left-content flex flex-col justify-center h-full gap-10 ">
+                            <div class="items">
+                                <h3 class="text-[32px] font-semibold mb-2">
+                                    Travel at Your Convenience
+                                </h3>
+                                <p class="text-base font-normal text-[#646464]">
+                                    The only solution to escape unbearable traffic jams is to send a bike! Reach <br> your destination on time, saving money and time.
+                                </p>
+                            </div>
+                            <div class="items">
+                                <h3 class="text-[32px] font-semibold mb-2">
+                                    We are with you
+                                </h3>
+                                <p class="text-base font-normal text-[#646464]">
+                                    Every ride we offer is safe and covered by safety services, ensuring that <br> each ride with us is much safer.
+                                </p>
+                            </div>
+                            <div class="items">
+                                <h3 class="text-[32px] font-semibold mb-2">
+                                    Always Available
+                                </h3>
+                                <p class="text-base font-normal text-[#646464]">
+                                    Whether it's early morning or late at night, our trained riders are ready to <br> ensure your safe ride.
+                                </p>
+                            </div>
+                            <div class="common-btn flex items-center">
+                                <a href="#" class="group relative overflow-hidden text-base font-medium text-white h-[48px] bg-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700">
+                                    <i class="fa-solid fa-arrow-right transition-all duration-500 ease-out -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                                    <span class="transition-all translate-x-[-10px] duration-500 ease-out group-hover:translate-x-2">
+                                        Learn More
+                                    </span>
+                                    <i class="fa-solid fa-arrow-right transition-all duration-500 ease-out group-hover:translate-x-4 translate-x-[-10px] group-hover:opacity-0">
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="col-span-5">
+                        <div class="right-content">
+                            <img src="./assets/images/platform/platform-01.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- parcel -->
+            <div class="tab-content hidden" id="parcel">
+                <div class="grid grid-cols-12">
+                    <div class="col-span-7">
+                        <div class="tab-left-content flex flex-col justify-center h-full gap-10 ">
+                            <div class="items">
+                                <h3 class="text-[32px] font-semibold mb-2">
+                                    Travel at Your Convenience
+                                </h3>
+                                <p class="text-base font-normal text-[#646464]">
+                                    The only solution to escape unbearable traffic jams is to send a bike! Reach <br>
+                                    your destination on time, saving money and time.
+                                </p>
+                            </div>
+                            <div class="items">
+                                <h3 class="text-[32px] font-semibold mb-2">
+                                    We are with you
+                                </h3>
+                                <p class="text-base font-normal text-[#646464]">
+                                    Every ride we offer is safe and covered by safety services, ensuring that <br> each
+                                    ride with us is much safer.
+                                </p>
+                            </div>
+                            <div class="items">
+                                <h3 class="text-[32px] font-semibold mb-2">
+                                    Always Available
+                                </h3>
+                                <p class="text-base font-normal text-[#646464]">
+                                    Whether it's early morning or late at night, our trained riders are ready to <br>
+                                    ensure your safe ride.
+                                </p>
+                            </div>
+                            <div class="common-btn flex items-center">
+                                <a href="#"
+                                    class="group relative overflow-hidden text-base font-medium text-white h-[48px] bg-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700">
+                                    <i
+                                        class="fa-solid fa-arrow-right transition-all duration-500 ease-out -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                                    <span
+                                        class="transition-all translate-x-[-10px] duration-500 ease-out group-hover:translate-x-2">
+                                        Learn More
+                                    </span>
+                                    <i
+                                        class="fa-solid fa-arrow-right transition-all duration-500 ease-out group-hover:translate-x-4 translate-x-[-10px] group-hover:opacity-0">
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-5">
+                        <div class="right-content">
+                            <img src="./assets/images/platform/platform-01.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- food -->
+            <div class="tab-content hidden" id="food">
+                <div class="grid grid-cols-12">
+                    <div class="col-span-7">
+                        <div class="tab-left-content flex flex-col justify-center h-full gap-10 ">
+                            <div class="items">
+                                <h3 class="text-[32px] font-semibold mb-2">
+                                    Travel at Your Convenience
+                                </h3>
+                                <p class="text-base font-normal text-[#646464]">
+                                    The only solution to escape unbearable traffic jams is to send a bike! Reach <br>
+                                    your destination on time, saving money and time.
+                                </p>
+                            </div>
+                            <div class="items">
+                                <h3 class="text-[32px] font-semibold mb-2">
+                                    We are with you
+                                </h3>
+                                <p class="text-base font-normal text-[#646464]">
+                                    Every ride we offer is safe and covered by safety services, ensuring that <br> each
+                                    ride with us is much safer.
+                                </p>
+                            </div>
+                            <div class="items">
+                                <h3 class="text-[32px] font-semibold mb-2">
+                                    Always Available
+                                </h3>
+                                <p class="text-base font-normal text-[#646464]">
+                                    Whether it's early morning or late at night, our trained riders are ready to <br>
+                                    ensure your safe ride.
+                                </p>
+                            </div>
+                            <div class="common-btn flex items-center">
+                                <a href="#"
+                                    class="group relative overflow-hidden text-base font-medium text-white h-[48px] bg-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700">
+                                    <i
+                                        class="fa-solid fa-arrow-right transition-all duration-500 ease-out -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                                    <span
+                                        class="transition-all translate-x-[-10px] duration-500 ease-out group-hover:translate-x-2">
+                                        Learn More
+                                    </span>
+                                    <i
+                                        class="fa-solid fa-arrow-right transition-all duration-500 ease-out group-hover:translate-x-4 translate-x-[-10px] group-hover:opacity-0">
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-5">
+                        <div class="right-content">
+                            <img src="./assets/images/platform/platform-01.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- here-with-you -->
+    <section class="mb-[100px]">
+        <div class="container max-w-2lg mx-auto px-4">
+            <div class="mb-[60px]">
+                <h2 class="font-semibold text-[40px] text-center leading-[120%] mb-3">
+                    Every Steps of the Way #HereWithYou!
+                </h2>
+            </div>
+            <div class="border-rotate-box relative mb-[60px]">
+                <div class="grid grid-cols-12 gap-6 p-6">
+                    <div class="col-span-3">
+                        <div class="img h-full overflow-hidden">
+                            <img class="w-full h-full object-cover item"
+                                src="./assets/images/hereWithYou/here-with-you-01.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-span-6">
+                        <div class="img h-full overflow-hidden">
+                            <img class="w-full h-full object-cover item"
+                                src="./assets/images/hereWithYou/here-with-you-02.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-span-3">
+                        <div class="img h-full overflow-hidden">
+                            <img class="w-full h-full object-cover item"
+                                src="./assets/images/hereWithYou/here-with-you-03.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-span-3">
+                        <div class="img h-full overflow-hidden">
+                            <img class="w-full h-full object-cover item"
+                                src="./assets/images/hereWithYou/here-with-you-04.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-span-3">
+                        <div class="img h-full overflow-hidden">
+                            <img class="w-full h-full object-cover item"
+                                src="./assets/images/hereWithYou/here-with-you-05.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-span-3">
+                        <div class="img h-full overflow-hidden">
+                            <img class="w-full h-full object-cover item"
+                                src="./assets/images/hereWithYou/here-with-you-06.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-span-3">
+                        <div class="img h-full overflow-hidden">
+                            <img class="w-full h-full object-cover item"
+                                src="./assets/images/hereWithYou/here-with-you-07.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="grid grid-cols-12">
-                <div class="col-span-7">
-                    
+
+                <div class="col-span-6">
+                    <div class="content">
+                        <h4 class="text-[32px] font-semibold mb-1">
+                            Live location sharing service
+                        </h4>
+                        <p class="text-base font-normal text-[#646464] mb-[23px]">
+                            With the live location sharing option in the Pathao app, you can inform <br> your friends
+                            and family of your current location.
+                        </p>
+                        <div class="common-btn flex items-center">
+                            <a href="#"
+                                class="group relative overflow-hidden text-base font-medium text-primary1-600 h-[48px] border border-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-4 transition-all duration-500 ease-out hover:border hover:border-primary1-700">
+                                <i
+                                    class="fa-solid fa-arrow-right transition-all duration-500 ease-out -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                                <span
+                                    class="transition-all translate-x-[-10px] duration-500 ease-out group-hover:translate-x-2">
+                                    Read more
+                                </span>
+                                <i
+                                    class="fa-solid fa-arrow-right transition-all duration-500 ease-out group-hover:translate-x-4 translate-x-[-10px] group-hover:opacity-0">
+                                </i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-span-5"></div>
+
+                <div class="col-span-6">
+                    <div class="content">
+                        <h4 class="text-[32px] font-semibold mb-1">
+                            Live location sharing service
+                        </h4>
+                        <p class="text-base font-normal text-[#646464] mb-[23px]">
+                            With the live location sharing option in the Pathao app, you can inform <br> your friends
+                            and family of your current location.
+                        </p>
+                        <div class="common-btn flex items-center">
+                            <a href="#"
+                                class="group relative overflow-hidden text-base font-medium text-primary1-600 h-[48px] border border-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-4 transition-all duration-500 ease-out hover:border hover:border-primary1-700">
+                                <i
+                                    class="fa-solid fa-arrow-right transition-all duration-500 ease-out -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                                <span
+                                    class="transition-all translate-x-[-10px] duration-500 ease-out group-hover:translate-x-2">
+                                    Read more
+                                </span>
+                                <i
+                                    class="fa-solid fa-arrow-right transition-all duration-500 ease-out group-hover:translate-x-4 translate-x-[-10px] group-hover:opacity-0">
+                                </i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-     </section>
+    </section>
+
+    <!-- earn rides -->
+    <section class="earn-rides-area pb-[100px]">
+        <div class="earn-rides-content container mx-auto">
+            <div class="mb-10 text-center">
+                <h2 class="font-semibold text-[40px] leading-[120%] mb-3">Earn through bike, car, or bicycle</h2>
+                <p class="text-base font-normal text-[#5d6467] mb-7">Join the country's highest earning platform</p>
+                <div class="common-btn flex items-center justify-center">
+                    <a href="#"
+                        class="group relative overflow-hidden text-base font-medium text-white h-[48px] bg-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700">
+                        <i
+                            class="fa-solid fa-arrow-right transition-all duration-500 ease-out -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                        <span
+                            class="transition-all translate-x-[-10px] duration-500 ease-out group-hover:translate-x-2">
+                            Start Earning
+                        </span>
+                        <i
+                            class="fa-solid fa-arrow-right transition-all duration-500 ease-out group-hover:translate-x-4 translate-x-[-10px] group-hover:opacity-0">
+                        </i>
+                    </a>
+                </div>
+            </div>
+            <div class="img">
+                <img class="mx-auto" src="./assets/images/earn-rides/earn-rides-01.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Download the app -->
+    <section class="download-area py-[60px] pb-[20px] bg-[#fbfbfb] mb-[100px] relative before:absolute before:w-[50%] before:h-[70px] before:bg-[#fbfbfb] before:right-0 before:bottom-[0] before:z-[1] overflow-hidden">
+        <div class="container max-w-2lg mx-auto px-4">
+            <div class="grid grid-cols-12">
+                <div class="col-span-7 flex flex-col h-full justify-center">
+                    <div class="mb-6">
+                        <h2 class="font-semibold text-[40px] leading-[120%] mb-2">Download the app</h2>
+                        <p class="text-base font-normal text-[#5d6467] mb-7">Our reliable service and attractive offers
+                            are waiting just for you!</p>
+                    </div>
+                    <div class="flex items-center flex-wrap gap-6">
+
+                        <div class="download-items">
+                            <h6 class="text-sm font-semibold mb-2">
+                                User app
+                            </h6>
+                            <div
+                                class="download-box flex items-center gap-4 bg-black backdrop-blur-[12px] border border-white/16 rounded-[12px] p-4">
+                                <a href="#" class="img">
+                                    <img class="rounded-[8px]" src="./assets/images/download/qr-code.png" alt="">
+                                </a>
+                                <div class="right flex flex-col gap-4">
+                                    <a href="#">
+                                        <img src="./assets/icons/googlr-play.png" alt="">
+                                    </a>
+    
+                                    <a href="#"
+                                        class="group relative overflow-hidden text-sm font-medium text-white h-[40px] bg-primary1-600 rounded-[8px] flex items-center justify-center px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700 pr-[18px]">
+                                        <span class="transition-all duration-500 ease-out mr-4">
+                                            Download
+                                        </span>
+    
+                                        <i class="fa-solid fa-download transition-all duration-500 ease-out group-hover:translate-y-[35px]">
+                                        </i>
+    
+                                       
+                                        <i class="fa-solid fa-download transition-all duration-500 ease-out  translate-x-[-14px] translate-y-[-35px] group-hover:translate-y-[0]">
+                                        </i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="download-items mt-auto">
+                            <div
+                                class="download-box flex items-center gap-4 bg-black backdrop-blur-[12px] border border-white/16 rounded-[12px] p-4">
+                                <a href="#" class="img">
+                                    <img class="rounded-[8px]" src="./assets/images/download/qr-code.png" alt="">
+                                </a>
+                                <div class="right flex flex-col gap-4">
+                                    <a href="#">
+                                        <img src="./assets/icons/app-store.png" alt="">
+                                    </a>
+    
+                                    <a href="#"
+                                        class="group relative overflow-hidden text-sm font-medium text-white h-[40px] bg-primary1-600 rounded-[8px] flex items-center justify-center px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700 pr-[18px]">
+                                        <span class="transition-all duration-500 ease-out mr-4">
+                                            Download
+                                        </span>
+    
+                                        <i class="fa-solid fa-download transition-all duration-500 ease-out group-hover:translate-y-[35px]">
+                                        </i>
+    
+                                       
+                                        <i class="fa-solid fa-download transition-all duration-500 ease-out  translate-x-[-14px] translate-y-[-35px] group-hover:translate-y-[0]">
+                                        </i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="download-items">
+                            <h6 class="text-sm font-semibold mb-2">
+                               Drive app
+                            </h6>
+                            <div
+                                class="download-box flex items-center gap-4 bg-black backdrop-blur-[12px] border border-white/16 rounded-[12px] p-4">
+                                <a href="#" class="img">
+                                    <img class="rounded-[8px]" src="./assets/images/download/qr-code.png" alt="">
+                                </a>
+                                <div class="right flex flex-col gap-4">
+                                    <a href="#">
+                                        <img src="./assets/icons/googlr-play.png" alt="">
+                                    </a>
+    
+                                    <a href="#"
+                                        class="group relative overflow-hidden text-sm font-medium text-white h-[40px] bg-primary1-600 rounded-[8px] flex items-center justify-center px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700 pr-[18px]">
+                                        <span class="transition-all duration-500 ease-out mr-4">
+                                            Download
+                                        </span>
+    
+                                        <i class="fa-solid fa-download transition-all duration-500 ease-out group-hover:translate-y-[35px]">
+                                        </i>
+    
+                                       
+                                        <i class="fa-solid fa-download transition-all duration-500 ease-out  translate-x-[-14px] translate-y-[-35px] group-hover:translate-y-[0]">
+                                        </i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-span-5">
+                    <div class="phone-img flex translate-y-[20px]">
+                        <img class="h-max mt-auto" src="./assets/images/download/small-phone.png" alt="">
+                        <img class="ml-[-70px]" src="./assets/images/download/big-phone.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- rider-loved-section -->
+
+
 
     <!-- script link -->
     <script src="./js/active-class-add.js"></script>
     <script src="./js/countup.js"></script>
+    <script src="./js/tab.js"></script>
 </body>
 
 </html>
