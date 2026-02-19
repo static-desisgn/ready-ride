@@ -29,20 +29,66 @@
     <!-- custom CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/platform.css">
+    <link rel="stylesheet" href="./css/offcanvas.css">
 
 
 </head>
 
 <body>
 
+    <!-- offcanvas start -->
+    <div class="tp-offcanvas-area block md:hidden max-[350px]:w-full">
+        <div class="tp-offcanvas-wrapper h-full">
+            <div class="tp-offcanvas-header flex items-center justify-between mb-4">
+                <div class="tp-offcanvas-logo">
+                    <a href="javascript:void(0)">
+                        <img src="./assets/logo/ready-ride-main-logo.png" alt="">
+                    </a>
+                </div>
+                <div class="tp-offcanvas-close flex items-center justify-center">
+                    <div class="common-btn p-0 bg-transparent">
+                        <button
+                            class="text-base font-medium text-primary h-8 w-8 flex items-center gap-4 justify-center border-[1.5px] border-white rounded-[6px]">
+                            <i class="fa-solid fa-xmark !text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="rs-main-menu  d-lg-none mb-[80px]">
+                <nav class="tp-mobile-menu-active mb-6">
+                    <h3 class="text-xl font-medium text-white mb-4 pb-2 border-b border-[#ffffff40]">
+                        Quick Links
+                    </h3>
+                    <ul class="offcanvas__menu main-menu ">
+                        <li class="mb-1"><a class="custom__border w-max" href="./index.html">Home</a></li>
+                        <li class="mb-1"><a class="custom__border w-max" href="./service.html">Service</a></li>
+                        <li class="mb-1"><a class="custom__border w-max" href="#">Blog</a></li>
+                        <li class="mb-1"><a class="custom__border w-max" href="#">About Us</a></li>
+                        <li class="mb-1"><a class="custom__border w-max" href="./api.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div
+                class="copy__right__area absolute bottom-0 left-1/2 -translate-x-1/2 w-full flex flex-col h-full items-center justify-end z-[-1]">
+                <p class="text-base font-normal text-[rgba(255,255,255,0.4)]">
+                    ⓒ2025
+                    <a href="#" class="custom__border text-white">ReadyRide.</a>
+                    All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="modal_backdrop modal_backdrop_2 opacity-0 invisible block md:hidden"></div>
+    <!-- offcanvas end -->
+
     <!-- header  -->
     <header
-        class="header-area py-[21px] backdrop-blur-[24px] bg-[#ffffffc5] shadow-[0_1px_4px_0_rgba(0,0,0,0.06)] sticky top-0 z-[9]">
+        class="header-area py-[21px] backdrop-blur-[24px] bg-[#ffffffde] shadow-[0_1px_4px_0_rgba(0,0,0,0.06)] sticky top-0 z-[9]">
         <div class="container max-w-2lg mx-auto px-4">
-            <div class="grid grid-cols-12 gap-10 items-center">
+            <div class="grid grid-cols-12 md:gap-10 items-center">
 
                 <!-- logo -->
-                <div class="col-span-2">
+                <div class="col-span-5 md:col-span-2">
                     <div class="main-logo">
                         <a href="#">
                             <img src="./assets/logo/ready-ride-main-logo.png" alt="">
@@ -51,10 +97,10 @@
                 </div>
 
                 <!-- menu -->
-                <div class="col-span-8">
-                    <div class="main-menu">
+                <div class="col-span-1 md:col-span-8">
+                    <div class="main-menu hidden md:block">
                         <nav>
-                            <ul class="flex items-center gap-10 justify-center">
+                            <ul class="flex items-center gap-5 xl:gap-10 justify-center">
                                 <li>
                                     <a href="#"
                                         class="text-base font-normal custom__border overflow-hidden py-[2px]  inline-block active">
@@ -91,7 +137,7 @@
                 </div>
 
                 <!-- lang-btn -->
-                <div class="col-span-2">
+                <div class="col-span-6 md:col-span-2 flex items-center gap-4 ml-auto">
                     <div class="lang text-end custom__dropdown relative">
                         <button class="lang-btn flex items-center gap-[6px] text-base font-normal relative">
                             English
@@ -110,28 +156,35 @@
                             </li>
                         </ul>
                     </div>
+                    <div
+                        class="rs-offcanvas-btn w-10 h-10 bg-[#1469B5] rounded-[4px] flex items-center justify-center md:hidden">
+                        <i class="fa-solid fa-bars text-white text-[18px]"></i>
+                        <div class="modal_backdrop hidden"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- hero -->
-    <section class="hero-area py-[136px] overflow-hidden relative">
+    <section class="hero-area py-10 lg:py-[136px] overflow-hidden relative">
         <div class="container max-w-2lg mx-auto px-4">
             <div class="grid grid-cols-12">
 
-                <div class="col-span-5">
-                    <div class="hero-content flex flex-col h-full justify-center">
-                        <h1 class="text-[56px] font-semibold leading-[143%] text-primary1-600 mb-6">
-                            <span class="block text-black">#1 World-Class</span>
+                <div class="col-span-12 lg:col-span-5 ">
+                    <div class="hero-content flex flex-col h-full justify-center items-center md:items-start">
+                        <h1
+                            class="text-2xl md:text-3xl lg:text-4xl xl:text-[56px] font-semibold !leading-[125%] text-primary1-600 mb-2 lg:mb-6">
+                            <span class="md:block text-black">#1 World-Class</span>
                             Ride Sharing App
                         </h1>
-                        <p class="text-xl font-normal mb-8">
-                            ReadyRide helps you move across the city faster, <br> safer, and more affordably
+                        <p class="text-xl font-normal mb-4 md;mb-8 text-center md:text-start">
+                            ReadyRide helps you move across the city faster, <br class="hidden xl:block"> safer, and
+                            more affordably
                         </p>
                         <div class="common-btn flex items-center">
                             <a href="#"
-                                class="group relative overflow-hidden text-base font-medium text-white h-[56px] bg-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700">
+                                class="group relative overflow-hidden text-base font-medium text-white h-12 lg:h-[56px] bg-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700">
                                 <i
                                     class="fa-solid fa-arrow-right transition-all duration-500 ease-out -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
                                 <span
@@ -146,15 +199,15 @@
                     </div>
                 </div>
 
-                <div class="col-span-7 absolute right-0 top-[0] z-[-1] h-full">
+                <div class="col-span-12 lg:col-span-7 lg:absolute right-0 top-[0] z-[-1] h-full mt-6 lg:mt-0">
                     <div
-                        class="hero-img h-full relative after:absolute after:bg-[#ffffff] after:w-[60%] after:h-[70%] after:left-[-60px] after:top-0 after:z-[-2] before:absolute before:bg-[#3863A0] before:w-[105%] before:h-[100%] before:z-[-2] before:right-0 before:rounded-[0_0_0_0] pb-11">
+                        class="hero-img max-w-[350px] md:w-auto xl:h-full relative after:absolute after:bg-[#ffffff] after:w-[60%] after:h-[70%] after:left-[-80px] after:top-0 after:z-[-2] before:absolute before:bg-[#3863A0] before:w-[105%] before:h-[100%] before:z-[-2] before:right-0 before:rounded-[0_0_0_0] pb-11 before:hidden xl:before:block after:hidden xl:after:block mx-auto">
                         <img class="h-full" src="./assets/images/hero/hero-01.png" alt="">
 
                         <!-- SVG wave background -->
-                        <svg width="150%" height="170%" id="svg" viewBox="0 0 1440 690"
+                        <svg width="155%" height="170%" id="svg" viewBox="0 0 1440 690"
                             xmlns="http://www.w3.org/2000/svg"
-                            class="transition duration-300 ease-in-out delay-150 absolute right-[170px] bottom-[-230px] rotate-[135deg] z-[-1]">
+                            class="transition duration-300 ease-in-out delay-150 absolute right-[170px] bottom-[-230px] rotate-[135deg] z-[-1] hidden xl:block">
                             <path
                                 d="M 0,700 L 0,262 C 57.4166952937135,263.39058742700104 114.833390587427,264.7811748540021 180,271 C 245.166609412573,277.2188251459979 318.08313294400546,288.2658880109928 383,283 C 447.91686705599454,277.7341119890072 504.834077636551,256.1552731020268 581,209 C 657.165922363449,161.8447268979732 752.5805565097904,89.11301958090007 834,132 C 915.4194434902096,174.88698041909993 982.8436963242871,333.392648574373 1048,389 C 1113.156303675713,444.607351425627 1176.0446581930607,397.31638612160776 1241,359 C 1305.9553418069393,320.68361387839224 1372.9776709034695,291.3418069391961 1440,262 L 1440,700 L 0,700 Z"
                                 stroke="none" stroke-width="0" fill="#3863A0" fill-opacity="1"
@@ -170,43 +223,42 @@
     </section>
 
     <!-- count -->
-    <section class="count-area absolute translate-y-[-50px] left-0 right-0">
+    <section class="count-area lg:absolute translate-y-[-50px] left-0 right-0">
         <div class="container max-w-2lg mx-auto px-4">
-            <div class="bg-white shadow-[0_2px_12px_0_rgba(0,0,0,0.18)] h-[162px]">
+            <div class="bg-white shadow-[0_2px_12px_0_rgba(0,0,0,0.18)] lg:h-[162px]">
                 <div class="grid grid-cols-12 h-full">
-                    <div class="col-span-3 h-full">
+                    <div class="max-[550px]:col-span-12 col-span-6 lg:col-span-3 h-full">
                         <div
-                            class="count-item hover hover:bg-primary1-600 hover:text-white transition duration-300 group h-full py-[17px] flex flex-col gap-2 items-center justify-center   rounded-[0] first:hover:translate-x-[-16px] hover:shadow-[0_2px_12px_0_rgba(0,0,0,0.18)]  hover:translate-y-[-16px] before:border-r before:border-[#EDEEF1] before:w-[1px] before:h-[70%] relative before:absolute before:top-1/2 before:-translate-y-1/2 before:right-0 hover:before:border-r hover:before:border-primary1-600 before:transition before:duration-300 ">
-                            <h2 class="counter font-bold text-2xl" data-target="15" data-suffix=" Million+">0 </h2>
+                            class="count-item hover hover:bg-primary1-600 hover:text-white transition duration-300 group h-full py-[17px] flex flex-col gap-1 md:gap-2 items-center justify-center   rounded-[0] xl:first:hover:translate-x-[-16px] hover:shadow-[0_2px_12px_0_rgba(0,0,0,0.18)]  hover:translate-y-[-16px] before:border-r before:border-[#EDEEF1] before:w-[1px] before:h-[70%] relative before:absolute before:top-1/2 before:-translate-y-1/2 before:right-0 hover:before:border-r hover:before:border-primary1-600 before:transition before:duration-300 ">
+                            <h2 class="counter font-bold text-xl md:text-2xl" data-target="15" data-suffix=" Million+">0 </h2>
                             <span
                                 class="text-base font-normal group-hover:text-white text-gray-500 transition duration-300">App
                                 Download</span>
                         </div>
                     </div>
-                    <div class="col-span-3 h-full">
+                    <div class="max-[550px]:col-span-12 col-span-6 lg:col-span-3 h-full">
                         <div
-                            class="count-item hover hover:bg-primary1-600 hover:text-white transition duration-300 group h-full py-[17px] flex flex-col gap-2 items-center justify-center   rounded-[0] hover:translate-x-[-10px] hover:shadow-[0_2px_12px_0_rgba(0,0,0,0.18)]  hover:translate-y-[-16px] before:border-r before:border-[#EDEEF1] before:w-[1px] before:h-[70%] relative before:absolute before:top-1/2 before:-translate-y-1/2 before:right-0 hover:before:border-r hover:before:border-primary1-600 before:transition before:duration-300 ">
-                            <h2 class="counter font-bold text-2xl" data-target="350" data-suffix=" Million+">0 </h2>
+                            class="count-item hover hover:bg-primary1-600 hover:text-white transition duration-300 group h-full py-[17px] flex flex-col gap-1 md:gap-2 items-center justify-center   rounded-[0] xl:hover:translate-x-[-10px] hover:shadow-[0_2px_12px_0_rgba(0,0,0,0.18)]  hover:translate-y-[-16px] before:border-r before:border-[#EDEEF1] before:w-[1px] before:h-[70%] relative before:absolute before:top-1/2 before:-translate-y-1/2 before:right-0 hover:before:border-r hover:before:border-primary1-600 before:transition before:duration-300 ">
+                            <h2 class="counter font-bold text-xl md:text-2xl" data-target="350" data-suffix=" Million+">0 </h2>
                             <span
                                 class="text-base font-normal group-hover:text-white text-gray-500 transition duration-300">Successful
                                 Trips/Orders</span>
                         </div>
                     </div>
-                    <div class="col-span-3 h-full">
+                    <div class="max-[550px]:col-span-12 col-span-6 lg:col-span-3 h-full">
                         <div
-                            class="count-item hover hover:bg-primary1-600 hover:text-white transition duration-300 group h-full py-[17px] flex flex-col gap-2 items-center justify-center   rounded-[0] hover:translate-x-[-10px] hover:shadow-[0_2px_12px_0_rgba(0,0,0,0.18)]  hover:translate-y-[-16px] before:border-r before:border-[#EDEEF1] before:w-[1px] before:h-[70%] relative before:absolute before:top-1/2 before:-translate-y-1/2 before:right-0 hover:before:border-r hover:before:border-primary1-600 before:transition before:duration-300 ">
-                            <h2 class="counter font-bold text-2xl" data-target="10" data-suffix=" Million+">0 </h2>
+                            class="count-item hover hover:bg-primary1-600 hover:text-white transition duration-300 group h-full py-[17px] flex flex-col gap-1 md:gap-2 items-center justify-center   rounded-[0] xl:hover:translate-x-[-10px] hover:shadow-[0_2px_12px_0_rgba(0,0,0,0.18)]  hover:translate-y-[-16px] before:border-r before:border-[#EDEEF1] before:w-[1px] before:h-[70%] relative before:absolute before:top-1/2 before:-translate-y-1/2 before:right-0 hover:before:border-r hover:before:border-primary1-600 before:transition before:duration-300 ">
+                            <h2 class="counter font-bold text-xl md:text-2xl" data-target="10" data-suffix=" Million+">0 </h2>
                             <span
                                 class="text-base font-normal group-hover:text-white text-gray-500 transition duration-300">In
                                 the march of humanity</span>
                         </div>
                     </div>
-
                     <!-- last child -->
-                    <div class="col-span-3 h-full">
+                    <div class="max-[550px]:col-span-12 col-span-6 lg:col-span-3 h-full">
                         <div
-                            class="count-item hover hover:bg-primary1-600 hover:text-white transition duration-300 group h-full py-[17px] flex flex-col gap-2 items-center justify-center   rounded-[0] last:hover:translate-x-[-16px] hover:shadow-[0_2px_12px_0_rgba(0,0,0,0.18)]  hover:translate-y-[-16px] before:border-r before:border-[#EDEEF1] before:w-[1px] before:h-[70%] relative before:absolute before:top-1/2 before:-translate-y-1/2 before:right-0 hover:before:border-r hover:before:border-primary1-600 before:transition before:duration-300 last:before:border-r-0">
-                            <h2 class="counter font-bold text-2xl" data-target="10" data-suffix=" Million+">0 </h2>
+                            class="count-item hover hover:bg-primary1-600 hover:text-white transition duration-300 group h-full py-[17px] flex flex-col gap-1 md:gap-2 items-center justify-center   rounded-[0] xl:last:hover:translate-x-[-16px] hover:shadow-[0_2px_12px_0_rgba(0,0,0,0.18)]  hover:translate-y-[-16px] before:border-r before:border-[#EDEEF1] before:w-[1px] before:h-[70%] relative before:absolute before:top-1/2 before:-translate-y-1/2 before:right-0 hover:before:border-r hover:before:border-primary1-600 before:transition before:duration-300 last:before:border-r-0">
+                            <h2 class="counter font-bold text-xl md:text-2xl" data-target="10" data-suffix=" Million+">0 </h2>
                             <span
                                 class="text-base font-normal group-hover:text-white text-gray-500 transition duration-300">In
                                 the march of humanity</span>
@@ -218,16 +270,17 @@
     </section>
 
     <!-- Ride Platform -->
-    <section class="platform-area mt-[230px] mb-[100px]">
+    <section class="platform-area mt-[50px] lg:mt-[230px] mb-[70px] lg:mb-[100px]">
         <div class="container max-w-2lg mx-auto px-4">
             <div class="wrapper text-center mb-6">
-                <h2 class="font-semibold text-[40px] leading-[120%] mb-3">The ReadyRide Platform</h2>
+                <h2 class="font-semibold text-xl md:text-2xl lg:text-[30px] xl:text-[40px] leading-[120%] mb-1 xl:mb-3">The
+                    ReadyRide Platform</h2>
                 <p class="text-base font-normal text-[#5d6467]">Here’s everything ReadyRid offers just for you!</p>
 
-                <div class="tab-area flex items-start justify-center gap-4 mt-10">
+                <div class="tab-area flex flex-wrap items-start justify-center gap-4 mt-10">
 
                     <button data-tab="bike"
-                        class="tab__button group text-lg font-normal flex items-center gap-2 px-[46px] pb-4 relative transition duration-300 mb-0 hover:text-primary1-600 active">
+                        class="tab__button group text-lg font-normal flex items-center gap-2 px-6 xl:px-[46px] pb-4 relative transition duration-300 mb-0 hover:text-primary1-600 active">
                         <span
                             class="flex items-center justify-center  w-[46px] h-[46px] rounded-[6px] border border-[#E3E5E7] group-hover:border-2 group-hover:border-primary1-600 transition duration-300">
                             <img src="./assets/icons/bike.png" alt="">
@@ -236,7 +289,7 @@
                     </button>
 
                     <button data-tab="car"
-                        class="tab__button group text-lg font-normal flex items-center gap-2 px-[46px] pb-4 relative transition duration-300 mb-0 hover:text-primary1-600">
+                        class="tab__button group text-lg font-normal flex items-center gap-2 px-6 xl:px-[46px] pb-4 relative transition duration-300 mb-0 hover:text-primary1-600">
                         <span
                             class="flex items-center justify-center  w-[46px] h-[46px] rounded-[6px] border border-[#E3E5E7] group-hover:border-2 group-hover:border-primary1-600 transition duration-300">
                             <img src="./assets/icons/car.png" alt="">
@@ -245,7 +298,7 @@
                     </button>
 
                     <button data-tab="parcel"
-                        class="tab__button group text-lg font-normal flex items-center gap-2 px-[46px] pb-4 relative transition duration-300 mb-0 hover:text-primary1-600">
+                        class="tab__button group text-lg font-normal flex items-center gap-2 px-6 xl:px-[46px] pb-4 relative transition duration-300 mb-0 hover:text-primary1-600">
                         <span
                             class="flex items-center justify-center  w-[46px] h-[46px] rounded-[6px] border border-[#E3E5E7] group-active-border-2 group-active-border-primary1-600 transition duration-300">
                             <img src="./assets/icons/parcel.png" alt="">
@@ -254,7 +307,7 @@
                     </button>
 
                     <button data-tab="food"
-                        class="tab__button group text-lg font-normal flex items-center gap-2 px-[46px] pb-4 relative transition duration-300 mb-0 hover:text-primary1-600">
+                        class="tab__button group text-lg font-normal flex items-center gap-2 px-6 xl:px-[46px] pb-4 relative transition duration-300 mb-0 hover:text-primary1-600">
                         <span
                             class="flex items-center justify-center  w-[46px] h-[46px] rounded-[6px] border border-[#E3E5E7] group-hover:border-2 group-hover:border-primary1-600 transition duration-300">
                             <img src="./assets/icons/food.png" alt="">
@@ -267,38 +320,41 @@
             <!-- bike -->
             <div class="tab-content" id="bike">
                 <div class="grid grid-cols-12">
-                    <div class="col-span-7">
-                        <div class="tab-left-content flex flex-col justify-center h-full gap-10 ">
+                    <div class="col-span-12 md:col-span-7">
+                        <div class="tab-left-content flex flex-col justify-center h-full gap-4 lg:gap-6 xl:gap-10">
                             <div class="items">
-                                <h3 class="text-[32px] font-semibold mb-2">
+                                <h3 class="text-xl lg:text-[26px] xl:text-[32px] font-semibold mb-2">
                                     Travel at Your Convenience
                                 </h3>
                                 <p class="text-base font-normal text-[#646464]">
-                                    The only solution to escape unbearable traffic jams is to send a bike! Reach <br>
+                                    The only solution to escape unbearable traffic jams is to send a bike! Reach <br
+                                        class="hidden xl:block">
                                     your destination on time, saving money and time.
                                 </p>
                             </div>
                             <div class="items">
-                                <h3 class="text-[32px] font-semibold mb-2">
+                                <h3 class="text-xl lg:text-[26px] xl:text-[32px] font-semibold mb-2">
                                     We are with you
                                 </h3>
                                 <p class="text-base font-normal text-[#646464]">
-                                    Every ride we offer is safe and covered by safety services, ensuring that <br> each
+                                    Every ride we offer is safe and covered by safety services, ensuring that <br
+                                        class="hidden xl:block"> each
                                     ride with us is much safer.
                                 </p>
                             </div>
                             <div class="items">
-                                <h3 class="text-[32px] font-semibold mb-2">
+                                <h3 class="text-xl lg:text-[26px] xl:text-[32px] font-semibold mb-2">
                                     Always Available
                                 </h3>
                                 <p class="text-base font-normal text-[#646464]">
-                                    Whether it's early morning or late at night, our trained riders are ready to <br>
+                                    Whether it's early morning or late at night, our trained riders are ready to <br
+                                        class="hidden xl:block">
                                     ensure your safe ride.
                                 </p>
                             </div>
-                            <div class="common-btn flex items-center">
+                            <div class="common-btn flex items-center justify-center md:justify-start">
                                 <a href="#"
-                                    class="group relative overflow-hidden text-base font-medium text-white h-[48px] bg-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700">
+                                    class="group relative overflow-hidden twxt-sm md:text-base font-medium text-white h-10 md:h-[48px] bg-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700">
                                     <i
                                         class="fa-solid fa-arrow-right transition-all duration-500 ease-out -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
                                     <span
@@ -312,9 +368,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-span-5">
+                    <div class="col-span-12 md:col-span-5">
                         <div class="right-content">
-                            <img src="./assets/images/platform/platform-01.png" alt="">
+                            <img class="h-[300px] md:h-auto" src="./assets/images/platform/platform-01.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -323,47 +379,54 @@
             <!-- car -->
             <div class="tab-content hidden" id="car">
                 <div class="grid grid-cols-12">
-                    <!-- <div class="col-span-7">
-                        <div class="tab-left-content flex flex-col justify-center h-full gap-10 ">
+                    <div class="col-span-12 md:col-span-7">
+                        <div class="tab-left-content flex flex-col justify-center h-full gap-4 lg:gap-6 xl:gap-10 ">
                             <div class="items">
-                                <h3 class="text-[32px] font-semibold mb-2">
+                                <h3 class="text-xl lg:text-[26px] xl:text-[32px] font-semibold mb-2">
                                     Travel at Your Convenience
                                 </h3>
                                 <p class="text-base font-normal text-[#646464]">
-                                    The only solution to escape unbearable traffic jams is to send a bike! Reach <br> your destination on time, saving money and time.
+                                    The only solution to escape unbearable traffic jams is to send a bike! Reach <br
+                                        class="hidden xl:block"> your destination on time, saving money and time.
                                 </p>
                             </div>
                             <div class="items">
-                                <h3 class="text-[32px] font-semibold mb-2">
+                                <h3 class="text-xl lg:text-[26px] xl:text-[32px] font-semibold mb-2">
                                     We are with you
                                 </h3>
                                 <p class="text-base font-normal text-[#646464]">
-                                    Every ride we offer is safe and covered by safety services, ensuring that <br> each ride with us is much safer.
+                                    Every ride we offer is safe and covered by safety services, ensuring that <br
+                                        class="hidden xl:block"> each ride with us is much safer.
                                 </p>
                             </div>
                             <div class="items">
-                                <h3 class="text-[32px] font-semibold mb-2">
+                                <h3 class="text-xl lg:text-[26px] xl:text-[32px] font-semibold mb-2">
                                     Always Available
                                 </h3>
                                 <p class="text-base font-normal text-[#646464]">
-                                    Whether it's early morning or late at night, our trained riders are ready to <br> ensure your safe ride.
+                                    Whether it's early morning or late at night, our trained riders are ready to <br
+                                        class="hidden xl:block"> ensure your safe ride.
                                 </p>
                             </div>
-                            <div class="common-btn flex items-center">
-                                <a href="#" class="group relative overflow-hidden text-base font-medium text-white h-[48px] bg-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700">
-                                    <i class="fa-solid fa-arrow-right transition-all duration-500 ease-out -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
-                                    <span class="transition-all translate-x-[-10px] duration-500 ease-out group-hover:translate-x-2">
+                            <div class="common-btn flex items-center justify-center md:justify-start">
+                                <a href="#"
+                                    class="group relative overflow-hidden twxt-sm md:text-base font-medium text-white h-10 md:h-[48px] bg-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700">
+                                    <i
+                                        class="fa-solid fa-arrow-right transition-all duration-500 ease-out -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                                    <span
+                                        class="transition-all translate-x-[-10px] duration-500 ease-out group-hover:translate-x-2">
                                         Learn More
                                     </span>
-                                    <i class="fa-solid fa-arrow-right transition-all duration-500 ease-out group-hover:translate-x-4 translate-x-[-10px] group-hover:opacity-0">
+                                    <i
+                                        class="fa-solid fa-arrow-right transition-all duration-500 ease-out group-hover:translate-x-4 translate-x-[-10px] group-hover:opacity-0">
                                     </i>
                                 </a>
                             </div>
                         </div>
-                    </div> -->
-                    <div class="col-span-5">
+                    </div>
+                    <div class="col-span-12 md:col-span-5">
                         <div class="right-content">
-                            <img src="./assets/images/platform/platform-01.png" alt="">
+                            <img class="h-[300px] md:h-auto" src="./assets/images/platform/platform-01.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -372,38 +435,41 @@
             <!-- parcel -->
             <div class="tab-content hidden" id="parcel">
                 <div class="grid grid-cols-12">
-                    <div class="col-span-7">
-                        <div class="tab-left-content flex flex-col justify-center h-full gap-10 ">
+                    <div class="col-span-12 md:col-span-7">
+                        <div class="tab-left-content flex flex-col justify-center h-full gap-4 lg:gap-6 xl:gap-10">
                             <div class="items">
-                                <h3 class="text-[32px] font-semibold mb-2">
+                                <h3 class="text-xl lg:text-[26px] xl:text-[32px] font-semibold mb-2">
                                     Travel at Your Convenience
                                 </h3>
                                 <p class="text-base font-normal text-[#646464]">
-                                    The only solution to escape unbearable traffic jams is to send a bike! Reach <br>
+                                    The only solution to escape unbearable traffic jams is to send a bike! Reach <br
+                                        class="hidden xl:block">
                                     your destination on time, saving money and time.
                                 </p>
                             </div>
                             <div class="items">
-                                <h3 class="text-[32px] font-semibold mb-2">
+                                <h3 class="text-xl lg:text-[26px] xl:text-[32px] font-semibold mb-2">
                                     We are with you
                                 </h3>
                                 <p class="text-base font-normal text-[#646464]">
-                                    Every ride we offer is safe and covered by safety services, ensuring that <br> each
+                                    Every ride we offer is safe and covered by safety services, ensuring that <br
+                                        class="hidden xl:block"> each
                                     ride with us is much safer.
                                 </p>
                             </div>
                             <div class="items">
-                                <h3 class="text-[32px] font-semibold mb-2">
+                                <h3 class="text-xl lg:text-[26px] xl:text-[32px] font-semibold mb-2">
                                     Always Available
                                 </h3>
                                 <p class="text-base font-normal text-[#646464]">
-                                    Whether it's early morning or late at night, our trained riders are ready to <br>
+                                    Whether it's early morning or late at night, our trained riders are ready to <br
+                                        class="hidden xl:block">
                                     ensure your safe ride.
                                 </p>
                             </div>
-                            <div class="common-btn flex items-center">
+                            <div class="common-btn flex items-center justify-center md:justify-start">
                                 <a href="#"
-                                    class="group relative overflow-hidden text-base font-medium text-white h-[48px] bg-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700">
+                                    class="group relative overflow-hidden twxt-sm md:text-base font-medium text-white h-10 md:h-[48px] bg-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700">
                                     <i
                                         class="fa-solid fa-arrow-right transition-all duration-500 ease-out -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
                                     <span
@@ -417,9 +483,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-span-5">
+                    <div class="col-span-12 md:col-span-5">
                         <div class="right-content">
-                            <img src="./assets/images/platform/platform-01.png" alt="">
+                            <img class="h-[300px] md:h-auto" src="./assets/images/platform/platform-01.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -428,38 +494,41 @@
             <!-- food -->
             <div class="tab-content hidden" id="food">
                 <div class="grid grid-cols-12">
-                    <div class="col-span-7">
-                        <div class="tab-left-content flex flex-col justify-center h-full gap-10 ">
+                    <div class="col-span-12 md:col-span-7">
+                        <div class="tab-left-content flex flex-col justify-center h-full gap-4 lg:gap-6 xl:gap-10">
                             <div class="items">
-                                <h3 class="text-[32px] font-semibold mb-2">
+                                <h3 class="text-xl lg:text-[26px] xl:text-[32px] font-semibold mb-2">
                                     Travel at Your Convenience
                                 </h3>
                                 <p class="text-base font-normal text-[#646464]">
-                                    The only solution to escape unbearable traffic jams is to send a bike! Reach <br>
+                                    The only solution to escape unbearable traffic jams is to send a bike! Reach <br
+                                        class="hidden xl:block">
                                     your destination on time, saving money and time.
                                 </p>
                             </div>
                             <div class="items">
-                                <h3 class="text-[32px] font-semibold mb-2">
+                                <h3 class="text-xl lg:text-[26px] xl:text-[32px] font-semibold mb-2">
                                     We are with you
                                 </h3>
                                 <p class="text-base font-normal text-[#646464]">
-                                    Every ride we offer is safe and covered by safety services, ensuring that <br> each
+                                    Every ride we offer is safe and covered by safety services, ensuring that <br
+                                        class="hidden xl:block"> each
                                     ride with us is much safer.
                                 </p>
                             </div>
                             <div class="items">
-                                <h3 class="text-[32px] font-semibold mb-2">
+                                <h3 class="text-xl lg:text-[26px] xl:text-[32px] font-semibold mb-2">
                                     Always Available
                                 </h3>
                                 <p class="text-base font-normal text-[#646464]">
-                                    Whether it's early morning or late at night, our trained riders are ready to <br>
+                                    Whether it's early morning or late at night, our trained riders are ready to <br
+                                        class="hidden xl:block">
                                     ensure your safe ride.
                                 </p>
                             </div>
-                            <div class="common-btn flex items-center">
+                            <div class="common-btn flex items-center justify-center md:justify-start">
                                 <a href="#"
-                                    class="group relative overflow-hidden text-base font-medium text-white h-[48px] bg-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700">
+                                    class="group relative overflow-hidden twxt-sm md:text-base font-medium text-white h-10 md:h-[48px] bg-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700">
                                     <i
                                         class="fa-solid fa-arrow-right transition-all duration-500 ease-out -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
                                     <span
@@ -473,9 +542,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-span-5">
+                    <div class="col-span-12 md:col-span-5">
                         <div class="right-content">
-                            <img src="./assets/images/platform/platform-01.png" alt="">
+                            <img class="h-[300px] md:h-auto" src="./assets/images/platform/platform-01.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -484,73 +553,75 @@
     </section>
 
     <!-- here-with-you -->
-    <section class="mb-[100px]">
+    <section class="mb-[70px] lg:mb-[100px]">
         <div class="container max-w-2lg mx-auto px-4">
-            <div class="mb-[60px]">
-                <h2 class="font-semibold text-[40px] text-center leading-[120%] mb-3">
+            <div class="mb-4 lg:mb-8 xl:mb-[60px]">
+                <h2
+                    class="font-semibold text-xl md:text-2xl lg:text-[30px] xl:text-[40px] text-center leading-[120%] mb-1 lg:mb-3">
                     Every Steps of the Way #HereWithYou!
                 </h2>
             </div>
             <div class="border-rotate-box relative mb-[60px]">
-                <div class="grid grid-cols-12 gap-6 p-6">
-                    <div class="col-span-3">
-                        <div class="img h-full overflow-hidden">
+                <div class="grid grid-cols-12 gap-4 lg:gap-6 p-4 lg:p-6">
+                    <div class="max-[380px]:col-span-12 col-span-6 md:col-span-3">
+                        <div class="img max-[380px]:h-[200px] h-full overflow-hidden">
                             <img class="w-full h-full object-cover item"
                                 src="./assets/images/hereWithYou/here-with-you-01.jpg" alt="">
                         </div>
                     </div>
-                    <div class="col-span-6">
-                        <div class="img h-full overflow-hidden">
+                    <div class="max-[380px]:col-span-12 col-span-6 md:col-span-6">
+                        <div class="img max-[380px]:h-[200px] h-full overflow-hidden">
                             <img class="w-full h-full object-cover item"
                                 src="./assets/images/hereWithYou/here-with-you-02.jpg" alt="">
                         </div>
                     </div>
-                    <div class="col-span-3">
-                        <div class="img h-full overflow-hidden">
+                    <div class="max-[380px]:col-span-12 col-span-6 md:col-span-3">
+                        <div class="img max-[380px]:h-[200px] h-full overflow-hidden">
                             <img class="w-full h-full object-cover item"
                                 src="./assets/images/hereWithYou/here-with-you-03.jpg" alt="">
                         </div>
                     </div>
-                    <div class="col-span-3">
-                        <div class="img h-full overflow-hidden">
+                    <div class="max-[380px]:col-span-12 col-span-6 md:col-span-3">
+                        <div class="img max-[380px]:h-[200px] h-full overflow-hidden">
                             <img class="w-full h-full object-cover item"
                                 src="./assets/images/hereWithYou/here-with-you-04.jpg" alt="">
                         </div>
                     </div>
-                    <div class="col-span-3">
-                        <div class="img h-full overflow-hidden">
+                    <div class="max-[380px]:col-span-12 col-span-6 md:col-span-3">
+                        <div class="img max-[380px]:h-[200px] h-full overflow-hidden">
                             <img class="w-full h-full object-cover item"
                                 src="./assets/images/hereWithYou/here-with-you-05.jpg" alt="">
                         </div>
                     </div>
-                    <div class="col-span-3">
-                        <div class="img h-full overflow-hidden">
+                    <div class="max-[380px]:col-span-12 col-span-6 md:col-span-3">
+                        <div class="img max-[380px]:h-[200px] h-full overflow-hidden">
                             <img class="w-full h-full object-cover item"
                                 src="./assets/images/hereWithYou/here-with-you-06.jpg" alt="">
                         </div>
                     </div>
-                    <div class="col-span-3">
-                        <div class="img h-full overflow-hidden">
+                    <div class="max-[380px]:col-span-12 col-span-6 md:col-span-3">
+                        <div class="img max-[380px]:h-[200px] h-full overflow-hidden">
                             <img class="w-full h-full object-cover item"
                                 src="./assets/images/hereWithYou/here-with-you-07.jpg" alt="">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="grid grid-cols-12">
+            <div class="grid grid-cols-12 gap-6">
 
-                <div class="col-span-6">
+                <div class="max-[550px]:col-span-12 col-span-6">
                     <div class="content">
-                        <h4 class="text-[32px] font-semibold mb-1">
+                        <h4 class="text-xl lg:text-2xl xl:text-[32px] font-semibold mb-1">
                             Live location sharing service
                         </h4>
-                        <p class="text-base font-normal text-[#646464] mb-[23px]">
-                            With the live location sharing option in the Pathao app, you can inform <br> your friends
+                        <p class="text-base font-normal text-[#646464] mb-4 xl:mb-[23px]">
+                            With the live location sharing option in the Pathao app, you can inform <br
+                                class="hidden xl:block"> your friends
                             and family of your current location.
                         </p>
                         <div class="common-btn flex items-center">
                             <a href="#"
-                                class="group relative overflow-hidden text-base font-medium text-primary1-600 h-[48px] border border-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-4 transition-all duration-500 ease-out hover:border hover:border-primary1-700">
+                                class="group relative overflow-hidden text-base font-medium text-primary1-600 h-10 xl:h-[48px] border border-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-4 transition-all duration-500 ease-out hover:border hover:border-primary1-700">
                                 <i
                                     class="fa-solid fa-arrow-right transition-all duration-500 ease-out -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
                                 <span
@@ -565,18 +636,19 @@
                     </div>
                 </div>
 
-                <div class="col-span-6">
+                <div class="max-[550px]:col-span-12 col-span-6">
                     <div class="content">
-                        <h4 class="text-[32px] font-semibold mb-1">
+                        <h4 class="text-xl lg:text-2xl xl:text-[32px] font-semibold mb-1">
                             Live location sharing service
                         </h4>
-                        <p class="text-base font-normal text-[#646464] mb-[23px]">
-                            With the live location sharing option in the Pathao app, you can inform <br> your friends
+                        <p class="text-base font-normal text-[#646464] mb-4 xl:mb-[23px]">
+                            With the live location sharing option in the Pathao app, you can inform <br
+                                class="hidden xl:block"> your friends
                             and family of your current location.
                         </p>
                         <div class="common-btn flex items-center">
                             <a href="#"
-                                class="group relative overflow-hidden text-base font-medium text-primary1-600 h-[48px] border border-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-4 transition-all duration-500 ease-out hover:border hover:border-primary1-700">
+                                class="group relative overflow-hidden text-base font-medium text-primary1-600 h-10 xl:h-[48px] border border-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-4 transition-all duration-500 ease-out hover:border hover:border-primary1-700">
                                 <i
                                     class="fa-solid fa-arrow-right transition-all duration-500 ease-out -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
                                 <span
@@ -596,14 +668,15 @@
     </section>
 
     <!-- earn rides -->
-    <section class="earn-rides-area pb-[100px]">
-        <div class="earn-rides-content container mx-auto">
+    <section class="earn-rides-area pb-[60px] md:pb-[100px]">
+        <div class="earn-rides-content max-w-2lg mx-auto px-4">
             <div class="mb-10 text-center">
-                <h2 class="font-semibold text-[40px] leading-[120%] mb-3">Earn through bike, car, or bicycle</h2>
+                <h2 class="font-semibold text-xl md:text-2xl lg:text-[30px] xl:text-[40px] leading-[120%] mb-1 xl:mb-3">Earn
+                    through bike, car, or bicycle</h2>
                 <p class="text-base font-normal text-[#5d6467] mb-7">Join the country's highest earning platform</p>
                 <div class="common-btn flex items-center justify-center">
                     <a href="#"
-                        class="group relative overflow-hidden text-base font-medium text-white h-[48px] bg-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700">
+                        class="group relative overflow-hidden twxt-sm md:text-base font-medium text-white h-10 md:h-[48px] bg-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700">
                         <i
                             class="fa-solid fa-arrow-right transition-all duration-500 ease-out -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
                         <span
@@ -625,23 +698,24 @@
 
     <!-- Download the app -->
     <section
-        class="download-area py-[60px] pb-[20px] bg-[#fbfbfb] mb-[100px] relative before:absolute before:w-[50%] before:h-[70px] before:bg-[#fbfbfb] before:right-0 before:bottom-[0] before:z-[1] overflow-hidden">
+        class="download-area py-[60px] pb-[20px] bg-[#fbfbfb] mb-[70px] lg:mb-[100px] relative before:absolute before:w-[50%] before:h-[70px] before:bg-[#fbfbfb] before:right-0 before:bottom-[0] before:z-[1] overflow-hidden before:hidden before:lg:block">
         <div class="container max-w-2lg mx-auto px-4">
             <div class="grid grid-cols-12">
-                <div class="col-span-7 flex flex-col h-full justify-center">
-                    <div class="mb-6">
-                        <h2 class="font-semibold text-[40px] leading-[120%] mb-2">Download the app</h2>
+                <div class="col-span-12 lg:col-span-7 flex flex-col h-full justify-center">
+                    <div class="mb-6 text-center lg:text-start">
+                        <h2 class="font-semibold text-[30px] xl:text-[40px] leading-[120%] mb-1 xl:mb-2">Download the
+                            app</h2>
                         <p class="text-base font-normal text-[#5d6467] mb-7">Our reliable service and attractive offers
                             are waiting just for you!</p>
                     </div>
-                    <div class="flex items-center flex-wrap gap-6">
+                    <div class="flex items-center flex-wrap gap-6 justify-center lg:justify-start">
 
                         <div class="download-items">
                             <h6 class="text-sm font-semibold mb-2">
                                 User app
                             </h6>
                             <div
-                                class="download-box flex items-center gap-4 bg-black backdrop-blur-[12px] border border-white/16 rounded-[12px] p-4">
+                                class="download-box flex flex-col xl:flex-row items-center gap-4 bg-black backdrop-blur-[12px] border border-white/16 rounded-[12px] p-4">
                                 <a href="#" class="img">
                                     <img class="rounded-[8px]" src="./assets/images/download/qr-code.png" alt="">
                                 </a>
@@ -671,7 +745,7 @@
 
                         <div class="download-items mt-auto">
                             <div
-                                class="download-box flex items-center gap-4 bg-black backdrop-blur-[12px] border border-white/16 rounded-[12px] p-4">
+                                class="download-box flex flex-col xl:flex-row items-center gap-4 bg-black backdrop-blur-[12px] border border-white/16 rounded-[12px] p-4">
                                 <a href="#" class="img">
                                     <img class="rounded-[8px]" src="./assets/images/download/qr-code.png" alt="">
                                 </a>
@@ -704,7 +778,7 @@
                                 Drive app
                             </h6>
                             <div
-                                class="download-box flex items-center gap-4 bg-black backdrop-blur-[12px] border border-white/16 rounded-[12px] p-4">
+                                class="download-box flex flex-col xl:flex-row items-center gap-4 bg-black backdrop-blur-[12px] border border-white/16 rounded-[12px] p-4">
                                 <a href="#" class="img">
                                     <img class="rounded-[8px]" src="./assets/images/download/qr-code.png" alt="">
                                 </a>
@@ -734,8 +808,8 @@
 
                     </div>
                 </div>
-                <div class="col-span-5">
-                    <div class="phone-img flex translate-y-[20px]">
+                <div class="col-span-12 lg:col-span-5 flex flex-col h-full justify-center">
+                    <div class="phone-img w-[200px] xl:w-full flex translate-y-[20px]">
                         <img class="h-max mt-auto" src="./assets/images/download/small-phone.png" alt="">
                         <img class="ml-[-70px]" src="./assets/images/download/big-phone.png" alt="">
                     </div>
@@ -745,10 +819,11 @@
     </section>
 
     <!-- rider-loved-section -->
-    <section class="rider-loved-area mb-[100px]">
+    <section class="rider-loved-area mb-[70px] lg:mb-[100px]">
         <div class="container max-w-[1700px] mx-auto">
             <div class="mb-10 text-center">
-                <h2 class="font-semibold text-[40px] leading-[120%] mb-2">Loved by Riders and Drivers Across the City
+                <h2 class="font-semibold text-2xl lg:text-[40px] leading-[120%] lg:mb-2">Loved by Riders and Drivers
+                    Across the City
                 </h2>
                 <p class="text-base font-normal text-[#5d6467] mb-7">
                     See why people choose ReadyRide for daily travel and income opportunities.
@@ -758,24 +833,24 @@
             <!-- Swiper-top -->
             <div class="swiper rider-slide mb-6">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                    <div class="swiper-slide flex-[0_0_auto] !w-full md:!w-[450px]">
                         <div
-                            class="content-box h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
+                            class="content-box md:min-w-[400px] h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
                             <p class="mb-8 text-lg font-normal three__line">
                                 An average healthy 7 year old boy weighs about 50 lb (23
                                 kg). If we suppose the same amount of alcohol is absorbed, the BAC would be low.</p>
                             <div class="author-info flex items-center gap-3">
                                 <img class="rounded-[12px]" src="./assets/images/author/author-01.png" alt="">
                                 <div class="name">
-                                    <h4>Kristin Watson</h4>
-                                    <span>Dog Trainer</span>
+                                    <h4 class="text-xl lg:text-2xl font-medium mb-[2px]">Kristin Watson</h4>
+                                    <span class="text-base font-medium text-primary1-600">Dog Trainer</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide flex-[0_0_auto] !w-full md:!w-[450px]">
                         <div
-                            class="content-box h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
+                            class="content-box md:min-w-[400px] h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
                             <p class="mb-8 text-lg font-normal three__line">
                                 An interesting implication of the 2007 study concerns the use of hand sanitizers by
                                 observant Muslims, since some believe ethanol is haram.
@@ -783,68 +858,68 @@
                             <div class="author-info flex items-center gap-3">
                                 <img class="rounded-[12px]" src="./assets/images/author/author-02.png" alt="">
                                 <div class="name">
-                                    <h4>Kristin Watson</h4>
-                                    <span>Dog Trainer</span>
+                                    <h4 class="text-xl lg:text-2xl font-medium mb-[2px]">Kristin Watson</h4>
+                                    <span class="text-base font-medium text-primary1-600">Dog Trainer</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide flex-[0_0_auto] !w-full md:!w-[450px]">
                         <div
-                            class="content-box h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
+                            class="content-box md:min-w-[400px] h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
                             <p class="mb-8 text-lg font-normal three__line">
                                 I found a 2007 study on effects of hand sanitizers on blood alcohol level in adults. The
                                 12 subjects showed a slight increase in BAC.</p>
                             <div class="author-info flex items-center gap-3">
                                 <img class="rounded-[12px]" src="./assets/images/author/author-03.png" alt="">
                                 <div class="name">
-                                    <h4>Kristin Watson</h4>
-                                    <span>Dog Trainer</span>
+                                    <h4 class="text-xl lg:text-2xl font-medium mb-[2px]">Kristin Watson</h4>
+                                    <span class="text-base font-medium text-primary1-600">Dog Trainer</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide flex-[0_0_auto] !w-full md:!w-[450px]">
                         <div
-                            class="content-box h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
+                            class="content-box md:min-w-[400px] h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
                             <p class="mb-8 text-lg font-normal three__line">
                                 An average healthy 7 year old boy weighs about 50 lb (23
                                 kg). If we suppose the same amount of alcohol is absorbed, the BAC would be low.</p>
                             <div class="author-info flex items-center gap-3">
                                 <img class="rounded-[12px]" src="./assets/images/author/author-04.png" alt="">
                                 <div class="name">
-                                    <h4>Kristin Watson</h4>
-                                    <span>Dog Trainer</span>
+                                    <h4 class="text-xl lg:text-2xl font-medium mb-[2px]">Kristin Watson</h4>
+                                    <span class="text-base font-medium text-primary1-600">Dog Trainer</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide flex-[0_0_auto] !w-full md:!w-[450px]">
                         <div
-                            class="content-box h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
+                            class="content-box md:min-w-[400px] h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
                             <p class="mb-8 text-lg font-normal three__line">
                                 An average healthy 7 year old boy weighs about 50 lb (23
                                 kg). If we suppose the same amount of alcohol is absorbed, the BAC would be low.</p>
                             <div class="author-info flex items-center gap-3">
                                 <img class="rounded-[12px]" src="./assets/images/author/author-05.png" alt="">
                                 <div class="name">
-                                    <h4>Kristin Watson</h4>
-                                    <span>Dog Trainer</span>
+                                    <h4 class="text-xl lg:text-2xl font-medium mb-[2px]">Kristin Watson</h4>
+                                    <span class="text-base font-medium text-primary1-600">Dog Trainer</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide flex-[0_0_auto] !w-full md:!w-[450px]">
                         <div
-                            class="content-box h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
+                            class="content-box md:min-w-[400px] h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
                             <p class="mb-8 text-lg font-normal three__line">
                                 An average healthy 7 year old boy weighs about 50 lb (23
                                 kg). If we suppose the same amount of alcohol is absorbed, the BAC would be low.</p>
                             <div class="author-info flex items-center gap-3">
                                 <img class="rounded-[12px]" src="./assets/images/author/author-06.png" alt="">
                                 <div class="name">
-                                    <h4>Kristin Watson</h4>
-                                    <span>Dog Trainer</span>
+                                    <h4 class="text-xl lg:text-2xl font-medium mb-[2px]">Kristin Watson</h4>
+                                    <span class="text-base font-medium text-primary1-600">Dog Trainer</span>
                                 </div>
                             </div>
                         </div>
@@ -855,24 +930,24 @@
             <!-- Swiper-bottom -->
             <div class="swiper rider-slide-2">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                    <div class="swiper-slide flex-[0_0_auto] !w-full md:!w-[450px]">
                         <div
-                            class="content-box h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
+                            class="content-box md:min-w-[400px] h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
                             <p class="mb-8 text-lg font-normal three__line">
                                 An average healthy 7 year old boy weighs about 50 lb (23
                                 kg). If we suppose the same amount of alcohol is absorbed, the BAC would be low.</p>
                             <div class="author-info flex items-center gap-3">
                                 <img class="rounded-[12px]" src="./assets/images/author/author-07.png" alt="">
                                 <div class="name">
-                                    <h4>Kristin Watson</h4>
-                                    <span>Dog Trainer</span>
+                                    <h4 class="text-xl lg:text-2xl font-medium mb-[2px]">Kristin Watson</h4>
+                                    <span class="text-base font-medium text-primary1-600">Dog Trainer</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide flex-[0_0_auto] !w-full md:!w-[450px]">
                         <div
-                            class="content-box h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
+                            class="content-box md:min-w-[400px] h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
                             <p class="mb-8 text-lg font-normal three__line">
                                 I found a 2007 study on effects of hand sanitizers on blood alcohol level in adults. The
                                 12 subjects showed a slight increase in BAC.
@@ -880,60 +955,60 @@
                             <div class="author-info flex items-center gap-3">
                                 <img class="rounded-[12px]" src="./assets/images/author/author-08.png" alt="">
                                 <div class="name">
-                                    <h4>Kristin Watson</h4>
-                                    <span>Dog Trainer</span>
+                                    <h4 class="text-xl lg:text-2xl font-medium mb-[2px]">Kristin Watson</h4>
+                                    <span class="text-base font-medium text-primary1-600">Dog Trainer</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide flex-[0_0_auto] !w-full md:!w-[450px]">
                         <div
-                            class="content-box h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
+                            class="content-box md:min-w-[400px] h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
                             <p class="mb-8 text-lg font-normal three__line">
                                 An average healthy 7 year old boy weighs about 50 lb (23
                                 kg). If we suppose the same amount of alcohol is absorbed, the BAC would be low.</p>
                             <div class="author-info flex items-center gap-3">
                                 <img class="rounded-[12px]" src="./assets/images/author/author-09.png" alt="">
                                 <div class="name">
-                                    <h4>Kristin Watson</h4>
-                                    <span>Dog Trainer</span>
+                                    <h4 class="text-xl lg:text-2xl font-medium mb-[2px]">Kristin Watson</h4>
+                                    <span class="text-base font-medium text-primary1-600">Dog Trainer</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide flex-[0_0_auto] !w-full md:!w-[450px]">
                         <div
-                            class="content-box h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
+                            class="content-box md:min-w-[400px] h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
                             <p class="mb-8 text-lg font-normal three__line">
                                 An average healthy 7 year old boy weighs about 50 lb (23
                                 kg). If we suppose the same amount of alcohol is absorbed, the BAC would be low.</p>
                             <div class="author-info flex items-center gap-3">
                                 <img class="rounded-[12px]" src="./assets/images/author/author-10.png" alt="">
                                 <div class="name">
-                                    <h4>Kristin Watson</h4>
-                                    <span>Dog Trainer</span>
+                                    <h4 class="text-xl lg:text-2xl font-medium mb-[2px]">Kristin Watson</h4>
+                                    <span class="text-base font-medium text-primary1-600">Dog Trainer</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide flex-[0_0_auto] !w-full md:!w-[450px]">
                         <div
-                            class="content-box h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
+                            class="content-box md:min-w-[400px] h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
                             <p class="mb-8 text-lg font-normal three__line">
                                 An average healthy 7 year old boy weighs about 50 lb (23
                                 kg). If we suppose the same amount of alcohol is absorbed, the BAC would be low.</p>
                             <div class="author-info flex items-center gap-3">
                                 <img class="rounded-[12px]" src="./assets/images/author/author-11.png" alt="">
                                 <div class="name">
-                                    <h4>Kristin Watson</h4>
-                                    <span>Dog Trainer</span>
+                                    <h4 class="text-xl lg:text-2xl font-medium mb-[2px]">Kristin Watson</h4>
+                                    <span class="text-base font-medium text-primary1-600">Dog Trainer</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide flex-[0_0_auto] !w-full md:!w-[450px]">
                         <div
-                            class="content-box h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
+                            class="content-box md:min-w-[400px] h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
                             <p class="mb-8 text-lg font-normal three__line">
                                 An interesting implication of the 2007 study concerns the use of hand sanitizers by
                                 observant Muslims, since some believe ethanol is haram.
@@ -941,8 +1016,8 @@
                             <div class="author-info flex items-center gap-3">
                                 <img class="rounded-[12px]" src="./assets/images/author/author-12.png" alt="">
                                 <div class="name">
-                                    <h4>Kristin Watson</h4>
-                                    <span>Dog Trainer</span>
+                                    <h4 class="text-xl lg:text-2xl font-medium mb-[2px]">Kristin Watson</h4>
+                                    <span class="text-base font-medium text-primary1-600">Dog Trainer</span>
                                 </div>
                             </div>
                         </div>
@@ -954,20 +1029,20 @@
     </section>
 
     <!-- trusted-delivery -->
-    <section class="trusted-delivery-area bg-gray-50 mb-[100px] py-[58px]">
+    <section class="trusted-delivery-area bg-gray-50 mb-[70px] lg:mb-[100px] py-[58px]">
         <div class="container max-w-2lg mx-auto px-4">
             <div class="grid grid-cols-12">
-                <div class="col-span-9">
-                    <div class="left-side">
+                <div class="col-span-12 md:col-span-6 lg:col-span-9">
+                    <div class="left-side text-center md:text-start">
                         <span class="text-base font-normal text-gray-500 mb-3 block">
                             Start delivering products using Pathao courier
                         </span>
-                        <h2 class="font-semibold text-[40px] leading-[120%] mb-2">
+                        <h2 class="font-semibold text-2xl lg;text-[30px] xl:text-[40px] leading-[120%] mb-6 md:mb-2">
                             Trusted & Reliable <br>
                             Delivery For Your Business</h2>
                     </div>
                 </div>
-                <div class="col-span-3 my-auto">
+                <div class="col-span-12 md:col-span-6 lg:col-span-3 my-auto">
                     <div class="common-btn flex items-center justify-center">
                         <a href="#"
                             class="group relative overflow-hidden text-base font-medium text-white h-[48px] bg-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-[10px] transition-all duration-500 ease-out hover:bg-primary1-700">
@@ -988,15 +1063,15 @@
     </section>
 
     <!-- article -->
-    <article class="article-area mb-[100px]">
+    <article class="article-area mb-[70px] lg:mb-[100px]">
         <div class="container max-w-2lg mx-auto px-4">
             <div class="top flex items-center justify-between mb-8">
-                <h3 class="text-[32px] font-semibold">
+                <h3 class="text-2xl lg:text-[32px] font-semibold">
                     From the Blog
                 </h3>
                 <div class="common-btn flex items-center">
                     <a href="#"
-                        class="group relative overflow-hidden text-base font-medium text-primary1-600 h-[48px] border border-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-4 transition-all duration-500 ease-out hover:border hover:border-primary1-700">
+                        class="group relative overflow-hidden text-base font-medium text-primary1-600 h-10 lg;h-[48px] border border-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-4 transition-all duration-500 ease-out hover:border hover:border-primary1-700">
                         <i
                             class="fa-solid fa-arrow-right transition-all duration-500 ease-out -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
                         <span
@@ -1011,13 +1086,13 @@
             </div>
             <div class="grid grid-cols-12 gap-6">
 
-                <div class="col-span-4">
+                <div class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
                     <div class="blog-box border group border-[#ece8eb] rounded-[8px] overflow-hidden">
                         <a href="#" class="max-h-[248px] block overflow-hidden">
                             <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
                                 src="./assets/images/blog/blog-01.jpg" alt="">
                         </a>
-                        <div class="blog-content p-6">
+                        <div class="blog-content p-4 md:p-6">
                             <div class="update-time flex items-center gap-[15px] mb-3">
                                 <span class="text-xs font-normal text-[#152934]">Service Updates</span>
                                 <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
@@ -1032,13 +1107,13 @@
                     </div>
                 </div>
 
-                <div class="col-span-4">
+                <div class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
                     <div class="blog-box border group border-[#ece8eb] rounded-[8px] overflow-hidden">
                         <a href="#" class="max-h-[248px] block overflow-hidden">
                             <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
                                 src="./assets/images/blog/blog-02.jpg" alt="">
                         </a>
-                        <div class="blog-content p-6">
+                        <div class="blog-content p-4 md:p-6">
                             <div class="update-time flex items-center gap-[15px] mb-3">
                                 <span class="text-xs font-normal text-[#152934]">Driver Stories</span>
                                 <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
@@ -1053,13 +1128,13 @@
                     </div>
                 </div>
 
-                <div class="col-span-4">
+                <div class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
                     <div class="blog-box border group border-[#ece8eb] rounded-[8px] overflow-hidden">
                         <a href="#" class="max-h-[248px] block overflow-hidden">
                             <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
                                 src="./assets/images/blog/blog-03.jpg" alt="">
                         </a>
-                        <div class="blog-content p-6">
+                        <div class="blog-content p-4 md:p-6">
                             <div class="update-time flex items-center gap-[15px] mb-3">
                                 <span class="text-xs font-normal text-[#152934]">Product Update</span>
                                 <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
@@ -1079,11 +1154,14 @@
     </article>
 
     <!-- footer -->
-    <footer class="footer-area bg-[#10151c] pt-[60px] pb-[200px] text-white">
+    <footer class="footer-area bg-[#10151c] pt-[60px] text-white relative overflow-hidden z-[1]">
+        <img class="absolute left-0 top-0 z-[-1]" src="./assets/images/shape/footer-shape.svg" alt="">
+        <img class="absolute right-0 top-0 z-[-1] [transform:rotateY(180deg)]"
+            src="./assets/images/shape/footer-shape.svg" alt="">
         <div class="container max-w-2lg mx-auto px-4">
-            <div class="grid grid-cols-12 mb-[33px] pb-[33px] border-b border-[rgba(255,255,255,0.16)]">
+            <div class="grid grid-cols-12 gap-4 mb-[33px] pb-[33px] border-b border-[rgba(255,255,255,0.16)]">
 
-                <div class="col-span-6">
+                <div class="col-span-12 lg:col-span-6">
                     <a href="#" class="mb-[30px] block">
                         <img src="./assets/logo/footer-logo.png" alt="">
                     </a>
@@ -1093,18 +1171,18 @@
                     </p>
                 </div>
 
-                <div class="col-span-6">
+                <div class="col-span-12 lg:col-span-6">
                     <form action="#"
                         class="bg-[rgba(255,255,255,0.08)] border border-[rgba(255,255,255,0.16)] rounded-[12px] p-[24px]">
                         <h3 class="text-2xl font-semibold mb-2">Get weekly Update</h3>
                         <p class="text-base font-normal text-[rgba(255,255,255,0.6)] mb-6">Stay ahead with the latest
                             industry insights.</p>
-                        <div class="flex items-center gap-4">
+                        <div class="flex items-center max-[520px]:flex-wrap gap-4">
                             <input type="text" placeholder="Enter your email"
-                                class="border border-[rgba(255,255,255,0.12)] rounded-[12px] px-[24px] py-[18px] h-[56px] bg-[rgba(255,255,255,0.06)] outline-none placeholder:font-normal placeholder:text-[16px] placeholder:tracking-[-0.02em] placeholder:text-[rgba(255,255,255,0.6)] focus:border-[var(--primary-1-600)] focus:placeholder:text-transparent transition-all duration-300 ease-in-out flex-1">
-                            <div class="common-btn flex items-center justify-center">
+                                class="border border-[rgba(255,255,255,0.12)] rounded-[12px] px-[24px] h-12 lg:h-[56px] bg-[rgba(255,255,255,0.06)] outline-none placeholder:font-normal placeholder:text-[16px] placeholder:tracking-[-0.02em] placeholder:text-[rgba(255,255,255,0.6)] focus:border-[var(--primary-1-600)] focus:placeholder:text-transparent transition-all duration-300 ease-in-out flex-1">
+                            <div class="common-btn max-[520px]:w-full flex items-center justify-center">
                                 <a href="#"
-                                    class="group relative overflow-hidden text-base font-medium text-white h-[56px] bg-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-[10px] transition-all duration-500 ease-out hover:bg-primary1-700">
+                                    class="max-[520px]:w-full group relative overflow-hidden text-base font-medium text-white h-12 lg:h-[56px] bg-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-[10px] transition-all duration-500 ease-out hover:bg-primary1-700">
                                     <i
                                         class="fa-solid fa-arrow-right transition-all duration-500 ease-out -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
                                     <span
@@ -1121,9 +1199,10 @@
                 </div>
 
             </div>
-            <div class="grid grid-cols-12">
 
-                <div class="col-span-4">
+            <div class="grid grid-cols-12 gap-6 mb-[33px]">
+
+                <div class="max-[420px]:col-span-12 col-span-6 md:col-span-4">
                     <div class="footer-widget">
                         <h5 class="title text-lg font-semibold mb-4">
                             Quick Links
@@ -1161,7 +1240,7 @@
                     </div>
                 </div>
 
-                <div class="col-span-4">
+                <div class="max-[420px]:col-span-12 col-span-6 md:col-span-4">
                     <div class="footer-widget">
                         <h5 class="title text-lg font-semibold mb-4">
                             Support
@@ -1198,7 +1277,7 @@
                     </div>
                 </div>
 
-                <div class="col-span-4">
+                <div class="max-[600px]:col-span-12 col-span-6 md:col-span-4">
                     <div class="footer-widget">
                         <h5 class="title text-lg font-semibold mb-4">
                             Contact
@@ -1218,9 +1297,10 @@
                             </li>
                             <li>
                                 <a href="#"
-                                    class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden flex w-max items-start gap-2 hover:text-white before:bg-white">
+                                    class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden flex lg:w-max items-start gap-2 hover:text-white before:bg-white">
                                     <i class="fa-solid fa-location-dot mt-1"></i>
-                                    RMR Center 1/1 (A&B) Shamoli Ring Road, Dhaka - <br> 1207, Bangladesh.
+                                    RMR Center 1/1 (A&B) Shamoli Ring Road, Dhaka - <br class="hidden lg:block"> 1207,
+                                    Bangladesh.
                                 </a>
                             </li>
 
@@ -1228,16 +1308,20 @@
                         </ul>
 
                         <div class="social-area flex items-center gap-[10px]">
-                            <a href="#" class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
+                            <a href="#"
+                                class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
                                 <i class="fa-brands fa-facebook text-xl"></i>
                             </a>
-                            <a href="#" class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
+                            <a href="#"
+                                class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
                                 <i class="fa-brands fa-square-x-twitter text-xl rounded-full"></i>
                             </a>
-                            <a href="#" class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
+                            <a href="#"
+                                class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
                                 <i class="fa-brands fa-youtube text-xl"></i>
                             </a>
-                            <a href="#" class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
+                            <a href="#"
+                                class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
                                 <i class="fa-brands fa-pinterest text-xl"></i>
                             </a>
                         </div>
@@ -1245,6 +1329,18 @@
                     </div>
                 </div>
 
+            </div>
+            <div class="img mx-auto pb-[33px] border-b border-[rgba(255,255,255,0.1)]">
+                <img class="mx-auto" src="./assets/logo/ready-ride.png" alt="">
+            </div>
+            <div class="copy-right-area flex max-[700px]:flex-wrap gap-2 max-[700px]:justify-center items-center justify-between py-6">
+                <p class="text-base font-normal text-[rgba(255,255,255,0.4)]">Professional Rideshare services you can
+                    trust.</p>
+                <p class="text-base font-normal text-[rgba(255,255,255,0.4)]">
+                    ⓒ2025
+                    <a href="#" class="custom__border text-white">ReadyRide.</a>
+                    All Rights Reserved.
+                </p>
             </div>
         </div>
     </footer>
@@ -1257,6 +1353,7 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="./js/Swiper.js"></script>
+    <script src="./js/offcanvas.js"></script>
 
 </body>
 

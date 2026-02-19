@@ -1,0 +1,64 @@
+/* offcanvas */
+.tp-offcanvas-area {
+    position: fixed;
+    z-index: 200;
+    width: 350px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: var(--black);
+    padding: 16px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.45s ease-in-out;
+    transform: translatex(100%);
+    overflow-y: scroll;
+    overscroll-behavior-y: contain;
+    scrollbar-width: none;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+
+.tp-offcanvas-wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+.tp-offcanvas-area.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+
+.modal_backdrop_2.active {
+    position: fixed !important;
+    opacity: 1;
+    visibility: visible;
+    z-index: 150;
+}
+
+.modal_backdrop_2 {
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><g transform='rotate(45 16 16)'><circle cx='16' cy='16' r='1.5' fill='white' stroke='black' stroke-width='0.5'/><line x1='16' y1='0' x2='16' y2='32' stroke='white' stroke-width='2' stroke-linecap='round'/><line x1='0' y1='16' x2='32' y2='16' stroke='white' stroke-width='2' stroke-linecap='round'/><line x1='16' y1='0' x2='16' y2='32' stroke='white' stroke-width='0.5' stroke-linecap='round'/><line x1='0' y1='16' x2='32' y2='16' stroke='white' stroke-width='0.5' stroke-linecap='round'/></g></svg>") 16 16, crosshair;
+    backdrop-filter: blur(2px);
+}
+
+.rs-main-menu {
+    background: #4668bd1c;
+    padding: 8px;
+    border-radius: 6px;
+    backdrop-filter: blur(23px);
+}
+
+.offcanvas__menu li a {
+    color: white;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+}
+
+.offcanvas__menu a::before {
+    bottom: 5px !important;
+}
