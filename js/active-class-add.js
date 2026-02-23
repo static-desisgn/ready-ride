@@ -1,8 +1,8 @@
 /*=============== active class add ============*/
 const trigger = document.querySelector('.custom__dropdown');
-const target = document.querySelector('.drop__down');        
-const btnText = trigger.querySelector('.lang-btn');          
-const links = target.querySelectorAll('a');                   
+const target = document.querySelector('.drop__down');
+const btnText = trigger.querySelector('.lang-btn');
+const links = target.querySelectorAll('a');
 
 //  Click to toggle dropdown //
 trigger.addEventListener('click', e => {
@@ -38,3 +38,11 @@ document.addEventListener('click', e => {
     }
 });
 
+
+// active class add //
+const inputItems = document.getElementsByClassName('input_items');
+Array.from(inputItems).forEach(item => {
+    item.addEventListener('click', function () {
+        item.classList.add('active');
+    });
+});

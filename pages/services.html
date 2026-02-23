@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready Ride Services</title>
+    <!-- font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- fav icon link -->
+    <link rel="shortcut icon" href="../assets/logo/ready-ride-favicon.png" type="image/x-icon">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../tailwind.config.js"></script>
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/offcanvas.css">
+    <link rel="stylesheet" href="../css/scrool-to-top.css">
+
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <!-- scrollToTop -->
+    <div class="scrollToTop active-progress">
+        <div class="arrowUp">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+        <div class="water" style="transform: translate(0px, 47%);">
+            <svg viewBox="0 0 560 20" class="water_wave water_wave_back">
+                <use xlink:href="#wave"></use>
+            </svg>
+            <svg viewBox="0 0 560 20" class="water_wave water_wave_front">
+                <use xlink:href="#wave"></use>
+            </svg>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 560 20" style="display: none;">
+                <symbol id="wave">
+                    <path
+                        d="M420,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C514,6.5,518,4.7,528.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H420z"
+                        fill="#"
+                        style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 301.839, 301.839; stroke-dashoffset: 140.858px;">
+                    </path>
+                    <path
+                        d="M420,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C326,6.5,322,4.7,311.5,2.7C304.3,1.4,293.6-0.1,280,0c0,0,0,0,0,0v20H420z"
+                        fill="#"
+                        style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 301.839, 301.839; stroke-dashoffset: 140.858px;">
+                    </path>
+                    <path
+                        d="M140,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C234,6.5,238,4.7,248.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H140z"
+                        fill="#"
+                        style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 301.839, 301.839; stroke-dashoffset: 140.858px;">
+                    </path>
+                    <path
+                        d="M140,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C46,6.5,42,4.7,31.5,2.7C24.3,1.4,13.6-0.1,0,0c0,0,0,0,0,0l0,20H140z"
+                        fill="#"
+                        style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 301.839, 301.839; stroke-dashoffset: 140.858px;">
+                    </path>
+                </symbol>
+            </svg>
+        </div>
+    </div>
+
+    <!-- offcanvas start -->
+    <div class="tp-offcanvas-area block md:hidden max-[350px]:w-full">
+        <div class="tp-offcanvas-wrapper h-full">
+            <div class="tp-offcanvas-header flex items-center justify-between mb-4">
+                <div class="tp-offcanvas-logo">
+                    <a href="javascript:void(0)">
+                        <img src="../assets/logo/ready-ride-main-logo.png" alt="">
+                    </a>
+                </div>
+                <div class="tp-offcanvas-close flex items-center justify-center">
+                    <div class="common-btn p-0 bg-transparent">
+                        <button
+                            class="text-base font-medium text-primary h-8 w-8 flex items-center gap-4 justify-center border-[1.5px] border-white rounded-[6px]">
+                            <i class="fa-solid fa-xmark !text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="rs-main-menu  d-lg-none mb-[80px]">
+                <nav class="tp-mobile-menu-active mb-6">
+                    <h3 class="text-xl font-medium text-white mb-4 pb-2 border-b border-[#ffffff40]">
+                        Quick Links
+                    </h3>
+                    <ul class="offcanvas__menu main-menu ">
+                        <li class="mb-1"><a class="custom__border w-max" href="../index.html">Home</a></li>
+                        <li class="mb-1"><a class="custom__border w-max" href="../service.html">Service</a></li>
+                        <li class="mb-1"><a class="custom__border w-max" href="../pages/blog.html">Blog</a></li>
+                        <li class="mb-1"><a class="custom__border w-max" href="#">About Us</a></li>
+                        <li class="mb-1"><a class="custom__border w-max" href="../api.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div
+                class="copy__right__area absolute bottom-0 left-1/2 -translate-x-1/2 w-full flex flex-col h-full items-center justify-end z-[-1]">
+                <p class="text-base font-normal text-[rgba(255,255,255,0.4)]">
+                    ⓒ2025
+                    <a href="#" class="custom__border text-white">ReadyRide.</a>
+                    All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="modal_backdrop modal_backdrop_2 opacity-0 invisible block md:hidden"></div>
+    <!-- offcanvas end -->
+
+    <!-- header  -->
+    <header
+        class="header-area py-[21px] backdrop-blur-[24px] bg-[#ffffffde] shadow-[0_1px_4px_0_rgba(0,0,0,0.06)] sticky top-0 z-[9]">
+        <div class="container max-w-2lg mx-auto px-4">
+            <div class="grid grid-cols-12 md:gap-10 items-center">
+
+                <!-- logo -->
+                <div class="col-span-5 md:col-span-2">
+                    <div class="main-logo">
+                        <a href="#">
+                            <img src="../assets/logo/ready-ride-main-logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- menu -->
+                <div class="col-span-1 md:col-span-8">
+                    <div class="main-menu hidden md:block">
+                        <nav>
+                            <ul class="flex items-center gap-5 xl:gap-10 justify-center">
+                                <li>
+                                    <a href="../index.html"
+                                        class="text-base font-normal custom__border overflow-hidden py-[2px]  inline-block">
+                                        <span class="explore-text" data-text="Home">Home</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../pages/services.html"
+                                        class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block active">
+                                        <span class="explore-text" data-text="Services">Services</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../pages/blog.html"
+                                        class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block">
+                                        <span class="explore-text" data-text="Blog">Blog</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block">
+                                        <span class="explore-text" data-text="About Us">About Us</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block">
+                                        <span class="explore-text" data-text="Contact Us">Contact Us</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- lang-btn -->
+                <div class="col-span-6 md:col-span-2 flex items-center gap-4 ml-auto">
+                    <div class="lang text-end custom__dropdown relative">
+                        <button class="lang-btn flex items-center gap-[6px] text-base font-normal relative">
+                            English
+                            <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                        <ul
+                            class="drop__down flex flex-col items-start gap-2 absolute top-[25px] left-0 bg-gray-50 p-2 rounded-[6px] min-w-max shadow-[0_1px_4px_0_rgba(0,0,0,0.06)]">
+                            <li>
+                                <a href="#" class="text-base font-normal custom__border active">English</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-base font-normal custom__border">Bangla</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-base font-normal custom__border">Arabic</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="rs-offcanvas-btn w-10 h-10 bg-[#1469B5] rounded-[4px] flex items-center justify-center md:hidden">
+                        <i class="fa-solid fa-bars text-white text-[18px]"></i>
+                        <div class="modal_backdrop hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- hero -->
+        <section
+            class="hero-area pt-[210px] pb-[140px] overflow-hidden relative bg-[url('../assets/images/hero/hero-02.jpg')] bg-cover translate-y-[-96px]">
+            <div class="container max-w-2lg mx-auto px-4">
+                <div class="grid grid-cols-12">
+
+                    <div class="col-span-12 lg:col-span-5 " data-aos="fade-right" data-aos-duration="1200">
+                        <div class="hero-content flex flex-col h-full justify-center items-center md:items-start">
+                            <h3 class="text-gray-700 font-semibold text-xl md:text-[28px] xl:text-[32px] mb-2 xl:mb-4">
+                                ReadyRide Bike
+                            </h3>
+                            <h1
+                                class="text-2xl md:text-3xl lg:text-4xl xl:text-[56px] font-semibold !leading-[125%] text-primary1-600 mb-2 lg:mb-6">
+                                <span class="md:block text-black">Beat the Traffic,</span>
+                                Save Time
+                            </h1>
+                            <p class="text-xl font-normal mb-4 md:mb-8 text-center md:text-start text-gray-700">
+                                ReadyRide helps you move across the city faster, <br class="hidden md:block"> safer, and
+                                more affordably
+                            </p>
+                            <div class="common-btn flex items-center">
+                                <a href="../pages/biker-register.html"
+                                    class="group relative overflow-hidden text-base font-medium text-white h-12 lg:h-[56px] bg-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700">
+                                    <i
+                                        class="fa-solid fa-arrow-right transition-all duration-500 ease-out -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                                    <span
+                                        class="transition-all translate-x-[-10px] duration-500 ease-out group-hover:translate-x-2">
+                                        Earn With ReadyRide
+                                    </span>
+                                    <i
+                                        class="fa-solid fa-arrow-right transition-all duration-500 ease-out group-hover:translate-x-4 translate-x-[-10px] group-hover:opacity-0">
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="why-choose-us-area mb-[100px]">
+            <div class="container max-w-2lg mx-auto px-4 xl:px-[60px]">
+                <div class="grid grid-cols-12 gap-4 md:gap-6">
+                    <div class="col-span-12 md:col-span-6 lg:col-span-4">
+                        <div class="flex flex-col items-center justify-center gap-4">
+                            <div class="img">
+                                <img src="../assets/images/why-choose-us/why-choose-us-01.jpg" alt="">
+                            </div>
+                            <div class="content text-center">
+                                <h3 class="text-xl lg:text-2xl xl:text-[32px] font-semibold mb-3">
+                                    Beat Traffic, Save Time
+                                </h3>
+                                <p class="text-base xl:text-lg font-normal text-[#646464]">
+                                    Nothing beats traffic like Pathao Bikes and you know it! Save time and save money by
+                                    ride-sharing with Pathao Bikes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-12 md:col-span-6 lg:col-span-4">
+                        <div class="flex flex-col items-center justify-center gap-4">
+                            <div class="img">
+                                <img src="../assets/images/why-choose-us/why-choose-us-02.jpg" alt="">
+                            </div>
+                            <div class="content text-center">
+                                <h3 class="text-xl lg:text-2xl xl:text-[32px] font-semibold mb-3">
+                                    We Got You Covered
+                                </h3>
+                                <p class="text-base xl:text-lg font-normal text-[#646464]">
+                                    Nothing beats traffic like Pathao Bikes and you know it! Save time and save money by
+                                    ride-sharing with Pathao Bikes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-12 md:col-span-6 lg:col-span-4">
+                        <div class="flex flex-col items-center justify-center gap-4">
+                            <div class="img">
+                                <img src="../assets/images/why-choose-us/why-choose-us-03.jpg" alt="">
+                            </div>
+                            <div class="content text-center">
+                                <h3 class="text-xl lg:text-2xl xl:text-[32px] font-semibold mb-3">
+                                    Always Available
+                                </h3>
+                                <p class="text-base xl:text-lg font-normal text-[#646464]">
+                                    Nothing beats traffic like Pathao Bikes and you know it! Save time and save money by
+                                    ride-sharing with Pathao Bikes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- steps section-->
+        <section class="step-area">
+            <div class="max-w-2lg mx-auto px-4 border-b border-[#EDF1F4] pb-[100px] xl:px-[60px]">
+                <div class="grid grid-cols-12 mb-[100px] lg:mb-[200px] relative">
+                    <!-- svg shape -->
+                    <svg class="line-dash-svg w-[400px] h-[250px] lg:w-auto lg:h-auto bottom-[-36%] lg:bottom-[-53%] hidden md:block"
+                        width="665" height="315" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Animated Dash Path -->
+                        <path class="line-dash-path" d="M20,20 
+                    C 40,100 150,180 200,80 
+                    C 220,40 160,40 180,120 
+                    C 200,200 400,180 500,180 
+                    C 580,180 580,250 580,280" />
+
+                        <!-- Arrow at the end -->
+                        <path class="arrow" d="M572,275 L580,288 L588,275 H572Z" />
+                    </svg>
+
+                    <div class="col-span-12 md:col-span-7 flex flex-col justify-center">
+                        <div class="flex items-center gap-5 mb-[30px]">
+                            <div
+                                class="img w-[76px] h-[76px] bg-primary1-50 rounded-[4px] flex items-center justify-center">
+                                <img class="w-[60px] h-[60px] object-cover" src="../assets/icons/bike-01.svg" alt="">
+                            </div>
+                            <div class="text">
+                                <span class="text-lg lg:text-xl font-medium text-[#5d6467]">Get going with</span>
+                                <h4 class=" text-[24px] lg:text-[32px] font-semibold text-primary1-600">Pathao Bike</h4>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <span class="text-[32px] font-medium text-[#e6e8eb]">
+                                01
+                            </span>
+                            <h4 class="text-2xl md:text-3xl xl:text-[32px] font-semibold mb-2">
+                                Download the App
+                            </h4>
+                            <p class="text-xl font-normal text-[#5d6467]">
+                                Pathao bikes are your fastest solution to the <br class="hidden md:block">
+                                city’s everyday traffic. Download the app.
+                            </p>
+                            <div class="flex mt-[30px] gap-6 items-center flex-wrap justify-center md:justify-start">
+                                <div class="download-items">
+                                    <div
+                                        class="download-box flex flex-col xl:flex-row items-center gap-4 bg-black backdrop-blur-[12px] border border-white/16 rounded-[12px] p-4">
+                                        <a href="#" class="img">
+                                            <img class="rounded-[8px]" src="../assets/images/download/qr-code.png"
+                                                alt="">
+                                        </a>
+                                        <div class="right flex flex-col gap-4">
+                                            <a href="#">
+                                                <img src="../assets/icons/googlr-play.png" alt="">
+                                            </a>
+
+                                            <a href="#"
+                                                class="group relative overflow-hidden text-sm font-medium text-white h-[40px] bg-primary1-600 rounded-[8px] flex items-center justify-center px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700 pr-[18px]">
+                                                <span class="transition-all duration-500 ease-out mr-4">
+                                                    Download
+                                                </span>
+
+                                                <i
+                                                    class="fa-solid fa-download transition-all duration-500 ease-out group-hover:translate-y-[35px]">
+                                                </i>
+
+
+                                                <i
+                                                    class="fa-solid fa-download transition-all duration-500 ease-out  translate-x-[-14px] translate-y-[-35px] group-hover:translate-y-[0]">
+                                                </i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="download-items">
+                                    <div
+                                        class="download-box flex flex-col xl:flex-row items-center gap-4 bg-black backdrop-blur-[12px] border border-white/16 rounded-[12px] p-4">
+                                        <a href="#" class="img">
+                                            <img class="rounded-[8px]" src="../assets/images/download/qr-code.png"
+                                                alt="">
+                                        </a>
+                                        <div class="right flex flex-col gap-4">
+                                            <a href="#">
+                                                <img src="../assets/icons/app-store.png" alt="">
+                                            </a>
+
+                                            <a href="#"
+                                                class="group relative overflow-hidden text-sm font-medium text-white h-[40px] bg-primary1-600 rounded-[8px] flex items-center justify-center px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700 pr-[18px]">
+                                                <span class="transition-all duration-500 ease-out mr-4">
+                                                    Download
+                                                </span>
+
+                                                <i
+                                                    class="fa-solid fa-download transition-all duration-500 ease-out group-hover:translate-y-[35px]">
+                                                </i>
+
+
+                                                <i
+                                                    class="fa-solid fa-download transition-all duration-500 ease-out  translate-x-[-14px] translate-y-[-35px] group-hover:translate-y-[0]">
+                                                </i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-5">
+                        <div class="img">
+                            <img class="h-[560px]" src="../assets/images/platform/platform-02.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="grid grid-cols-12 gap-4 md:gap-10 mb-[70px] relative">
+
+                    <div class="col-span-12 md:col-span-6">
+                        <div class="img overflow-hidden">
+                            <img class="item" src="../assets/images/step/step-01.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-6">
+                        <div class="step-content flex flex-col justify-center h-full">
+                            <span class="text-[32px] font-medium text-[#e6e8eb]">
+                                02
+                            </span>
+                            <h4 class="text-[24px] lg:text-[32px] font-semibold mb-2 lg:mb-4">
+                                Request your Ride
+                            </h4>
+                            <p class="text-base lg:text-xl font-normal text-[#5d6467]">
+                                Select the bike option and set your pickup & <br class="hidden md:block">
+                                destination locations.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="road-illustration hidden lg:block">
+                        <svg class="absolute left-[25%] bottom-[-70%] road-svg" width="675" height="288"
+                            viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path id="roadPath"
+                                d="M725 0V100C725 155.228 680.228 200 625 200H175C119.772 200 75 244.772 75 300V400"
+                                stroke="#E5E7EB" stroke-width="90" stroke-linecap="round" />
+
+                            <path d="M725 0V100C725 155.228 680.228 200 625 200H175C119.772 200 75 244.772 75 300V400"
+                                stroke="white" stroke-width="3" stroke-dasharray="15 15" />
+
+                            <g id="bike">
+                                <image href="../assets/icons/bike-02.png" x="-30" y="-30" width="60" height="60" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-12 gap-4 md:gap-10">
+
+                    <div class="col-span-12 md:col-span-6">
+                        <div class="step-content flex flex-col justify-center h-full">
+                            <span class="text-[32px] font-medium text-[#e6e8eb]">
+                                03
+                            </span>
+                            <h4 class="text-[24px] lg:text-[32px] font-semibold mb-2 lg:mb-4">
+                                Wait for Your Ride
+                            </h4>
+                            <p class="text-base lg:text-xl font-normal text-[#5d6467]">
+                                Pathao will connect you to a nearby rider. Wait <br>
+                                for the rider to arrive and start your journey.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-6">
+                        <div class="img overflow-hidden">
+                            <img class="item" src="../assets/images/step/step-02.jpg" alt="">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Digital Payments -->
+        <section class="digital-payments-area mb-[100px] pt-[100px]">
+            <div class="max-w-2lg mx-auto px-4 xl:px-[60px]">
+                <div class="grid grid-cols-12 gap-4">
+
+                    <div class="col-span-12 md:col-span-6">
+                        <div class="step-content flex flex-col items-center md:items-start justify-center h-full">
+                            <h4 class="text-xl lg:text-2xl xl:text-[32px] font-semibold mb-3 !leading-[140%]">
+                                Pay Cashless for your <br class="hidden md:block">
+                                Ride
+                            </h4>
+                            <p class="text-base lg:text-xl font-normal text-[#5d6467]">
+                                Enjoy hassle-free payment with the option to <br>
+                                pay with your card, Digital pay or bKash.
+                            </p>
+                            <div class="common-btn flex items-center mt-6">
+                                <a href="#"
+                                    class="group relative overflow-hidden text-base font-medium text-primary1-600 h-10 xl:h-[48px] border border-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-4 transition-all duration-500 ease-out hover:border hover:border-primary1-700">
+                                    <i
+                                        class="fa-solid fa-arrow-right transition-all duration-500 ease-out -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                                    <span
+                                        class="transition-all translate-x-[-10px] duration-500 ease-out group-hover:translate-x-2">
+                                        Learn More 
+                                    </span>
+                                    <i
+                                        class="fa-solid fa-arrow-right transition-all duration-500 ease-out group-hover:translate-x-4 translate-x-[-10px] group-hover:opacity-0">
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-6">
+                        <div class="img overflow-hidden">
+                            <img class="item" src="../assets/images/platform/mobile-app.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- earn section -->
+        <section class="mb-[65px]">
+            <div class="max-w-2lg mx-auto px-4 xl:px-[60px]">
+                <div class="grid grid-cols-12 gap-4 md:gap-10">
+
+
+                    <div class="col-span-12 md:col-span-6">
+                        <div class="img overflow-hidden">
+                            <img class="item" src="../assets/images/service/service-01.jpg" alt="">
+                        </div>
+                    </div>
+
+
+                    <div class="col-span-12 md:col-span-6">
+                        <div class="step-content flex flex-col justify-center h-full">
+                            <h4 class="text-[24px] lg:text-[32px] font-semibold mb-2">
+                                Earn with your Bike
+                            </h4>
+                            <ul class="space-y-2 [list-style:inside]">
+                                <li class="text-base lg:text-xl font-normal text-[#5d6467]">
+                                    Fast, Safe & Easy Income for a better lifestyle
+                                </li>
+                                <li class="text-base lg:text-xl font-normal text-[#5d6467]">
+                                    Scope to avail bonus offers
+                                </li>
+                                <li class="text-base lg:text-xl font-normal text-[#5d6467]">
+                                    Hassle free on-time Payment
+                                </li>
+                            </ul>
+                            <div class="common-btn flex items-center mt-[30px]">
+                                <a href="#"
+                                    class="group relative overflow-hidden text-base font-medium text-white h-12 bg-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-4 transition-all duration-500 ease-out hover:bg-primary1-700">
+                                    <i
+                                        class="fa-solid fa-arrow-right transition-all duration-500 ease-out -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                                    <span
+                                        class="transition-all translate-x-[-10px] duration-500 ease-out group-hover:translate-x-2">
+                                        Become a Rider
+                                    </span>
+                                    <i
+                                        class="fa-solid fa-arrow-right transition-all duration-500 ease-out group-hover:translate-x-4 translate-x-[-10px] group-hover:opacity-0">
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- faq section -->
+        <section class="faq-area mb-[70px] lg:mb-[100px] xl:px-[60px]">
+            <div class="max-w-2lg mx-auto px-4">
+                <div class="grid">
+                    <div class="grid-cols-12">
+                        <div class="col-span-12">
+                            <h2 class="text-3xl lg:text-4xl xl:text-[46px] font-medium mb-0 xl:mb-8 text-center">
+                                Frequently Asked Questions
+                            </h2>
+
+                            <div class="tab-area flex flex-wrap items-start justify-center gap-4 mb-5">
+                                <div class="common-btn flex gap-3 items-center mt-6">
+                                    <button data-tab="item-1"
+                                        class="tab__button__2  group relative overflow-hidden text-base font-medium text-primary1-600 h-10 xl:h-[48px] border border-[#e5e9eb] rounded-[8px] flex items-center justify-center gap-[10px] px-4 transition-all duration-500 ease-out hover:border hover:border-primary1-700 active">
+                                        <span
+                                            class="transition-all translate-x-[-1px] duration-100 ease-out group-hover:translate-x-1">
+                                            I’m a customer&nbsp;
+                                        </span>
+                                    </button>
+                                    <button data-tab="item-2"
+                                        class="tab__button__2 group relative overflow-hidden text-base font-medium text-primary1-600 h-10 xl:h-[48px] border border-[#e5e9eb] rounded-[8px] flex items-center justify-center gap-[10px] px-4 transition-all duration-500 ease-out hover:border hover:border-primary1-700">
+                                        <span
+                                            class="transition-all translate-x-[-1px] duration-100 ease-out group-hover:translate-x-1">
+                                            I’m a rider&nbsp;
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- I’m-a-customer -->
+                            <div class="tab-content block" id="item-1">
+                                <!-- accordion -->
+                                <div id="accordion-2" data-accordion="single" class="space-y-4 accordion">
+
+                                    <!-- Item 1 -->
+                                    <div class="w-full p-4 rounded-[12px] ac__items mb-4">
+                                        <button type="button"
+                                            class="w-full flex justify-between items-center gap-3 text-left cursor-pointer"
+                                            aria-expanded="false" aria-controls="acc-panel-4" id="acc-trigger-4">
+                                            <p
+                                                class="font-medium text-lg lg:text-[20px]  text-[#101828] flex items-center justify-start gap-4 w-full">
+                                                <i class="ac__close__icon flex-[0_0_auto]"></i>
+                                                I was overcharged. How can I get refund?
+                                            </p>
+                                        </button>
+                                        <div id="acc-panel-4" role="region" aria-labelledby="acc-trigger-4"
+                                            class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
+                                            <div class="overflow-hidden">
+                                                <p class="text-base font-normal mt-2 text-[#667085]">
+                                                    Please report an issue through your user app following this process:
+                                                    Pathao App> Profile> History> Report Issue> I would like a refund> I
+                                                    was overcharged> then write ride details> Submit. Or, you can mail
+                                                    us your complaint at rides@pathao.com.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Item 2 -->
+                                    <div class="w-full p-4 rounded-[12px] ac__items mb-4">
+                                        <button type="button"
+                                            class="w-full flex justify-between items-center gap-3 text-left cursor-pointer"
+                                            aria-expanded="false" aria-controls="acc-panel-5" id="acc-trigger-5">
+                                            <p
+                                                class="font-medium text-lg lg:text-[20px]  text-[#101828] flex items-center justify-start gap-4 w-full">
+                                                <i class="ac__close__icon flex-[0_0_auto]"></i>
+                                                How to use Pathao ride?
+                                            </p>
+                                        </button>
+                                        <div id="acc-panel-5" role="region" aria-labelledby="acc-trigger-5"
+                                            class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
+                                            <div class="overflow-hidden">
+                                                <p class="text-base font-normal mt-2 text-[#667085]">
+                                                    Open the Pathao app, select your pickup and drop location, choose
+                                                    your ride type, confirm the booking, and wait for the rider to
+                                                    arrive.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Item 3 -->
+                                    <div class="w-full p-4 rounded-[12px] ac__items mb-4">
+                                        <button type="button"
+                                            class="w-full flex justify-between items-center gap-3 text-left cursor-pointer"
+                                            aria-expanded="false" aria-controls="acc-panel-6" id="acc-trigger-6">
+                                            <p
+                                                class="font-medium text-lg lg:text-[20px]  text-[#101828] flex items-center justify-start gap-4 w-full">
+                                                <i class="ac__close__icon flex-[0_0_auto]"></i>
+                                                How can I get promo code?
+                                            </p>
+                                        </button>
+                                        <div id="acc-panel-6" role="region" aria-labelledby="acc-trigger-6"
+                                            class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
+                                            <div class="overflow-hidden">
+                                                <p class="text-base font-normal mt-2 text-[#667085]">
+                                                    Promo codes are usually available in the “Offers” section of the
+                                                    app. You can apply them before confirming your ride or order.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Item 4 -->
+                                    <div class="w-full p-4 rounded-[12px] ac__items mb-4">
+                                        <button type="button"
+                                            class="w-full flex justify-between items-center gap-3 text-left cursor-pointer"
+                                            aria-expanded="false" aria-controls="acc-panel-7" id="acc-trigger-7">
+                                            <p
+                                                class="font-medium text-lg lg:text-[20px]  text-[#101828] flex items-center justify-start gap-4 w-full">
+                                                <i class="ac__close__icon flex-[0_0_auto]"></i>
+                                                What can I do if my rider didn’t carry extra helmet?
+                                            </p>
+                                        </button>
+                                        <div id="acc-panel-7" role="region" aria-labelledby="acc-trigger-7"
+                                            class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
+                                            <div class="overflow-hidden">
+                                                <p class="text-base font-normal mt-2 text-[#667085]">
+                                                    Contact support through the app immediately and report the issue.
+                                                    You can request a new ride or a refund if safety standards are not
+                                                    met.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Item 5 -->
+                                    <div class="w-full p-4 rounded-[12px] ac__items mb-4">
+                                        <button type="button"
+                                            class="w-full flex justify-between items-center gap-3 text-left cursor-pointer"
+                                            aria-expanded="false" aria-controls="acc-panel-8" id="acc-trigger-8">
+                                            <p
+                                                class="font-medium text-lg lg:text-[20px]  text-[#101828] flex items-center justify-start gap-4 w-full">
+                                                <i class="ac__close__icon flex-[0_0_auto]"></i>
+                                                What can I do if my rider drove dangerously/behave rudely?
+                                            </p>
+                                        </button>
+                                        <div id="acc-panel-8" role="region" aria-labelledby="acc-trigger-8"
+                                            class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
+                                            <div class="overflow-hidden">
+                                                <p class="text-base font-normal mt-2 text-[#667085]">
+                                                    Report the rider through the app immediately. You can provide
+                                                    feedback, request a refund, or escalate the issue to Pathao support
+                                                    for action.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- I’m-a-rider -->
+                            <div class="tab-content hidden" id="item-2">
+                                <!-- accordion -->
+                                <div id="accordion-2" data-accordion="single" class="space-y-4">
+
+                                    <!-- Item 1 -->
+                                    <div class="w-full p-4 rounded-[12px] ac__items mb-4">
+                                        <button type="button"
+                                            class="w-full flex justify-between items-center gap-3 text-left cursor-pointer"
+                                            aria-expanded="false" aria-controls="acc-panel-r1" id="acc-trigger-r1">
+                                            <p
+                                                class="font-medium text-lg lg:text-[20px]  text-[#101828] flex items-center justify-start gap-4 w-full">
+                                                <i class="ac__close__icon flex-[0_0_auto]"></i>
+                                                I was overcharged. How can I get refund?
+                                            </p>
+                                        </button>
+                                        <div id="acc-panel-r1" role="region" aria-labelledby="acc-trigger-r1"
+                                            class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
+                                            <div class="overflow-hidden">
+                                                <p class="text-base font-normal mt-2 text-[#667085]">
+                                                    Please report an issue through your user app following this process:
+                                                    Pathao App> Profile> History> Report Issue> I would like a refund> I
+                                                    was overcharged> then write ride details> Submit. Or, you can mail
+                                                    us your complaint at rides@pathao.com.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Item 2 -->
+                                    <div class="w-full p-4 rounded-[12px] ac__items mb-4">
+                                        <button type="button"
+                                            class="w-full flex justify-between items-center gap-3 text-left cursor-pointer"
+                                            aria-expanded="false" aria-controls="acc-panel-r2" id="acc-trigger-r2">
+                                            <p
+                                                class="font-medium text-lg lg:text-[20px]  text-[#101828] flex items-center justify-start gap-4 w-full">
+                                                <i class="ac__close__icon flex-[0_0_auto]"></i>
+                                                How to use Pathao ride?
+                                            </p>
+                                        </button>
+                                        <div id="acc-panel-r2" role="region" aria-labelledby="acc-trigger-r2"
+                                            class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
+                                            <div class="overflow-hidden">
+                                                <p class="text-base font-normal mt-2 text-[#667085]">
+                                                    Open the Pathao app, select your pickup and drop location, choose
+                                                    your ride type, confirm the booking, and wait for the rider to
+                                                    arrive.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Item 3 -->
+                                    <div class="w-full p-4 rounded-[12px] ac__items mb-4">
+                                        <button type="button"
+                                            class="w-full flex justify-between items-center gap-3 text-left cursor-pointer"
+                                            aria-expanded="false" aria-controls="acc-panel-r3" id="acc-trigger-r3">
+                                            <p
+                                                class="font-medium text-lg lg:text-[20px]  text-[#101828] flex items-center justify-start gap-4 w-full">
+                                                <i class="ac__close__icon flex-[0_0_auto]"></i>
+                                                How can I get promo code?
+                                            </p>
+                                        </button>
+                                        <div id="acc-panel-r3" role="region" aria-labelledby="acc-trigger-r3"
+                                            class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
+                                            <div class="overflow-hidden">
+                                                <p class="text-base font-normal mt-2 text-[#667085]">
+                                                    Promo codes are usually available in the “Offers” section of the
+                                                    app. You can apply them before confirming your ride or order.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Item 4 -->
+                                    <div class="w-full p-4 rounded-[12px] ac__items mb-4">
+                                        <button type="button"
+                                            class="w-full flex justify-between items-center gap-3 text-left cursor-pointer"
+                                            aria-expanded="false" aria-controls="acc-panel-r4" id="acc-trigger-r4">
+                                            <p
+                                                class="font-medium text-lg lg:text-[20px]  text-[#101828] flex items-center justify-start gap-4 w-full">
+                                                <i class="ac__close__icon flex-[0_0_auto]"></i>
+                                                What can I do if my rider didn’t carry extra helmet?
+                                            </p>
+                                        </button>
+                                        <div id="acc-panel-r4" role="region" aria-labelledby="acc-trigger-r4"
+                                            class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
+                                            <div class="overflow-hidden">
+                                                <p class="text-base font-normal mt-2 text-[#667085]">
+                                                    Contact support through the app immediately and report the issue.
+                                                    You can request a new ride or a refund if safety standards are not
+                                                    met.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Item 5 -->
+                                    <div class="w-full p-4 rounded-[12px] ac__items mb-4">
+                                        <button type="button"
+                                            class="w-full flex justify-between items-center gap-3 text-left cursor-pointer"
+                                            aria-expanded="false" aria-controls="acc-panel-r5" id="acc-trigger-r5">
+                                            <p
+                                                class="font-medium text-lg lg:text-[20px]  text-[#101828] flex items-center justify-start gap-4 w-full">
+                                                <i class="ac__close__icon flex-[0_0_auto]"></i>
+                                                What can I do if my rider drove dangerously/behave rudely?
+                                            </p>
+                                        </button>
+                                        <div id="acc-panel-r5" role="region" aria-labelledby="acc-trigger-r5"
+                                            class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
+                                            <div class="overflow-hidden">
+                                                <p class="text-base font-normal mt-2 text-[#667085]">
+                                                    Report the rider through the app immediately. You can provide
+                                                    feedback, request a refund, or escalate the issue to Pathao support
+                                                    for action.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    <footer class="footer-area bg-[#10151c] pt-[60px] text-white relative overflow-hidden z-[1]">
+        <img class="absolute left-0 top-0 z-[-1]" src="../assets/images/shape/footer-shape.svg" alt="">
+        <img class="absolute right-0 top-0 z-[-1] [transform:rotateY(180deg)]"
+            src="../assets/images/shape/footer-shape.svg" alt="">
+        <div class="container max-w-2lg mx-auto px-4">
+            <div class="grid grid-cols-12 gap-4 mb-[33px] pb-[33px] border-b border-[rgba(255,255,255,0.16)]">
+
+                <div class="col-span-12 lg:col-span-6">
+                    <a href="#" class="mb-[30px] block">
+                        <img src="../assets/logo/footer-logo.png" alt="">
+                    </a>
+                    <p class="text-lg font-normal text-[#d1d5db]">
+                        ReadyRide provides fast, safe, and affordable ride and <br class="hidden md:block"> delivery
+                        services, helping people
+                        move smarter every day.
+                    </p>
+                </div>
+
+                <div class="col-span-12 lg:col-span-6">
+                    <form data-aos="fade-right" data-aos-duration="1000" action="#"
+                        class="bg-[rgba(255,255,255,0.08)] border border-[rgba(255,255,255,0.16)] rounded-[12px] p-4 md:p-[24px]">
+                        <h3 class="text-2xl font-semibold mb-2">Get weekly Update</h3>
+                        <p class="text-base font-normal text-[rgba(255,255,255,0.6)] mb-6">Stay ahead with the latest
+                            industry insights.</p>
+                        <div class="flex items-center max-[520px]:flex-wrap gap-4">
+                            <input type="text" placeholder="Enter your email"
+                                class="border border-[rgba(255,255,255,0.12)] rounded-[12px] px-4 md:px-[24px] h-12 lg:h-[56px] bg-[rgba(255,255,255,0.06)] outline-none placeholder:font-normal placeholder:text-[16px] placeholder:tracking-[-0.02em] placeholder:text-[rgba(255,255,255,0.6)] focus:border-[var(--primary-1-600)] focus:placeholder:text-transparent transition-all duration-300 ease-in-out flex-1">
+                            <div class="common-btn max-[520px]:w-full flex items-center justify-center">
+                                <a href="#"
+                                    class="max-[520px]:w-full group relative overflow-hidden text-base font-medium text-white h-12 lg:h-[56px] bg-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-[10px] transition-all duration-500 ease-out hover:bg-primary1-700">
+                                    <i
+                                        class="fa-solid fa-arrow-right transition-all duration-500 ease-out -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                                    <span
+                                        class="transition-all translate-x-[-10px] duration-500 ease-out group-hover:translate-x-2">
+                                        Subscribe
+                                    </span>
+                                    <i
+                                        class="fa-solid fa-arrow-right transition-all duration-500 ease-out group-hover:translate-x-4 translate-x-[-10px] group-hover:opacity-0">
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="grid grid-cols-12 gap-6 mb-[33px]">
+
+                <div class="max-[420px]:col-span-12 col-span-6 md:col-span-4">
+                    <div class="footer-widget">
+                        <h5 class="title text-lg font-semibold mb-4">
+                            Quick Links
+                        </h5>
+                        <ul class="footer-link flex flex-col gap-2">
+                            <li>
+                                <a href="#"
+                                    class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden  inline-block hover:text-white before:bg-white">
+                                    <span class="explore-text" data-text="Home">Home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden inline-block hover:text-white before:bg-white">
+                                    <span class="explore-text" data-text="Earn With ReadyRide">Earn With
+                                        ReadyRide</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#"
+                                    class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden inline-block hover:text-white before:bg-white">
+                                    <span class="explore-text" data-text="Services">Services</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../pages/blog.html"
+                                    class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden inline-block hover:text-white before:bg-white">
+                                    <span class="explore-text" data-text="Blogs">Blogs</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="max-[420px]:col-span-12 col-span-6 md:col-span-4">
+                    <div class="footer-widget">
+                        <h5 class="title text-lg font-semibold mb-4">
+                            Support
+                        </h5>
+                        <ul class="footer-link flex flex-col gap-2">
+                            <li>
+                                <a href="#"
+                                    class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden  inline-block hover:text-white before:bg-white">
+                                    <span class="explore-text" data-text="Help Center">Help Center</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden inline-block hover:text-white before:bg-white">
+                                    <span class="explore-text" data-text="Terms & Conditions">Terms & Conditions</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#"
+                                    class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden inline-block hover:text-white before:bg-white">
+                                    <span class="explore-text" data-text="Privacy Policy">Privacy Policy</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#"
+                                    class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden inline-block hover:text-white before:bg-white">
+                                    <span class="explore-text" data-text="Contact Us">Contact Us</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="max-[600px]:col-span-12 col-span-6 md:col-span-4">
+                    <div class="footer-widget">
+                        <h5 class="title text-lg font-semibold mb-4">
+                            Contact
+                        </h5>
+                        <ul class="footer-link flex flex-col gap-4 mb-6">
+                            <li>
+                                <a href="mailto:info@razinsoft.com"
+                                    class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden flex w-max items-center gap-2 hover:text-white before:bg-white">
+                                    <i class="fa-solid fa-envelope"></i> info@razinsoft.com
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:+8801711257498"
+                                    class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden flex w-max items-center gap-2 hover:text-white before:bg-white">
+                                    <i class="fa-solid fa-phone"></i> +880 1711 257 498
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden flex lg:w-max items-start gap-2 hover:text-white before:bg-white">
+                                    <i class="fa-solid fa-location-dot mt-1"></i>
+                                    RMR Center 1/1 (A&B) Shamoli Ring Road, Dhaka - <br class="hidden lg:block"> 1207,
+                                    Bangladesh.
+                                </a>
+                            </li>
+
+
+                        </ul>
+
+                        <div class="social-area flex items-center gap-[10px]">
+                            <a href="#"
+                                class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
+                                <i class="fa-brands fa-facebook text-xl"></i>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
+                                <i class="fa-brands fa-square-x-twitter text-xl rounded-full"></i>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
+                                <i class="fa-brands fa-youtube text-xl"></i>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
+                                <i class="fa-brands fa-pinterest text-xl"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="img mx-auto pb-[33px] border-b border-[rgba(255,255,255,0.1)]">
+                <img class="mx-auto" src="../assets/logo/ready-ride.png" alt="">
+            </div>
+            <div
+                class="copy-right-area flex max-[700px]:flex-wrap gap-2 max-[700px]:justify-center items-center justify-between py-6">
+                <p class="text-base font-normal text-[rgba(255,255,255,0.4)]">Professional Rideshare services you can
+                    trust.</p>
+                <p class="text-base font-normal text-[rgba(255,255,255,0.4)]">
+                    ⓒ2025
+                    <a href="#" class="custom__border text-white">ReadyRide.</a>
+                    All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- script link -->
+    <script src="../js/active-class-add.js"></script>
+    <script src="../js/tab.js"></script>
+    <script src="../js/offcanvas.js"></script>
+    <script src="../js/accordion.js"></script>
+    <script src="../js/scrool-to-top.js"></script>
+
+
+    <!-- aos JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- gsap js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+    <script src="../js/gsap-animation.js"></script>
+
+    <!-- //======= aos =========// -->
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>

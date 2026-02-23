@@ -78,6 +78,16 @@ input:-webkit-autofill:active {
     transition: background-color 9999s ease-in-out 0s;
 }
 
+.register-info input:-webkit-autofill,
+.register-info input:-webkit-autofill:hover,
+.register-info input:-webkit-autofill:focus,
+.register-info input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+    box-shadow: 0 0 0 1000px transparent inset !important;
+    -webkit-text-fill-color: #000000 !important;
+    transition: background-color 9999s ease-in-out 0s;
+}
+
 
 
 /*=============== hover animation ============*/
@@ -146,6 +156,11 @@ input:-webkit-autofill:active {
     opacity: 1;
     visibility: visible;
 }
+.custom__dropdown:hover .drop__down {
+    transform: scaleY(1);
+    opacity: 1;
+    visibility: visible;
+}
 
 
 /*=============== text rotate animation ============*/
@@ -172,6 +187,7 @@ input:-webkit-autofill:active {
     text-align: center;
     z-index: -1;
 }
+
 
 a:hover .explore-text {
     transform: rotateX(0deg) translateY(0);
@@ -257,3 +273,129 @@ a:hover .explore-text::before {
     }
 }
 
+
+/*=============== dash svg animation ===============*/
+
+.road-svg {
+    max-width: 675px;
+    max-height: 290px;
+    position: absolute;
+}
+
+.line-dash-svg {
+    max-width: 665px;
+    max-height: 315px;
+    position: absolute;
+    bottom: -53%;
+    left: 17%;
+}
+
+.line-dash-path {
+    stroke: #D2D4D5;
+    stroke-width: 2;
+    stroke-dasharray: 6 4;
+    /* dash + gap */
+    fill: transparent;
+    animation: dashMove 1s linear infinite;
+}
+
+@keyframes dashMove {
+    to {
+        stroke-dashoffset: -10;
+        /* 6+4=10 */
+    }
+}
+
+.arrow {
+    fill: #D1D5DB;
+}
+
+
+
+
+
+/* accordion */
+.ac__items.active {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.ac__close__icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+    border-radius: 100%;
+    position: relative;
+    transition: .2s linear;
+}
+
+.ac__close__icon::before {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 22px;
+    background: #000000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .2s linear;
+}
+
+.ac__close__icon::after {
+    position: absolute;
+    content: '';
+    width: 22px;
+    height: 2px;
+    background: #000000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .2s linear;
+}
+
+
+@media (max-width: 768px) {
+    .ac__close__icon::before {
+        height: 16px;
+    }
+
+    .ac__close__icon::after {
+        width: 16px;
+    }
+}
+
+.ac__close__icon__2 {
+    transform: rotate(0);
+    transition: .2s linear;
+}
+
+.ac__close__icon__2.ac {
+    transform: rotate(90deg);
+}
+
+
+.ac__close__icon.ac::before {
+    border: 1.5px solid var(--primary-1-600);
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.ac__close__icon.ac::after {
+    border: 1.5px solid var(--primary-1-600);
+}
+
+.ac__items p.ac {
+    color: var(--primary-1-600);
+}
+
+.tab__button__2:hover,
+.tab__button__2.active {
+    border: 1px solid var(--primary-1-600);
+}
+
+.tab__button__3:hover,
+.tab__button__3.active {
+    border: 1px solid transparent !important;
+}
+
+.tab__button__3 {
+    border: 1px solid transparent !important;
+}

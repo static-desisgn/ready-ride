@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready Ride Blog</title>
+    <!-- font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- fav icon link -->
+    <link rel="shortcut icon" href="../assets/logo/ready-ride-favicon.png" type="image/x-icon">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../tailwind.config.js"></script>
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/offcanvas.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="../css/scrool-to-top.css">
+
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <!-- scrollToTop -->
+    <div class="scrollToTop active-progress">
+        <div class="arrowUp">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+        <div class="water" style="transform: translate(0px, 47%);">
+            <svg viewBox="0 0 560 20" class="water_wave water_wave_back">
+                <use xlink:href="#wave"></use>
+            </svg>
+            <svg viewBox="0 0 560 20" class="water_wave water_wave_front">
+                <use xlink:href="#wave"></use>
+            </svg>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 560 20" style="display: none;">
+                <symbol id="wave">
+                    <path
+                        d="M420,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C514,6.5,518,4.7,528.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H420z"
+                        fill="#"
+                        style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 301.839, 301.839; stroke-dashoffset: 140.858px;">
+                    </path>
+                    <path
+                        d="M420,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C326,6.5,322,4.7,311.5,2.7C304.3,1.4,293.6-0.1,280,0c0,0,0,0,0,0v20H420z"
+                        fill="#"
+                        style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 301.839, 301.839; stroke-dashoffset: 140.858px;">
+                    </path>
+                    <path
+                        d="M140,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C234,6.5,238,4.7,248.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H140z"
+                        fill="#"
+                        style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 301.839, 301.839; stroke-dashoffset: 140.858px;">
+                    </path>
+                    <path
+                        d="M140,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C46,6.5,42,4.7,31.5,2.7C24.3,1.4,13.6-0.1,0,0c0,0,0,0,0,0l0,20H140z"
+                        fill="#"
+                        style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 301.839, 301.839; stroke-dashoffset: 140.858px;">
+                    </path>
+                </symbol>
+            </svg>
+        </div>
+    </div>
+
+    <!-- offcanvas start -->
+    <div class="tp-offcanvas-area block md:hidden max-[350px]:w-full">
+        <div class="tp-offcanvas-wrapper h-full">
+            <div class="tp-offcanvas-header flex items-center justify-between mb-4">
+                <div class="tp-offcanvas-logo">
+                    <a href="javascript:void(0)">
+                        <img src="../assets/logo/ready-ride-main-logo.png" alt="">
+                    </a>
+                </div>
+                <div class="tp-offcanvas-close flex items-center justify-center">
+                    <div class="common-btn p-0 bg-transparent">
+                        <button
+                            class="text-base font-medium text-primary h-8 w-8 flex items-center gap-4 justify-center border-[1.5px] border-white rounded-[6px]">
+                            <i class="fa-solid fa-xmark !text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="rs-main-menu  d-lg-none mb-[80px]">
+                <nav class="tp-mobile-menu-active mb-6">
+                    <h3 class="text-xl font-medium text-white mb-4 pb-2 border-b border-[#ffffff40]">
+                        Quick Links
+                    </h3>
+                    <ul class="offcanvas__menu main-menu ">
+                        <li class="mb-1"><a class="custom__border w-max" href="../index.html">Home</a></li>
+                        <li class="mb-1"><a class="custom__border w-max" href="../service.html">Service</a></li>
+                        <li class="mb-1"><a class="custom__border w-max" href="#">Blog</a></li>
+                        <li class="mb-1"><a class="custom__border w-max" href="#">About Us</a></li>
+                        <li class="mb-1"><a class="custom__border w-max" href="../api.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div
+                class="copy__right__area absolute bottom-0 left-1/2 -translate-x-1/2 w-full flex flex-col h-full items-center justify-end z-[-1]">
+                <p class="text-base font-normal text-[rgba(255,255,255,0.4)]">
+                    ⓒ2025
+                    <a href="#" class="custom__border text-white">ReadyRide.</a>
+                    All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="modal_backdrop modal_backdrop_2 opacity-0 invisible block md:hidden"></div>
+    <!-- offcanvas end -->
+
+    <!-- header  -->
+    <header
+        class="header-area py-[21px] backdrop-blur-[24px] bg-[#ffffffde] shadow-[0_1px_4px_0_rgba(0,0,0,0.06)] sticky top-0 z-[9]">
+        <div class="container max-w-2lg mx-auto px-4">
+            <div class="grid grid-cols-12 md:gap-10 items-center">
+
+                <!-- logo -->
+                <div class="col-span-5 md:col-span-2">
+                    <div class="main-logo">
+                        <a href="#">
+                            <img src="../assets/logo/ready-ride-main-logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- menu -->
+                <div class="col-span-1 md:col-span-8">
+                    <div class="main-menu hidden md:block">
+                        <nav>
+                            <ul class="flex items-center gap-5 xl:gap-10 justify-center">
+                                <li>
+                                    <a href="../index.html"
+                                        class="text-base font-normal custom__border overflow-hidden py-[2px]  inline-block">
+                                        <span class="explore-text" data-text="Home">Home</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../pages/services.html"
+                                        class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block">
+                                        <span class="explore-text" data-text="Services">Services</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../pages/blog.html"
+                                        class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block active">
+                                        <span class="explore-text" data-text="Blog">Blog</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block">
+                                        <span class="explore-text" data-text="About Us">About Us</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block">
+                                        <span class="explore-text" data-text="Contact Us">Contact Us</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- lang-btn -->
+                <div class="col-span-6 md:col-span-2 flex items-center gap-4 ml-auto">
+                    <div class="lang text-end custom__dropdown relative">
+                        <button class="lang-btn flex items-center gap-[6px] text-base font-normal relative">
+                            English
+                            <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                        <ul
+                            class="drop__down flex flex-col items-start gap-2 absolute top-[25px] left-0 bg-gray-50 p-2 rounded-[6px] min-w-max shadow-[0_1px_4px_0_rgba(0,0,0,0.06)]">
+                            <li>
+                                <a href="#" class="text-base font-normal custom__border active">English</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-base font-normal custom__border">Bangla</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-base font-normal custom__border">Arabic</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="rs-offcanvas-btn w-10 h-10 bg-[#1469B5] rounded-[4px] flex items-center justify-center md:hidden">
+                        <i class="fa-solid fa-bars text-white text-[18px]"></i>
+                        <div class="modal_backdrop hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- hero -->
+        <section class="hero-area overflow-hidden py-6 pb-[50px]">
+            <div class="container max-w-2lg mx-auto px-4">
+                <div class="grid grid-cols-12">
+
+                    <div class="col-span-12 lg:col-span-5 " data-aos="fade-right" data-aos-duration="1200">
+                        <div class="hero-content flex flex-col h-full justify-center items-center md:items-start">
+                            <h1
+                                class="text-2xl md:text-3xl lg:text-3xl xl:text-[40px] font-semibold !leading-[125%]  mb-2">
+                                ReadyRide Blog
+                            </h1>
+                            <p class="text-lg font-normal mb-4 md:mb-8 text-center md:text-start text-gray-700">
+                                Announcements, updates, releases, and more
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-span-7">
+                        <div class="img">
+                            <img class="ml-auto" src="../assets/images/blog/blog-04.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <section class="tab-menu">
+        <div class="max-w-2lg mx-auto px-4">
+            <div class="grid grid-cols-12 gap-3 mb-6 pb-6 items-center border-b border-gray-100">
+                <div class="col-span-12 xl:col-span-8">
+                    <ul class="flex items-center flex-wrap gap-3 lg:gap-4 xl:gap-6">
+                        <li>
+                            <a href="#" data-tab="item-1"
+                                class="text-base tab__button__2 tab__button__3 hover:border-transparent  font-normal custom__border overflow-hidden py-[2px]  inline-block whitespace-nowrap ">
+                                <span class="explore-text" data-text="Home">Home</span>
+                            </a>
+                        </li>
+                        <li class="relative custom__dropdown">
+                            <a href="#" data-tab="item-2"
+                                class="text-base tab__button__2 tab__button__3 hover:border-transparent  font-normal custom__border overflow-hidden py-[2px] inline-block whitespace-nowrap ">
+                                Services Updates
+                                <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul
+                                class="absolute left-0 z-[99] grid grid-cols-2 w-max gap-4 bg-white p-4 rounded-[8px] border border-gray-100 drop__down">
+                                <li class="col-span-1">
+                                    <a href="#"
+                                        class="custom__border max-w-[140px] block  truncate font-normal text-[15px]">Pathao
+                                        Bike</a>
+                                </li>
+                                <li class="col-span-1">
+                                    <a href="#"
+                                        class="custom__border max-w-[140px] block  truncate font-normal text-[15px]">Pathao
+                                        Car</a>
+                                </li>
+                                <li class="col-span-1">
+                                    <a href="#"
+                                        class="custom__border max-w-[140px] block  truncate font-normal text-[15px]">Pathao
+                                        Food</a>
+                                </li>
+                                <li class="col-span-1">
+                                    <a href="#"
+                                        class="custom__border max-w-[140px] block  truncate font-normal text-[15px]">Pathao
+                                        Parcel</a>
+                                </li>
+                                <li class="col-span-1">
+                                    <a href="#"
+                                        class="custom__border max-w-[140px] block  truncate font-normal text-[15px]">Pathao
+                                        Express</a>
+                                </li>
+                                <li class="col-span-1">
+                                    <a href="#"
+                                        class="custom__border max-w-[140px] block  truncate font-normal text-[15px]">Pathao
+                                        Mart</a>
+                                </li>
+
+                                <li class="col-span-1">
+                                    <a href="#"
+                                        class="custom__border max-w-[140px] block  truncate font-normal text-[15px]">Pathao
+                                        Travel</a>
+                                </li>
+                                <li class="col-span-1">
+                                    <a href="#"
+                                        class="custom__border max-w-[140px] block  truncate font-normal text-[15px]">Pathao
+                                        Ride
+                                        Share</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="relative">
+                            <a href="#" data-tab="item-3"
+                                class="text-base tab__button__2 tab__button__3 hover:border-transparent  font-normal custom__border overflow-hidden py-[2px] inline-block whitespace-nowrap active">
+                                <span class="explore-text" data-text="Newsroom">Newsroom</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-tab="item-4"
+                                class="text-base tab__button__2 tab__button__3 hover:border-transparent  font-normal custom__border overflow-hidden py-[2px] inline-block whitespace-nowrap">
+                                <span class="explore-text" data-text="Promotions">Promotions</span>
+                            </a>
+                        </li>
+                        <li class="relative custom__dropdown">
+                            <a href="#" data-tab="item-2"
+                                class="text-base tab__button__2 tab__button__3 hover:border-transparent  font-normal custom__border overflow-hidden py-[2px] inline-block whitespace-nowrap ">
+                                Stories
+                                <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul
+                                class="absolute left-0 z-[99] grid grid-cols-2 w-max gap-4 bg-white p-4 rounded-[8px] border border-gray-100 drop__down">
+                                <li class="col-span-1">
+                                    <a href="#"
+                                        class="custom__border max-w-[140px] block  truncate font-normal text-[15px]">Pathao
+                                        Bike</a>
+                                </li>
+                                <li class="col-span-1">
+                                    <a href="#"
+                                        class="custom__border max-w-[140px] block  truncate font-normal text-[15px]">Pathao
+                                        Car</a>
+                                </li>
+                                <li class="col-span-1">
+                                    <a href="#"
+                                        class="custom__border max-w-[140px] block  truncate font-normal text-[15px]">Pathao
+                                        Food</a>
+                                </li>
+                                <li class="col-span-1">
+                                    <a href="#"
+                                        class="custom__border max-w-[140px] block  truncate font-normal text-[15px]">Pathao
+                                        Parcel</a>
+                                </li>
+                                <li class="col-span-1">
+                                    <a href="#"
+                                        class="custom__border max-w-[140px] block  truncate font-normal text-[15px]">Pathao
+                                        Express</a>
+                                </li>
+                                <li class="col-span-1">
+                                    <a href="#"
+                                        class="custom__border max-w-[140px] block  truncate font-normal text-[15px]">Pathao
+                                        Mart</a>
+                                </li>
+
+                                <li class="col-span-1">
+                                    <a href="#"
+                                        class="custom__border max-w-[140px] block  truncate font-normal text-[15px]">Pathao
+                                        Travel</a>
+                                </li>
+                                <li class="col-span-1">
+                                    <a href="#"
+                                        class="custom__border max-w-[140px] block  truncate font-normal text-[15px]">Pathao
+                                        Ride
+                                        Share</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-span-12 xl:col-span-4 flex justify-end">
+                    <div class="input_items text-end">
+                        <input type="text" placeholder="Search our blog">
+                        <i
+                            class="fa-solid fa-magnifying-glass text-[#c9ccce] absolute right-[14px] top-1/2 -translate-y-1/2 cursor-pointer"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="blog">
+            <!-- blog-home -->
+            <div class="tab-content block" id="item-1">
+                <div class="mb-[100px] max-w-2lg mx-auto px-4 lg:px-[90px]">
+                    <h2 class="text-[40px] font-semibold mb-3">
+                        How ReadyRide Supports Safer Travel for Riders and Drivers
+                    </h2>
+                    <div class="update-time flex items-center gap-[15px] mb-3">
+                        <span class="text-xs font-normal text-[#152934]">Service
+                            Updates</span>
+                        <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                        <span class="text-xs font-normal text-[#5a6872]">June 3,
+                            2026</span>
+                    </div>
+                    <div class="img mt-10 overflow-hidden mb-8">
+                        <img class="item w-full" src="../assets/images/blog/blog-details.jpg" alt="">
+                    </div>
+                    <p class="text-base font-normal font-[#212529] mb-6">
+                        Life moves fast. You’ve got rides to catch, food to order, errands to run and the last thing you
+                        need is tomanually confirm every payment. With Pathao Pay’s Auto-Pay feature, those repetitive
+                        taps become one less thing on your mind. Because in Your YOUniverse, things just flow.
+                    </p>
+                    <h3 class="text-[32px] font-medium mb-2">
+                        What Is Auto-Pay and Why You’ll Love It
+                    </h3>
+                    <p class="text-base font-normal font-[#212529] mb-6">
+                        Auto-Pay is exactly what it sounds like, it’s a way to authorize recurring Pathao payments
+                        without
+                        having to do it manually each time. Once enabled, your payments go through automatically,
+                        securely,
+                        and instantly, every time you use Pathao Pay for a ride, food delivery, or parcel.
+                    </p>
+                    <h3 class="text-[32px] font-medium mb-2">
+                        How to Set It Up in Seconds
+                    </h3>
+                    <p class="text-base font-normal font-[#212529] mb-6">
+                        Turning on Auto-Pay is incredibly simple. Just head to the Pathao Pay section in your app and
+                        tap the
+                        “Enable Auto-Pay” button under the Pay widget. You’ll be prompted to confirm your choice with
+                        your
+                        wallet PIN, and that’s it. You’re ready.
+                    </p>
+                    <h3 class="text-[32px] font-medium mb-2">
+                        Built on Trust and Security
+                    </h3>
+                    <p class="text-base font-normal font-[#212529] mb-6">
+                        Even with automation, your security remains the priority. Auto-Pay only works after your
+                        explicit PIN
+                        confirmation, and you remain in full control. You can disable or change Auto-Pay settings
+                        anytime from
+                        your wallet.
+                    </p>
+                    <h3 class="text-[32px] font-medium mb-2">
+                        Let Things Run on Autopilot
+                    </h3>
+                    <p class="text-base font-normal font-[#212529] mb-6">
+                        You’ve got enough to juggle. Let Auto-Pay take care of the small stuff, so you can stay focused
+                        on
+                        everything else. Because it’s Your YOUniverse, Your Way!
+                    </p>
+                    <p class="text-base font-normal font-[#212529] mb-6">
+                        Download or update the Pathao app and
+                        <a href="#" class="text-[#007bff] hover:underline">Sign Up on Pathao Pay</a>
+                        today.
+                    </p>
+                </div>
+                <article class="article-area overflow-hidden mb-[70px] lg:mb-[100px]">
+                    <div class="container max-w-2lg mx-auto px-4">
+                        <div class="top flex items-center justify-between mb-8">
+                            <h3 class="text-2xl lg:text-[32px] font-semibold">
+                                Related Blog
+                            </h3>
+                            <div class="common-btn flex items-center">
+                                <a href="#"
+                                    class="group relative overflow-hidden text-base font-medium text-primary1-600 h-10 lg;h-[48px] border border-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-4 transition-all duration-500 ease-out hover:border hover:border-primary1-700">
+                                    <i
+                                        class="fa-solid fa-arrow-right transition-all duration-500 ease-out -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                                    <span
+                                        class="transition-all translate-x-[-10px] duration-500 ease-out group-hover:translate-x-2">
+                                        View All
+                                    </span>
+                                    <i
+                                        class="fa-solid fa-arrow-right transition-all duration-500 ease-out group-hover:translate-x-4 translate-x-[-10px] group-hover:opacity-0">
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-12 gap-6">
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-10.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Service Updates</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">June 3, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                How ReadyRide Supports Safer Travel for Riders and Drivers
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-09.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Driver Stories</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">June 1, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                Why More Commuters Are Switching to ReadyRide for Daily Travel
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-05.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Product Update</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">May 28, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                How ReadyRide Is Helping Cities Move Smarter
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- blog-Services-Updates -->
+            <div class="tab-content hidden max-w-2lg mx-auto px-4" id="item-2">
+                <!-- Product Updates -->
+                <article class="article-area mb-[70px] lg:mb-[100px]">
+                    <div class="container max-w-2lg mx-auto px-4">
+                        <h4 class="text-[40px] font-semibold mb-10">
+                            Product Updates
+                        </h4>
+                        <div class="grid grid-cols-12 gap-6">
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-09.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Service
+                                                Updates</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">June 3, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                How ReadyRide Supports Safer Travel for Riders and Drivers
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-10.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Driver
+                                                Stories</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">June 1, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                Why More Commuters Are Switching to ReadyRide for Daily Travel
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-11.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Product
+                                                Update</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">May 28, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                How ReadyRide Is Helping Cities Move Smarter
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-09.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Service
+                                                Updates</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">June 3, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                How ReadyRide Supports Safer Travel for Riders and Drivers
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-10.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Driver
+                                                Stories</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">June 1, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                Why More Commuters Are Switching to ReadyRide for Daily Travel
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-11.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Product
+                                                Update</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">May 28, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                How ReadyRide Is Helping Cities Move Smarter
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-09.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Service
+                                                Updates</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">June 3, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                How ReadyRide Supports Safer Travel for Riders and Drivers
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-10.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Driver
+                                                Stories</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">June 1, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                Why More Commuters Are Switching to ReadyRide for Daily Travel
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-11.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Product
+                                                Update</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">May 28, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                How ReadyRide Is Helping Cities Move Smarter
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- blog-Newsroom -->
+            <div class="tab-content hidden max-w-2lg mx-auto px-4" id="item-3">
+                <!-- Newsroom -->
+                <article class="article-area mb-[70px] lg:mb-[100px]">
+                    <div class="container max-w-2lg mx-auto px-4">
+                        <h4 class="text-[40px] font-semibold mb-10">
+                            Newsroom
+                        </h4>
+                        <div class="grid grid-cols-12 gap-6">
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-14.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Service
+                                                Updates</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">June 3, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                ReadyRide Expands Service Coverage to New City Areas
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-15.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Driver
+                                                Stories</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">June 1, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="../pages/blog-details.html">
+                                                ReadyRide Launches New Safety Monitoring System
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-16.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Product
+                                                Update</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">May 28, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                ReadyRide Introduces Faster Smart Ride Matching Technology
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-16.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Product
+                                                Update</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">May 28, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                ReadyRide Introduces Faster Smart Ride Matching Technology
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-16.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Product
+                                                Update</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">May 28, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                ReadyRide Introduces Faster Smart Ride Matching Technology
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-14.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Service
+                                                Updates</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">June 3, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                ReadyRide Expands Service Coverage to New City Areas
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-15.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Driver
+                                                Stories</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">June 1, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="../pages/blog-details.html">
+                                                ReadyRide Launches New Safety Monitoring System
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-16.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Product
+                                                Update</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">May 28, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                ReadyRide Introduces Faster Smart Ride Matching Technology
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-14.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Service
+                                                Updates</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">June 3, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                ReadyRide Expands Service Coverage to New City Areas
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- blog-Promotions -->
+            <div class="tab-content hidden max-w-2lg mx-auto px-4" id="item-4">
+                <!-- Promotions -->
+                <article class="article-area mb-[70px] lg:mb-[100px]">
+                    <div class="container max-w-2lg mx-auto px-4">
+                        <h4 class="text-[40px] font-semibold mb-10">
+                            Promotions
+                        </h4>
+                        <div class="grid grid-cols-12 gap-6">
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-14.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Service
+                                                Updates</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">June 3, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                ReadyRide Expands Service Coverage to New City Areas
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-15.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Driver
+                                                Stories</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">June 1, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="../pages/blog-details.html">
+                                                ReadyRide Launches New Safety Monitoring System
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-16.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Product
+                                                Update</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">May 28, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                ReadyRide Introduces Faster Smart Ride Matching Technology
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-16.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Product
+                                                Update</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">May 28, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                ReadyRide Introduces Faster Smart Ride Matching Technology
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-16.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Product
+                                                Update</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">May 28, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                ReadyRide Introduces Faster Smart Ride Matching Technology
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-14.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Service
+                                                Updates</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">June 3, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                ReadyRide Expands Service Coverage to New City Areas
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-15.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Driver
+                                                Stories</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">June 1, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="../pages/blog-details.html">
+                                                ReadyRide Launches New Safety Monitoring System
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-16.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Product
+                                                Update</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">May 28, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                ReadyRide Introduces Faster Smart Ride Matching Technology
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-14.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Service
+                                                Updates</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">June 3, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                ReadyRide Expands Service Coverage to New City Areas
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+
+            <!-- blog-Stories -->
+            <div class="tab-content hidden max-w-2lg mx-auto px-4" id="item-5">
+                <!-- Product Updates -->
+                <article class="article-area mb-[70px] lg:mb-[100px]">
+                    <div class="container max-w-2lg mx-auto px-4">
+                        <h4 class="text-[40px] font-semibold mb-10">
+                            Stories
+                        </h4>
+                        <div class="grid grid-cols-12 gap-6">
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-09.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Service
+                                                Updates</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">June 3, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                How ReadyRide Supports Safer Travel for Riders and Drivers
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-10.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Driver
+                                                Stories</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">June 1, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                Why More Commuters Are Switching to ReadyRide for Daily Travel
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-11.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Product
+                                                Update</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">May 28, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                How ReadyRide Is Helping Cities Move Smarter
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-09.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Service
+                                                Updates</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">June 3, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                How ReadyRide Supports Safer Travel for Riders and Drivers
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-10.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Driver
+                                                Stories</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">June 1, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                Why More Commuters Are Switching to ReadyRide for Daily Travel
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-11.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Product
+                                                Update</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">May 28, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                How ReadyRide Is Helping Cities Move Smarter
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-09.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Service
+                                                Updates</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">June 3, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                How ReadyRide Supports Safer Travel for Riders and Drivers
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-10.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Driver
+                                                Stories</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">June 1, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                Why More Commuters Are Switching to ReadyRide for Daily Travel
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1000"
+                                class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+                                <div
+                                    class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
+                                    <a href="#" class="max-h-[248px] block overflow-hidden">
+                                        <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
+                                            src="../assets/images/blog/blog-11.jpg" alt="">
+                                    </a>
+                                    <div class="blog-content p-4 md:p-6">
+                                        <div class="update-time flex items-center gap-[15px] mb-3">
+                                            <span class="text-xs font-normal text-[#152934]">Product
+                                                Update</span>
+                                            <span class="block w-[5px] h-[5px] rounded-full bg-[#152934]"></span>
+                                            <span class="text-xs font-normal text-[#5a6872]">May 28, 2026</span>
+                                        </div>
+                                        <h4
+                                            class="text-base md:text-lg font-semibold group-hover:text-primary1-600 transition duration-200">
+                                            <a href="#">
+                                                How ReadyRide Is Helping Cities Move Smarter
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+        </section>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer-area bg-[#10151c] pt-[60px] text-white relative overflow-hidden z-[1]">
+        <img class="absolute left-0 top-0 z-[-1]" src="../assets/images/shape/footer-shape.svg" alt="">
+        <img class="absolute right-0 top-0 z-[-1] [transform:rotateY(180deg)]"
+            src="../assets/images/shape/footer-shape.svg" alt="">
+        <div class="container max-w-2lg mx-auto px-4">
+            <div class="grid grid-cols-12 gap-4 mb-[33px] pb-[33px] border-b border-[rgba(255,255,255,0.16)]">
+
+                <div class="col-span-12 lg:col-span-6">
+                    <a href="#" class="mb-[30px] block">
+                        <img src="../assets/logo/footer-logo.png" alt="">
+                    </a>
+                    <p class="text-lg font-normal text-[#d1d5db]">
+                        ReadyRide provides fast, safe, and affordable ride and <br class="hidden md:block"> delivery
+                        services, helping people
+                        move smarter every day.
+                    </p>
+                </div>
+
+                <div class="col-span-12 lg:col-span-6">
+                    <form data-aos="fade-right" data-aos-duration="1000" action="#"
+                        class="bg-[rgba(255,255,255,0.08)] border border-[rgba(255,255,255,0.16)] rounded-[12px] p-4 md:p-[24px]">
+                        <h3 class="text-2xl font-semibold mb-2">Get weekly Update</h3>
+                        <p class="text-base font-normal text-[rgba(255,255,255,0.6)] mb-6">Stay ahead with the latest
+                            industry insights.</p>
+                        <div class="flex items-center max-[520px]:flex-wrap gap-4">
+                            <input type="text" placeholder="Enter your email"
+                                class="border border-[rgba(255,255,255,0.12)] rounded-[12px] px-4 md:px-[24px] h-12 lg:h-[56px] bg-[rgba(255,255,255,0.06)] outline-none placeholder:font-normal placeholder:text-[16px] placeholder:tracking-[-0.02em] placeholder:text-[rgba(255,255,255,0.6)] focus:border-[var(--primary-1-600)] focus:placeholder:text-transparent transition-all duration-300 ease-in-out flex-1">
+                            <div class="common-btn max-[520px]:w-full flex items-center justify-center">
+                                <a href="#"
+                                    class="max-[520px]:w-full group relative overflow-hidden text-base font-medium text-white h-12 lg:h-[56px] bg-primary1-600 rounded-[8px] flex items-center justify-center gap-[10px] px-[10px] transition-all duration-500 ease-out hover:bg-primary1-700">
+                                    <i
+                                        class="fa-solid fa-arrow-right transition-all duration-500 ease-out -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                                    <span
+                                        class="transition-all translate-x-[-10px] duration-500 ease-out group-hover:translate-x-2">
+                                        Subscribe
+                                    </span>
+                                    <i
+                                        class="fa-solid fa-arrow-right transition-all duration-500 ease-out group-hover:translate-x-4 translate-x-[-10px] group-hover:opacity-0">
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="grid grid-cols-12 gap-6 mb-[33px]">
+
+                <div class="max-[420px]:col-span-12 col-span-6 md:col-span-4">
+                    <div class="footer-widget">
+                        <h5 class="title text-lg font-semibold mb-4">
+                            Quick Links
+                        </h5>
+                        <ul class="footer-link flex flex-col gap-2">
+                            <li>
+                                <a href="#"
+                                    class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden  inline-block hover:text-white before:bg-white">
+                                    <span class="explore-text" data-text="Home">Home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden inline-block hover:text-white before:bg-white">
+                                    <span class="explore-text" data-text="Earn With ReadyRide">Earn With
+                                        ReadyRide</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#"
+                                    class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden inline-block hover:text-white before:bg-white">
+                                    <span class="explore-text" data-text="Services">Services</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#"
+                                    class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden inline-block hover:text-white before:bg-white">
+                                    <span class="explore-text" data-text="Blogs">Blogs</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="max-[420px]:col-span-12 col-span-6 md:col-span-4">
+                    <div class="footer-widget">
+                        <h5 class="title text-lg font-semibold mb-4">
+                            Support
+                        </h5>
+                        <ul class="footer-link flex flex-col gap-2">
+                            <li>
+                                <a href="#"
+                                    class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden  inline-block hover:text-white before:bg-white">
+                                    <span class="explore-text" data-text="Help Center">Help Center</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden inline-block hover:text-white before:bg-white">
+                                    <span class="explore-text" data-text="Terms & Conditions">Terms & Conditions</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#"
+                                    class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden inline-block hover:text-white before:bg-white">
+                                    <span class="explore-text" data-text="Privacy Policy">Privacy Policy</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#"
+                                    class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden inline-block hover:text-white before:bg-white">
+                                    <span class="explore-text" data-text="Contact Us">Contact Us</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="max-[600px]:col-span-12 col-span-6 md:col-span-4">
+                    <div class="footer-widget">
+                        <h5 class="title text-lg font-semibold mb-4">
+                            Contact
+                        </h5>
+                        <ul class="footer-link flex flex-col gap-4 mb-6">
+                            <li>
+                                <a href="mailto:info@razinsoft.com"
+                                    class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden flex w-max items-center gap-2 hover:text-white before:bg-white">
+                                    <i class="fa-solid fa-envelope"></i> info@razinsoft.com
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:+8801711257498"
+                                    class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden flex w-max items-center gap-2 hover:text-white before:bg-white">
+                                    <i class="fa-solid fa-phone"></i> +880 1711 257 498
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden flex lg:w-max items-start gap-2 hover:text-white before:bg-white">
+                                    <i class="fa-solid fa-location-dot mt-1"></i>
+                                    RMR Center 1/1 (A&B) Shamoli Ring Road, Dhaka - <br class="hidden lg:block"> 1207,
+                                    Bangladesh.
+                                </a>
+                            </li>
+
+
+                        </ul>
+
+                        <div class="social-area flex items-center gap-[10px]">
+                            <a href="#"
+                                class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
+                                <i class="fa-brands fa-facebook text-xl"></i>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
+                                <i class="fa-brands fa-square-x-twitter text-xl rounded-full"></i>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
+                                <i class="fa-brands fa-youtube text-xl"></i>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
+                                <i class="fa-brands fa-pinterest text-xl"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="img mx-auto pb-[33px] border-b border-[rgba(255,255,255,0.1)]">
+                <img class="mx-auto" src="../assets/logo/ready-ride.png" alt="">
+            </div>
+            <div
+                class="copy-right-area flex max-[700px]:flex-wrap gap-2 max-[700px]:justify-center items-center justify-between py-6">
+                <p class="text-base font-normal text-[rgba(255,255,255,0.4)]">Professional Rideshare services you can
+                    trust.</p>
+                <p class="text-base font-normal text-[rgba(255,255,255,0.4)]">
+                    ⓒ2025
+                    <a href="#" class="custom__border text-white">ReadyRide.</a>
+                    All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- script link -->
+    <script src="../js/active-class-add.js"></script>
+    <script src="../js/tab.js"></script>
+    <script src="../js/offcanvas.js"></script>
+
+    <script src="../js/scrool-to-top.js"></script>
+
+    <!-- aos JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- //======= aos =========// -->
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>

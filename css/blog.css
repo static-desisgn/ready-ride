@@ -1,0 +1,40 @@
+.input_items {
+    border: 1px solid #edf1f4;
+    border-radius: 4px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 12px;
+    position: relative;
+    cursor: pointer;
+    transition: width 0.5s ease, padding 0.5s ease;
+}
+
+.input_items.active {
+    width: 100%;
+    cursor: auto;
+    justify-content: flex-start;
+    padding: 0 12px;
+}
+
+.input_items input {
+    flex: 1;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+}
+
+.input_items.active input {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.input_items input:focus::placeholder {
+    color: transparent;
+}
