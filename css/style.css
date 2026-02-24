@@ -156,6 +156,7 @@ input:-webkit-autofill:active {
     opacity: 1;
     visibility: visible;
 }
+
 .custom__dropdown:hover .drop__down {
     transform: scaleY(1);
     opacity: 1;

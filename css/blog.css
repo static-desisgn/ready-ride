@@ -26,7 +26,8 @@
     opacity: 0;
     visibility: hidden;
     transform: translateX(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease; 
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    padding-right: 35px;
 }
 
 .input_items.active input {
@@ -37,4 +38,30 @@
 
 .input_items input:focus::placeholder {
     color: transparent;
+}
+
+
+.tab__button__about {
+    position: relative;
+}
+
+.tab__button__about::before {
+    content: "\f107";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 50%;
+    top: 108%;
+    transform: translateX(50%) rotate(180deg);
+    font-size: 28px;
+    background: #fff;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s linear;
+}
+.tab__button__about.active::before {
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
 }
