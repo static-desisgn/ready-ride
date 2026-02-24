@@ -15,18 +15,17 @@ trigger.addEventListener('click', e => {
 // Click on a link → active + update button //
 links.forEach(link => {
     link.addEventListener('click', e => {
-        e.preventDefault();
 
-        // Remove active from all links //
+        // Remove active from all links
         links.forEach(l => l.classList.remove('active'));
 
-        // Add active to clicked link //
+        // Add active to clicked link
         link.classList.add('active');
 
-        // Update button text //
+        // Update button text
         btnText.firstChild.textContent = link.textContent;
 
-        // Hide dropdown //
+        // Hide dropdown
         target.classList.remove('active');
     });
 });

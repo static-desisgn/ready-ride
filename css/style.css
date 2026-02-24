@@ -163,6 +163,20 @@ input:-webkit-autofill:active {
     visibility: visible;
 }
 
+.custom__dropdown:hover>a {
+    color: var(--primary-1-600);
+}
+
+.list__item:hover {
+    color: var(--primary-1-600);
+}
+
+.custom__dropdown:hover>.custom__border:before {
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+
 
 /*=============== text rotate animation ============*/
 .explore-text {

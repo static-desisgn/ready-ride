@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ready Ride</title>
+    <title>Ready Ride Food</title>
     <!-- font from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -105,10 +105,71 @@
                     </h3>
                     <ul class="offcanvas__menu main-menu ">
                         <li class="mb-1"><a class="custom__border w-max" href="./index.html">Home</a></li>
-                        <li class="mb-1"><a class="custom__border w-max" href="./service.html">Service</a></li>
+                        <li class="relative custom__dropdown">
+                            <a href="javascript:void(0)" data-tab="item-2"
+                                class="text-base hover:border-transparent  font-normal custom__border overflow-hidden py-[2px] inline-block whitespace-nowrap ">
+                                Services
+                                <i class="fa-solid fa-angle-down ml-4"></i>
+                            </a>
+                            <ul
+                                class="absolute left-0 z-[99] grid grid-cols-1 w-full gap-6 bg-[#24262d] p-4 rounded-[8px] border border-gray-700 drop__down">
+                                <li class="col-span-1 hover:translate-x-1 transition duration-300">
+                                    <a href="./index.html"
+                                        class="list__item max-w-[160px] flex items-center gap-2  truncate font-normal text-[15px]">
+                                        <span
+                                            class="flex items-center justify-center  w-[40px] h-[40px] rounded-[6px] border border-[#e3e5e73d] group-hover:border-2 group-hover:border-primary1-600 transition duration-300 flex-[0_0_auto]">
+                                            <img class="w-[30px] h-[30px] object-cover" src="./assets/icons/car.png"
+                                                alt="">
+                                        </span>
+                                        <div class="flex flex-col gap-1">
+                                            Car
+                                            <br>
+                                            <span
+                                                class="text-[11px] text-gray-400 translate-y-[-4px] block ">
+                                                Beat the Traffic, Save Time</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="col-span-1 hover:translate-x-1 transition duration-300">
+                                    <a href="./pages/services.html"
+                                        class="list__item flex items-center gap-2   font-normal text-[15px]">
+                                        <span
+                                            class="flex items-center justify-center  w-[40px] h-[40px] rounded-[6px] border border-[#e3e5e73d] group-hover:border-2 group-hover:border-primary1-600 transition duration-300 flex-[0_0_auto]">
+                                            <img class="w-[30px] h-[30px] object-cover" src="./assets/icons/bike.png"
+                                                alt="">
+                                        </span>
+                                        <div class="flex flex-col gap-1">
+                                            Bike
+                                            <br>
+                                            <span
+                                                class="text-[11px] text-gray-400 translate-y-[-4px] block ">
+                                                Beat the Traffic, Save Time</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="col-span-1 hover:translate-x-1 transition duration-300">
+                                    <a href="./pages/food.html"
+                                        class="list__item  flex items-center gap-2   font-normal text-[15px]">
+                                        <span
+                                            class="flex items-center justify-center  w-[40px] h-[40px] rounded-[6px] border border-[#e3e5e73d] group-hover:border-2 group-hover:border-primary1-600 transition duration-300 flex-[0_0_auto]">
+                                            <img class="w-[30px] h-[30px] object-cover" src="./assets/icons/food.png"
+                                                alt="">
+                                        </span>
+                                        <div class="flex flex-col gap-1">
+                                            Food
+                                            <br>
+                                            <span
+                                                class="text-[11px] text-gray-400 translate-y-[-4px] block">
+                                                Beat the Traffic, Save Time</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="mb-1"><a class="custom__border w-max" href="./pages/blog.html">Blog</a></li>
                         <li class="mb-1"><a class="custom__border w-max" href="./pages/about-us.html">About Us</a></li>
-                        <li class="mb-1"><a class="custom__border w-max" href="./pages/contact-us.html">Contact Us</a></li>
+                        <li class="mb-1"><a class="custom__border w-max" href="./pages/contact-us.html">Contact Us</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -126,9 +187,9 @@
     <!-- offcanvas end -->
 
     <!-- header  -->
-    <header  
+    <header
         class="header-area py-[21px] backdrop-blur-[24px] bg-[#ffffffde] shadow-[0_1px_4px_0_rgba(0,0,0,0.06)] sticky top-0 z-[9]">
-        <div class="container max-w-2lg mx-auto px-4 overflow-hidden">
+        <div class="container max-w-2lg mx-auto px-4 ">
             <div class="grid grid-cols-12 md:gap-10 items-center">
 
                 <!-- logo -->
@@ -151,11 +212,66 @@
                                         <span class="explore-text" data-text="Home">Home</span>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="./pages/services.html"
-                                        class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block">
-                                        <span class="explore-text" data-text="Services">Services</span>
+                                <li class="relative custom__dropdown">
+                                    <a href="javascript:void(0)" data-tab="item-2"
+                                        class="text-base hover:border-transparent  font-normal custom__border overflow-hidden py-[2px] inline-block whitespace-nowrap ">
+                                        Services
+                                        <i class="fa-solid fa-angle-down"></i>
                                     </a>
+                                    <ul
+                                        class="absolute left-0 z-[99] grid grid-cols-2 w-max gap-6 bg-white p-4 rounded-[8px] border border-gray-100 drop__down">
+                                        <li class="col-span-1 hover:translate-x-1 transition duration-300">
+                                            <a href="./index.html"
+                                                class="list__item flex items-center gap-2  font-normal text-[15px]">
+                                                <span
+                                                    class="flex items-center justify-center  w-[40px] h-[40px] rounded-[6px] border border-[#E3E5E7] group-hover:border-2 group-hover:border-primary1-600 transition duration-300 flex-[0_0_auto]">
+                                                    <img class="w-[30px] h-[30px] object-cover"
+                                                        src="./assets/icons/car.png" alt="">
+                                                </span>
+                                                <div class="flex flex-col gap-1">
+                                                    Car
+                                                    <br>
+                                                    <span
+                                                        class="text-[11px] text-gray-400 translate-y-[-4px] block max-w-[160px]  truncate">
+                                                        Beat the Traffic, Save Time</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col-span-1 hover:translate-x-1 transition duration-300">
+                                            <a href="./pages/services.html"
+                                                class="list__item max-w-[160px] flex items-center gap-2  truncate font-normal text-[15px]">
+                                                <span
+                                                    class="flex items-center justify-center  w-[40px] h-[40px] rounded-[6px] border border-[#E3E5E7] group-hover:border-2 group-hover:border-primary1-600 transition duration-300 flex-[0_0_auto]">
+                                                    <img class="w-[30px] h-[30px] object-cover"
+                                                        src="./assets/icons/bike.png" alt="">
+                                                </span>
+                                                <div class="flex flex-col gap-1">
+                                                    Bike
+                                                    <br>
+                                                    <span
+                                                        class="text-[11px] text-gray-400 translate-y-[-4px] block max-w-[160px]  truncate">
+                                                        Beat the Traffic, Save Time</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col-span-1 hover:translate-x-1 transition duration-300">
+                                            <a href="./pages/food.html"
+                                                class="list__item max-w-[160px] flex items-center gap-2  truncate font-normal text-[15px]">
+                                                <span
+                                                    class="flex items-center justify-center  w-[40px] h-[40px] rounded-[6px] border border-[#E3E5E7] group-hover:border-2 group-hover:border-primary1-600 transition duration-300 flex-[0_0_auto]">
+                                                    <img class="w-[30px] h-[30px] object-cover"
+                                                        src="./assets/icons/food.png" alt="">
+                                                </span>
+                                                <div class="flex flex-col gap-1">
+                                                    Food
+                                                    <br>
+                                                    <span
+                                                        class="text-[11px] text-gray-400 translate-y-[-4px] block max-w-[160px]  truncate">
+                                                        Beat the Traffic, Save Time</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li>
                                     <a href="./pages/blog.html"
@@ -215,7 +331,7 @@
         <section class="hero-area overflow-hidden py-10 lg:py-[136px]  relative">
             <div class="container max-w-2lg mx-auto px-4">
                 <div class="grid grid-cols-12">
-    
+
                     <div class="col-span-12 lg:col-span-5 " data-aos="fade-right" data-aos-duration="1200">
                         <div class="hero-content flex flex-col h-full justify-center items-center md:items-start">
                             <h1
@@ -243,12 +359,13 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <div class="col-span-12 lg:col-span-7 lg:absolute right-0 top-[0] z-[-1] h-full mt-6 lg:mt-0">
                         <div
                             class="hero-img max-w-[350px] md:max-w-full xl:h-full relative after:absolute after:bg-[#ffffff] after:rounded-br-[40%] after:w-[60%] after:h-[70%] after:left-[-80px] after:top-0 after:z-[-2] before:absolute before:bg-[#3863A0] before:w-[105%] before:h-[100%] before:z-[-2] before:right-0 before:rounded-[0_0_0_0] pb-11 before:hidden xl:before:block after:hidden xl:after:block mx-auto">
-                            <img data-aos="flip-left" data-aos-easing="flip-right" data-aos-duration="1200" class="h-full" src="./assets/images/hero/hero-01.png" alt="">
-    
+                            <img data-aos="flip-left" data-aos-easing="flip-right" data-aos-duration="1200"
+                                class="h-full" src="./assets/images/hero/hero-01.png" alt="">
+
                             <!-- SVG wave background -->
                             <svg width="155%" height="170%" id="svg" viewBox="0 0 1440 690"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -262,11 +379,11 @@
                             </svg>
                         </div>
                     </div>
-    
+
                 </div>
             </div>
         </section>
-    
+
         <!-- count -->
         <section class="count-area overflow-hidden lg:absolute translate-y-[-50px] left-0 right-0">
             <div class="container max-w-2lg mx-auto px-4">
@@ -275,7 +392,8 @@
                         <div class="max-[550px]:col-span-12 col-span-6 lg:col-span-3 h-full">
                             <div
                                 class="count-item hover hover:bg-primary1-600 hover:text-white transition duration-300 group h-full py-[17px] flex flex-col gap-1 md:gap-2 items-center justify-center   rounded-[0] xl:first:hover:translate-x-[-16px] hover:shadow-[0_2px_12px_0_rgba(0,0,0,0.18)]  hover:translate-y-[-16px] before:border-r before:border-[#EDEEF1] before:w-[1px] before:h-[70%] relative before:absolute before:top-1/2 before:-translate-y-1/2 before:right-0 hover:before:border-r hover:before:border-primary1-600 before:transition before:duration-300 ">
-                                <h2 class="counter font-bold text-xl md:text-2xl" data-target="15" data-suffix=" Million+">0
+                                <h2 class="counter font-bold text-xl md:text-2xl" data-target="15"
+                                    data-suffix=" Million+">0
                                 </h2>
                                 <span
                                     class="text-base font-normal group-hover:text-white text-gray-500 transition duration-300">App
@@ -285,7 +403,8 @@
                         <div class="max-[550px]:col-span-12 col-span-6 lg:col-span-3 h-full">
                             <div
                                 class="count-item hover hover:bg-primary1-600 hover:text-white transition duration-300 group h-full py-[17px] flex flex-col gap-1 md:gap-2 items-center justify-center   rounded-[0] xl:hover:translate-x-[-10px] hover:shadow-[0_2px_12px_0_rgba(0,0,0,0.18)]  hover:translate-y-[-16px] before:border-r before:border-[#EDEEF1] before:w-[1px] before:h-[70%] relative before:absolute before:top-1/2 before:-translate-y-1/2 before:right-0 hover:before:border-r hover:before:border-primary1-600 before:transition before:duration-300 ">
-                                <h2 class="counter font-bold text-xl md:text-2xl" data-target="350" data-suffix=" Million+">
+                                <h2 class="counter font-bold text-xl md:text-2xl" data-target="350"
+                                    data-suffix=" Million+">
                                     0 </h2>
                                 <span
                                     class="text-base font-normal group-hover:text-white text-gray-500 transition duration-300">Successful
@@ -295,7 +414,8 @@
                         <div class="max-[550px]:col-span-12 col-span-6 lg:col-span-3 h-full">
                             <div
                                 class="count-item hover hover:bg-primary1-600 hover:text-white transition duration-300 group h-full py-[17px] flex flex-col gap-1 md:gap-2 items-center justify-center   rounded-[0] xl:hover:translate-x-[-10px] hover:shadow-[0_2px_12px_0_rgba(0,0,0,0.18)]  hover:translate-y-[-16px] before:border-r before:border-[#EDEEF1] before:w-[1px] before:h-[70%] relative before:absolute before:top-1/2 before:-translate-y-1/2 before:right-0 hover:before:border-r hover:before:border-primary1-600 before:transition before:duration-300 ">
-                                <h2 class="counter font-bold text-xl md:text-2xl" data-target="10" data-suffix=" Million+">0
+                                <h2 class="counter font-bold text-xl md:text-2xl" data-target="10"
+                                    data-suffix=" Million+">0
                                 </h2>
                                 <span
                                     class="text-base font-normal group-hover:text-white text-gray-500 transition duration-300">In
@@ -306,7 +426,8 @@
                         <div class="max-[550px]:col-span-12 col-span-6 lg:col-span-3 h-full">
                             <div
                                 class="count-item hover hover:bg-primary1-600 hover:text-white transition duration-300 group h-full py-[17px] flex flex-col gap-1 md:gap-2 items-center justify-center   rounded-[0] xl:last:hover:translate-x-[-16px] hover:shadow-[0_2px_12px_0_rgba(0,0,0,0.18)]  hover:translate-y-[-16px] before:border-r before:border-[#EDEEF1] before:w-[1px] before:h-[70%] relative before:absolute before:top-1/2 before:-translate-y-1/2 before:right-0 hover:before:border-r hover:before:border-primary1-600 before:transition before:duration-300 last:before:border-r-0">
-                                <h2 class="counter font-bold text-xl md:text-2xl" data-target="10" data-suffix=" Million+">0
+                                <h2 class="counter font-bold text-xl md:text-2xl" data-target="10"
+                                    data-suffix=" Million+">0
                                 </h2>
                                 <span
                                     class="text-base font-normal group-hover:text-white text-gray-500 transition duration-300">In
@@ -317,18 +438,19 @@
                 </div>
             </div>
         </section>
-    
+
         <!-- Ride Platform -->
         <section class="platform-area overflow-hidden mt-[50px] lg:mt-[230px] mb-[70px] lg:mb-[100px]">
             <div class="container max-w-2lg mx-auto px-4">
                 <div class="wrapper text-center mb-6" data-aos="fade-up" data-aos-duration="1000">
-                    <h2 class="font-semibold text-xl md:text-2xl lg:text-[30px] xl:text-[40px] leading-[120%] mb-1 xl:mb-3">
+                    <h2
+                        class="font-semibold text-xl md:text-2xl lg:text-[30px] xl:text-[40px] leading-[120%] mb-1 xl:mb-3">
                         The
                         ReadyRide Platform</h2>
                     <p class="text-base font-normal text-[#5d6467]">Here’s everything ReadyRid offers just for you!</p>
-    
+
                     <div class="tab-area flex flex-wrap items-start justify-center gap-4 mt-10">
-    
+
                         <button data-tab="bike"
                             class="tab__button group text-lg font-normal flex items-center gap-2 px-6 xl:px-[46px] pb-4 relative transition duration-300 mb-0 hover:text-primary1-600 active">
                             <span
@@ -337,7 +459,7 @@
                             </span>
                             Bike
                         </button>
-    
+
                         <button data-tab="car"
                             class="tab__button group text-lg font-normal flex items-center gap-2 px-6 xl:px-[46px] pb-4 relative transition duration-300 mb-0 hover:text-primary1-600">
                             <span
@@ -346,7 +468,7 @@
                             </span>
                             Car
                         </button>
-    
+
                         <button data-tab="parcel"
                             class="tab__button group text-lg font-normal flex items-center gap-2 px-6 xl:px-[46px] pb-4 relative transition duration-300 mb-0 hover:text-primary1-600">
                             <span
@@ -355,7 +477,7 @@
                             </span>
                             Parcel
                         </button>
-    
+
                         <button data-tab="food"
                             class="tab__button group text-lg font-normal flex items-center gap-2 px-6 xl:px-[46px] pb-4 relative transition duration-300 mb-0 hover:text-primary1-600">
                             <span
@@ -365,7 +487,7 @@
                             Food
                         </button>
                     </div>
-    
+
                 </div>
                 <!-- bike -->
                 <div class="tab-content" id="bike">
@@ -418,14 +540,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-span-12 md:col-span-5" data-aos="flip-left" data-aos-easing="flip-right" data-aos-duration="1200">
+                        <div class="col-span-12 md:col-span-5" data-aos="flip-left" data-aos-easing="flip-right"
+                            data-aos-duration="1200">
                             <div class="right-content">
                                 <img class="h-[300px] md:h-auto" src="./assets/images/platform/platform-01.png" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- car -->
                 <div class="tab-content hidden" id="car">
                     <div class="grid grid-cols-12">
@@ -474,14 +597,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-span-12 md:col-span-5" data-aos="flip-left" data-aos-easing="flip-right" data-aos-duration="1200">
+                        <div class="col-span-12 md:col-span-5" data-aos="flip-left" data-aos-easing="flip-right"
+                            data-aos-duration="1200">
                             <div class="right-content">
                                 <img class="h-[300px] md:h-auto" src="./assets/images/platform/platform-01.png" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- parcel -->
                 <div class="tab-content hidden" id="parcel">
                     <div class="grid grid-cols-12">
@@ -533,14 +657,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-span-12 md:col-span-5" data-aos="flip-left" data-aos-easing="flip-right" data-aos-duration="1200">
+                        <div class="col-span-12 md:col-span-5" data-aos="flip-left" data-aos-easing="flip-right"
+                            data-aos-duration="1200">
                             <div class="right-content">
                                 <img class="h-[300px] md:h-auto" src="./assets/images/platform/platform-01.png" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- food -->
                 <div class="tab-content hidden" id="food">
                     <div class="grid grid-cols-12">
@@ -592,7 +717,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-span-12 md:col-span-5" data-aos="flip-left" data-aos-easing="flip-right" data-aos-duration="1200">
+                        <div class="col-span-12 md:col-span-5" data-aos="flip-left" data-aos-easing="flip-right"
+                            data-aos-duration="1200">
                             <div class="right-content">
                                 <img class="h-[300px] md:h-auto" src="./assets/images/platform/platform-01.png" alt="">
                             </div>
@@ -601,7 +727,7 @@
                 </div>
             </div>
         </section>
-    
+
         <!-- here-with-you -->
         <section class="mb-[70px] overflow-hidden lg:mb-[100px]">
             <div class="container max-w-2lg mx-auto px-4">
@@ -613,43 +739,50 @@
                 </div>
                 <div class="border-rotate-box relative mb-[60px]">
                     <div class="grid grid-cols-12 gap-4 lg:gap-6 p-4 lg:p-6">
-                        <div data-aos="zoom-in" data-aos-duration="1000" class="max-[380px]:col-span-12 col-span-6 md:col-span-3">
+                        <div data-aos="zoom-in" data-aos-duration="1000"
+                            class="max-[380px]:col-span-12 col-span-6 md:col-span-3">
                             <div class="img max-[380px]:h-[200px] h-full overflow-hidden">
                                 <img class="w-full h-full object-cover item"
                                     src="./assets/images/hereWithYou/here-with-you-01.jpg" alt="">
                             </div>
                         </div>
-                        <div  data-aos="zoom-in" data-aos-duration="1000"class="max-[380px]:col-span-12 col-span-6 md:col-span-6">
+                        <div data-aos="zoom-in" data-aos-duration="1000"
+                            class="max-[380px]:col-span-12 col-span-6 md:col-span-6">
                             <div class="img max-[380px]:h-[200px] h-full overflow-hidden">
                                 <img class="w-full h-full object-cover item"
                                     src="./assets/images/hereWithYou/here-with-you-02.jpg" alt="">
                             </div>
                         </div>
-                        <div data-aos="zoom-in" data-aos-duration="1000" class="max-[380px]:col-span-12 col-span-6 md:col-span-3">
+                        <div data-aos="zoom-in" data-aos-duration="1000"
+                            class="max-[380px]:col-span-12 col-span-6 md:col-span-3">
                             <div class="img max-[380px]:h-[200px] h-full overflow-hidden">
                                 <img class="w-full h-full object-cover item"
                                     src="./assets/images/hereWithYou/here-with-you-03.jpg" alt="">
                             </div>
                         </div>
-                        <div data-aos="zoom-in" data-aos-duration="1000" class="max-[380px]:col-span-12 col-span-6 md:col-span-3">
+                        <div data-aos="zoom-in" data-aos-duration="1000"
+                            class="max-[380px]:col-span-12 col-span-6 md:col-span-3">
                             <div class="img max-[380px]:h-[200px] h-full overflow-hidden">
                                 <img class="w-full h-full object-cover item"
                                     src="./assets/images/hereWithYou/here-with-you-04.jpg" alt="">
                             </div>
                         </div>
-                        <div data-aos="zoom-in" data-aos-duration="1000" class="max-[380px]:col-span-12 col-span-6 md:col-span-3">
+                        <div data-aos="zoom-in" data-aos-duration="1000"
+                            class="max-[380px]:col-span-12 col-span-6 md:col-span-3">
                             <div class="img max-[380px]:h-[200px] h-full overflow-hidden">
                                 <img class="w-full h-full object-cover item"
                                     src="./assets/images/hereWithYou/here-with-you-05.jpg" alt="">
                             </div>
                         </div>
-                        <div data-aos="zoom-in" data-aos-duration="1000" class="max-[380px]:col-span-12 col-span-6 md:col-span-3">
+                        <div data-aos="zoom-in" data-aos-duration="1000"
+                            class="max-[380px]:col-span-12 col-span-6 md:col-span-3">
                             <div class="img max-[380px]:h-[200px] h-full overflow-hidden">
                                 <img class="w-full h-full object-cover item"
                                     src="./assets/images/hereWithYou/here-with-you-06.jpg" alt="">
                             </div>
                         </div>
-                        <div data-aos="zoom-in" data-aos-duration="1000" class="max-[380px]:col-span-12 col-span-6 md:col-span-3">
+                        <div data-aos="zoom-in" data-aos-duration="1000"
+                            class="max-[380px]:col-span-12 col-span-6 md:col-span-3">
                             <div class="img max-[380px]:h-[200px] h-full overflow-hidden">
                                 <img class="w-full h-full object-cover item"
                                     src="./assets/images/hereWithYou/here-with-you-07.jpg" alt="">
@@ -658,7 +791,7 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-12 gap-6">
-    
+
                     <div data-aos="fade-right" data-aos-duration="1000" class="max-[550px]:col-span-12 col-span-6">
                         <div class="content">
                             <h4 class="text-xl lg:text-2xl xl:text-[32px] font-semibold mb-1">
@@ -685,7 +818,7 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <div data-aos="fade-left" data-aos-duration="1000" class="max-[550px]:col-span-12 col-span-6">
                         <div class="content">
                             <h4 class="text-xl lg:text-2xl xl:text-[32px] font-semibold mb-1">
@@ -712,16 +845,17 @@
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
             </div>
         </section>
-    
+
         <!-- earn rides -->
         <section class="earn-rides-area overflow-hidden pb-[60px] md:pb-[100px]">
             <div class="earn-rides-content max-w-2lg mx-auto px-4">
                 <div class="mb-10 text-center">
-                    <h2 class="font-semibold text-xl md:text-2xl lg:text-[30px] xl:text-[40px] leading-[120%] mb-1 xl:mb-3">
+                    <h2
+                        class="font-semibold text-xl md:text-2xl lg:text-[30px] xl:text-[40px] leading-[120%] mb-1 xl:mb-3">
                         Earn
                         through bike, car, or bicycle</h2>
                     <p class="text-base font-normal text-[#5d6467] mb-7">Join the country's highest earning platform</p>
@@ -746,21 +880,24 @@
                 </div>
             </div>
         </section>
-    
+
         <!-- Download the app -->
-        <section 
+        <section
             class="download-area py-[60px] pb-[20px] bg-[#fbfbfb] mb-[70px] lg:mb-[100px] relative before:absolute before:w-[50%] before:h-[70px] before:bg-[#fbfbfb] before:right-0 before:bottom-[0] before:z-[1] overflow-hidden before:hidden before:lg:block">
             <div class="container max-w-2lg mx-auto px-4">
                 <div class="grid grid-cols-12">
-                    <div class="col-span-12 lg:col-span-7 flex flex-col h-full justify-center" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="col-span-12 lg:col-span-7 flex flex-col h-full justify-center" data-aos="fade-right"
+                        data-aos-duration="1000">
                         <div class="mb-6 text-center lg:text-start">
-                            <h2 class="font-semibold text-[30px] xl:text-[40px] leading-[120%] mb-1 xl:mb-2">Download the
+                            <h2 class="font-semibold text-[30px] xl:text-[40px] leading-[120%] mb-1 xl:mb-2">Download
+                                the
                                 app</h2>
-                            <p class="text-base font-normal text-[#5d6467] mb-7">Our reliable service and attractive offers
+                            <p class="text-base font-normal text-[#5d6467] mb-7">Our reliable service and attractive
+                                offers
                                 are waiting just for you!</p>
                         </div>
                         <div class="flex items-center flex-wrap gap-6 justify-center lg:justify-start">
-    
+
                             <div class="download-items">
                                 <h6 class="text-sm font-semibold mb-2">
                                     User app
@@ -774,18 +911,18 @@
                                         <a href="#">
                                             <img src="./assets/icons/googlr-play.png" alt="">
                                         </a>
-    
+
                                         <a href="#"
                                             class="group relative overflow-hidden text-sm font-medium text-white h-[40px] bg-primary1-600 rounded-[8px] flex items-center justify-center px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700 pr-[18px]">
                                             <span class="transition-all duration-500 ease-out mr-4">
                                                 Download
                                             </span>
-    
+
                                             <i
                                                 class="fa-solid fa-download transition-all duration-500 ease-out group-hover:translate-y-[35px]">
                                             </i>
-    
-    
+
+
                                             <i
                                                 class="fa-solid fa-download transition-all duration-500 ease-out  translate-x-[-14px] translate-y-[-35px] group-hover:translate-y-[0]">
                                             </i>
@@ -793,7 +930,7 @@
                                     </div>
                                 </div>
                             </div>
-    
+
                             <div class="download-items mt-auto">
                                 <div
                                     class="download-box flex flex-col xl:flex-row items-center gap-4 bg-black backdrop-blur-[12px] border border-white/16 rounded-[12px] p-4">
@@ -804,18 +941,18 @@
                                         <a href="#">
                                             <img src="./assets/icons/app-store.png" alt="">
                                         </a>
-    
+
                                         <a href="#"
                                             class="group relative overflow-hidden text-sm font-medium text-white h-[40px] bg-primary1-600 rounded-[8px] flex items-center justify-center px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700 pr-[18px]">
                                             <span class="transition-all duration-500 ease-out mr-4">
                                                 Download
                                             </span>
-    
+
                                             <i
                                                 class="fa-solid fa-download transition-all duration-500 ease-out group-hover:translate-y-[35px]">
                                             </i>
-    
-    
+
+
                                             <i
                                                 class="fa-solid fa-download transition-all duration-500 ease-out  translate-x-[-14px] translate-y-[-35px] group-hover:translate-y-[0]">
                                             </i>
@@ -823,7 +960,7 @@
                                     </div>
                                 </div>
                             </div>
-    
+
                             <div class="download-items">
                                 <h6 class="text-sm font-semibold mb-2">
                                     Drive app
@@ -837,18 +974,18 @@
                                         <a href="#">
                                             <img src="./assets/icons/googlr-play.png" alt="">
                                         </a>
-    
+
                                         <a href="#"
                                             class="group relative overflow-hidden text-sm font-medium text-white h-[40px] bg-primary1-600 rounded-[8px] flex items-center justify-center px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700 pr-[18px]">
                                             <span class="transition-all duration-500 ease-out mr-4">
                                                 Download
                                             </span>
-    
+
                                             <i
                                                 class="fa-solid fa-download transition-all duration-500 ease-out group-hover:translate-y-[35px]">
                                             </i>
-    
-    
+
+
                                             <i
                                                 class="fa-solid fa-download transition-all duration-500 ease-out  translate-x-[-14px] translate-y-[-35px] group-hover:translate-y-[0]">
                                             </i>
@@ -856,10 +993,11 @@
                                     </div>
                                 </div>
                             </div>
-    
+
                         </div>
                     </div>
-                    <div data-aos="zoom-in" data-aos-duration="1000" class="col-span-12 lg:col-span-5 flex flex-col h-full justify-center">
+                    <div data-aos="zoom-in" data-aos-duration="1000"
+                        class="col-span-12 lg:col-span-5 flex flex-col h-full justify-center">
                         <div class="phone-img w-[200px] xl:w-full flex translate-y-[20px]">
                             <img class="h-max mt-auto" src="./assets/images/download/small-phone.png" alt="">
                             <img class="ml-[-70px]" src="./assets/images/download/big-phone.png" alt="">
@@ -868,7 +1006,7 @@
                 </div>
             </div>
         </section>
-    
+
         <!-- rider-loved-section -->
         <section class="rider-loved-area overflow-hidden mb-[70px] lg:mb-[100px]">
             <div class="container max-w-[1700px] mx-auto">
@@ -880,7 +1018,7 @@
                         See why people choose ReadyRide for daily travel and income opportunities.
                     </p>
                 </div>
-    
+
                 <!-- Swiper-top -->
                 <div class="swiper rider-slide mb-6">
                     <div class="swiper-wrapper">
@@ -919,7 +1057,8 @@
                             <div
                                 class="content-box md:min-w-[400px] h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
                                 <p class="mb-8 text-lg font-normal three__line">
-                                    I found a 2007 study on effects of hand sanitizers on blood alcohol level in adults. The
+                                    I found a 2007 study on effects of hand sanitizers on blood alcohol level in adults.
+                                    The
                                     12 subjects showed a slight increase in BAC.</p>
                                 <div class="author-info flex items-center gap-3">
                                     <img class="rounded-[12px]" src="./assets/images/author/author-03.png" alt="">
@@ -977,7 +1116,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Swiper-bottom -->
                 <div class="swiper rider-slide-2">
                     <div class="swiper-wrapper">
@@ -1000,7 +1139,8 @@
                             <div
                                 class="content-box md:min-w-[400px] h-[218px] flex flex-col justify-between  p-6 rounded-[12px] bg-primary1-50">
                                 <p class="mb-8 text-lg font-normal three__line">
-                                    I found a 2007 study on effects of hand sanitizers on blood alcohol level in adults. The
+                                    I found a 2007 study on effects of hand sanitizers on blood alcohol level in adults.
+                                    The
                                     12 subjects showed a slight increase in BAC.
                                 </p>
                                 <div class="author-info flex items-center gap-3">
@@ -1076,9 +1216,9 @@
                     </div>
                 </div>
             </div>
-    
+
         </section>
-    
+
         <!-- trusted-delivery -->
         <section class="trusted-delivery-area bg-gray-50 mb-[70px] lg:mb-[100px] py-[58px] overflow-hidden">
             <div class="container max-w-2lg mx-auto px-4">
@@ -1088,7 +1228,8 @@
                             <span class="text-base font-normal text-gray-500 mb-3 block">
                                 Start delivering products using Pathao courier
                             </span>
-                            <h2 class="font-semibold text-2xl lg;text-[30px] xl:text-[40px] leading-[120%] mb-6 md:mb-2">
+                            <h2
+                                class="font-semibold text-2xl lg;text-[30px] xl:text-[40px] leading-[120%] mb-6 md:mb-2">
                                 Trusted & Reliable <br>
                                 Delivery For Your Business</h2>
                         </div>
@@ -1112,7 +1253,7 @@
                 </div>
             </div>
         </section>
-    
+
         <!-- article -->
         <article class="article-area overflow-hidden mb-[70px] lg:mb-[100px]">
             <div class="container max-w-2lg mx-auto px-4">
@@ -1136,8 +1277,9 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-12 gap-6">
-    
-                    <div data-aos="zoom-in" data-aos-duration="1000" class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+
+                    <div data-aos="zoom-in" data-aos-duration="1000"
+                        class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
                         <div class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
                             <a href="#" class="max-h-[248px] block overflow-hidden">
                                 <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
@@ -1157,8 +1299,9 @@
                             </div>
                         </div>
                     </div>
-    
-                    <div data-aos="zoom-in" data-aos-duration="1000" class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+
+                    <div data-aos="zoom-in" data-aos-duration="1000"
+                        class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
                         <div class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
                             <a href="#" class="max-h-[248px] block overflow-hidden">
                                 <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
@@ -1178,8 +1321,9 @@
                             </div>
                         </div>
                     </div>
-    
-                    <div data-aos="zoom-in" data-aos-duration="1000" class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
+
+                    <div data-aos="zoom-in" data-aos-duration="1000"
+                        class="max-[650px]:col-span-12 col-span-6 lg:col-span-4">
                         <div class="blog-box h-full border group border-[#ece8eb] rounded-[8px] overflow-hidden">
                             <a href="#" class="max-h-[248px] block overflow-hidden">
                                 <img class="w-full h-full object-cover item group-hover:![transform:perspective(400px)_rotateX(0.09deg)_rotateY(0)_scaleX(1.1)_scaleY(1.1)]"
@@ -1199,14 +1343,14 @@
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
             </div>
         </article>
     </main>
 
     <!-- footer -->
-    <footer class="footer-area overflow-hidden bg-[#10151c] pt-[60px] text-white relative overflow-hidden z-[1]">
+    <footer class="footer-area bg-[#10151c] pt-[60px] text-white relative overflow-hidden z-[1]">
         <img class="absolute left-0 top-0 z-[-1]" src="./assets/images/shape/footer-shape.svg" alt="">
         <img class="absolute right-0 top-0 z-[-1] [transform:rotateY(180deg)]"
             src="./assets/images/shape/footer-shape.svg" alt="">
@@ -1225,7 +1369,7 @@
                 </div>
 
                 <div class="col-span-12 lg:col-span-6">
-                    <form data-aos="fade-right" data-aos-duration="1000"  action="#"
+                    <form data-aos="fade-right" data-aos-duration="1000" action="#"
                         class="bg-[rgba(255,255,255,0.08)] border border-[rgba(255,255,255,0.16)] rounded-[12px] p-4 md:p-[24px]">
                         <h3 class="text-2xl font-semibold mb-2">Get weekly Update</h3>
                         <p class="text-base font-normal text-[rgba(255,255,255,0.6)] mb-6">Stay ahead with the latest
@@ -1276,7 +1420,7 @@
                             </li>
 
                             <li>
-                                <a href="#"
+                                <a href="./pages/services.html"
                                     class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden inline-block hover:text-white before:bg-white">
                                     <span class="explore-text" data-text="Services">Services</span>
                                 </a>
@@ -1386,7 +1530,7 @@
             <div class="img mx-auto pb-[33px] border-b border-[rgba(255,255,255,0.1)]">
                 <img class="mx-auto" src="./assets/logo/ready-ride.png" alt="">
             </div>
-            <div 
+            <div
                 class="copy-right-area flex max-[700px]:flex-wrap gap-2 max-[700px]:justify-center items-center justify-between py-6">
                 <p class="text-base font-normal text-[rgba(255,255,255,0.4)]">Professional Rideshare services you can
                     trust.</p>
