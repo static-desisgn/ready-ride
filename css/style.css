@@ -414,3 +414,22 @@ a:hover .explore-text::before {
 .tab__button__3 {
     border: 1px solid transparent !important;
 }
+
+
+
+.rider-slide .swiper-wrapper {
+    transition-timing-function: linear !important;
+}
+
+.rider-slide .swiper-slide {
+    width: 300px;
+}
+
+
+.rider-slide-2 .swiper-wrapper {
+    transition-timing-function: linear !important;
+}
+
+.rider-slide-2 .swiper-slide {
+    width: 300px;
+}
