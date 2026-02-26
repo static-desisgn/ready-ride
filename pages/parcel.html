@@ -26,7 +26,8 @@
     <!-- custom CSS -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/offcanvas.css">
-    <link rel="stylesheet" href="../css/scrool-to-top.css">
+   <link rel="stylesheet" href="../css/scrool-to-top.css">
+    <link rel="stylesheet" href="../css/rtl.css">
 
     <!-- aos css -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -34,7 +35,7 @@
 
 </head>
 
-<body>
+<body class="transition-all duration-300">
 
     <!-- scrollToTop -->
     <div class="scrollToTop active-progress">
@@ -229,7 +230,7 @@
                                         <i class="fa-solid fa-angle-down"></i>
                                     </a>
                                     <ul
-                                        class="absolute left-0 z-[99] grid grid-cols-2 w-max gap-6 bg-white p-4 rounded-[8px] border border-gray-100 drop__down">
+                                        class="absolute rtl:r-0 ltr:left-0 z-[99] grid grid-cols-2 w-max gap-6 bg-white p-4 rounded-[8px] border border-gray-100 drop__down">
                                         <li class="col-span-1 hover:translate-x-1 transition duration-300">
                                             <a href="../pages/sevice-car.html"
                                                 class="list__item flex items-center gap-2  font-normal text-[15px]">
@@ -324,7 +325,7 @@
                 </div>
 
                 <!-- lang-btn -->
-                <div class="col-span-6 md:col-span-2 flex items-center gap-4 ml-auto">
+                <div class="col-span-6 md:col-span-2 flex items-center gap-4 rtl:mr-auto ltr:ml-auto">
                     <div class="lang text-end custom__dropdown relative">
                         <button class="lang-btn flex items-center gap-[6px] text-base font-normal relative">
                             English
@@ -333,13 +334,13 @@
                         <ul
                             class="drop__down flex flex-col items-start gap-2 absolute top-[25px] left-0 bg-gray-50 p-2 rounded-[6px] min-w-max shadow-[0_1px_4px_0_rgba(0,0,0,0.06)]">
                             <li>
-                                <a href="#" class="text-base font-normal custom__border active">English</a>
+                                <button class="text-base font-normal custom__border active ltr__btn">English</button>
+                            </li>
+                           <li>
+                                <button type="button" class="text-base font-normal custom__border ltr__btn">Bangla</button>
                             </li>
                             <li>
-                                <a href="#" class="text-base font-normal custom__border">Bangla</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-base font-normal custom__border">Arabic</a>
+                                <button type="button" class="text-base font-normal custom__border rtl__btn">Arabic</button>
                             </li>
                         </ul>
                     </div>
@@ -356,7 +357,7 @@
     <main>
         <!-- hero -->
         <section
-            class="hero-area pt-[90px] lg:pt-[270px] pb-[140px] overflow-hidden lg:bg-[url('../assets/images/hero/hero-03.png')] lg:bg-cover lg:bg-center translate-y-[0] bg-none mb-[70px]">
+            class="hero-area pt-[90px] lg:pt-[270px] pb-[140px] overflow-hidden rtl:bg-[url('../assets/images/hero/hero-03-rtl.png')] ltr:lg:bg-[url('../assets/images/hero/hero-03.png')] lg:bg-cover lg:bg-center translate-y-[0] bg-none mb-[70px]">
             <div class="container max-w-2lg mx-auto px-4">
                 <div class="grid grid-cols-12">
 
@@ -460,11 +461,11 @@
                                         <p
                                             class="font-medium text-lg lg:text-[20px]  text-[#101828] flex items-center justify-start gap-4 w-full ac">
                                             <span
-                                                class="text-lg font-bold text-primary1-600 flex items-center justify-center w-9 h-9 bg-primary1-100 rounded-full">
+                                                class="text-lg font-bold text-primary1-600 flex items-center justify-center w-9 h-9 bg-primary1-100 rounded-full flex-[0_0_auto]">
                                                 1
                                             </span>
                                             Download the App
-                                            <i class="fa-solid fa-angle-right ac__close__icon__2 ml-auto ac"></i>
+                                            <i class="fa-solid fa-angle-right ac__close__icon__2 rtl:mr-auto ltr:ml-auto ac ac"></i>
                                         </p>
                                     </button>
                                     <div id="acc-panel-1" role="region" aria-labelledby="acc-trigger-1"
@@ -548,11 +549,11 @@
                                         <p
                                             class="font-medium text-lg lg:text-[20px]  text-[#101828] flex items-center justify-start gap-4 w-full">
                                             <span
-                                                class="text-lg font-bold text-primary1-600 flex items-center justify-center w-9 h-9 bg-primary1-100 rounded-full">
+                                                class="text-lg font-bold text-primary1-600 flex items-center justify-center w-9 h-9 bg-primary1-100 rounded-full flex-[0_0_auto]">
                                                 2
                                             </span>
                                             Select the Parcel option and Location
-                                            <i class="fa-solid fa-angle-right ac__close__icon__2 ml-auto"></i>
+                                            <i class="fa-solid fa-angle-right ac__close__icon__2 rtl:mr-auto ltr:ml-auto ac"></i>
                                         </p>
                                     </button>
                                     <div id="acc-panel-2" role="region" aria-labelledby="acc-trigger-1"
@@ -636,11 +637,11 @@
                                         <p
                                             class="font-medium text-lg lg:text-[20px]  text-[#101828] flex items-center justify-start gap-4 w-full">
                                             <span
-                                                class="text-lg font-bold text-primary1-600 flex items-center justify-center w-9 h-9 bg-primary1-100 rounded-full">
+                                                class="text-lg font-bold text-primary1-600 flex items-center justify-center w-9 h-9 bg-primary1-100 rounded-full flex-[0_0_auto]">
                                                 3
                                             </span>
                                             Fill in the information
-                                            <i class="fa-solid fa-angle-right ac__close__icon__2 ml-auto"></i>
+                                            <i class="fa-solid fa-angle-right ac__close__icon__2 rtl:mr-auto ltr:ml-auto ac"></i>
                                         </p>
                                     </button>
                                     <div id="acc-panel-3" role="region" aria-labelledby="acc-trigger-1"
@@ -1253,7 +1254,7 @@
                             </li>
 
                             <li>
-                                <a href="#"
+                                <a href="privacy-policy.html"
                                     class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden inline-block hover:text-white before:bg-white">
                                     <span class="explore-text" data-text="Privacy Policy">Privacy Policy</span>
                                 </a>
@@ -1301,19 +1302,19 @@
                         </ul>
 
                         <div class="social-area flex items-center gap-[10px]">
-                            <a href="#"
+                            <a href="https://www.facebook.com/razinsoft" target="_blank"
                                 class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
                                 <i class="fa-brands fa-facebook text-xl"></i>
                             </a>
-                            <a href="#"
+                           <a href="https://x.com/razinsoft" target="_blank"
                                 class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
                                 <i class="fa-brands fa-square-x-twitter text-xl rounded-full"></i>
                             </a>
-                            <a href="#"
+                            <a href="https://www.youtube.com/@razinsoft.dev " target="_blank" 
                                 class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
                                 <i class="fa-brands fa-youtube text-xl"></i>
                             </a>
-                            <a href="#"
+                            <a href="https://www.pinterest.com/razin_soft/" target="_blank" 
                                 class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
                                 <i class="fa-brands fa-pinterest text-xl"></i>
                             </a>
@@ -1343,6 +1344,7 @@
     <script src="../js/active-class-add.js"></script>
     <script src="../js/tab.js"></script>
     <script src="../js/offcanvas.js"></script>
+    <script src="../js/rtl.js"></script>
     <script src="../js/accordion.js"></script>
     <script src="../js/scrool-to-top.js"></script>
 

@@ -15,3 +15,5 @@ tilts.forEach(img => {
         img.style.transform = "perspective(1000px) rotateY(0deg) rotateX(0deg) scale3d(1,1,1)";
     });
 });
+
+

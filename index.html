@@ -31,14 +31,14 @@
     <link rel="stylesheet" href="./css/platform.css">
     <link rel="stylesheet" href="./css/offcanvas.css">
     <link rel="stylesheet" href="./css/scrool-to-top.css">
+    <link rel="stylesheet" href="./css/rtl.css">
 
     <!-- aos css -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-
 </head>
 
-<body>
+<body class="transition-all duration-300">
 
     <!-- scrollToTop -->
     <div class="scrollToTop active-progress">
@@ -233,7 +233,7 @@
                                         <i class="fa-solid fa-angle-down"></i>
                                     </a>
                                     <ul
-                                        class="absolute left-0 z-[99] grid grid-cols-2 w-max gap-6 bg-white p-4 rounded-[8px] border border-gray-100 drop__down">
+                                        class="absolute rtl:r-0 ltr:left-0 z-[99] grid grid-cols-2 w-max gap-6 bg-white p-4 rounded-[8px] border border-gray-100 drop__down">
                                         <li class="col-span-1 hover:translate-x-1 transition duration-300">
                                             <a href="./pages/sevice-car.html"
                                                 class="list__item flex items-center gap-2  font-normal text-[15px]">
@@ -328,7 +328,7 @@
                 </div>
 
                 <!-- lang-btn -->
-                <div class="col-span-6 md:col-span-2 flex items-center gap-4 ml-auto">
+                <div class="col-span-6 md:col-span-2 flex items-center gap-4 rtl:mr-auto ltr:ml-auto">
                     <div class="lang text-end custom__dropdown relative">
                         <button class="lang-btn flex items-center gap-[6px] text-base font-normal relative">
                             English
@@ -337,13 +337,13 @@
                         <ul
                             class="drop__down flex flex-col items-start gap-2 absolute top-[25px] left-0 bg-gray-50 p-2 rounded-[6px] min-w-max shadow-[0_1px_4px_0_rgba(0,0,0,0.06)]">
                             <li>
-                                <a href="#" class="text-base font-normal custom__border active">English</a>
+                                <button class="text-base font-normal custom__border active ltr__btn">English</button>
+                            </li>
+                           <li>
+                                <button type="button" class="text-base font-normal custom__border ltr__btn">Bangla</button>
                             </li>
                             <li>
-                                <a href="#" class="text-base font-normal custom__border">Bangla</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-base font-normal custom__border">Arabic</a>
+                                <button type="button" class="text-base font-normal custom__border rtl__btn">Arabic</button>
                             </li>
                         </ul>
                     </div>
@@ -391,16 +391,16 @@
                         </div>
                     </div>
 
-                    <div class="col-span-12 lg:col-span-7 lg:absolute right-0 top-[0] z-[-1] h-full mt-6 lg:mt-0">
+                    <div class="col-span-12 lg:col-span-7 lg:absolute rtl:left-0 ltr:right-0 top-[0] z-[-1] h-full mt-6 lg:mt-0">
                         <div
-                            class="hero-img max-w-[350px] md:max-w-full xl:h-full relative after:absolute after:bg-[#ffffff] after:rounded-br-[40%] after:w-[60%] after:h-[70%] after:left-[-80px] after:top-0 after:z-[-2] before:absolute before:bg-[#3863A0] before:w-[105%] before:h-[100%] before:z-[-2] before:right-0 before:rounded-[0_0_0_0] pb-11 before:hidden xl:before:block after:hidden xl:after:block mx-auto">
+                            class="hero-img max-w-[350px] md:max-w-full xl:h-full relative after:absolute rtl:after:bg-[#3863A0] ltr:after:bg-[#ffffff] after:rounded-br-[40%] after:w-[60%] after:h-[70%] after:left-[-80px] after:top-0 after:z-[-2] before:absolute before:bg-[#3863A0] before:w-[105%] before:h-[100%] before:z-[-2] before:right-0 before:rounded-[0_0_0_0] pb-11 before:hidden xl:before:block after:hidden xl:after:block mx-auto">
                             <img data-aos="flip-left" data-aos-easing="flip-right" data-aos-duration="1200"
                                 class="h-full" src="./assets/images/hero/hero-01.png" alt="">
 
                             <!-- SVG wave background -->
                             <svg width="155%" height="170%" id="svg" viewBox="0 0 1440 690"
                                 xmlns="http://www.w3.org/2000/svg"
-                                class="transition duration-300 ease-in-out delay-150 absolute right-[170px] bottom-[-230px] rotate-[135deg] z-[-1] hidden xl:block">
+                                class="rtl:hidden ltr:block transition duration-300 ease-in-out delay-150 absolute right-[170px] bottom-[-230px] rotate-[135deg] z-[-1] hidden xl:block">
                                 <path
                                     d="M 0,700 L 0,262 C 57.4166952937135,263.39058742700104 114.833390587427,264.7811748540021 180,271 C 245.166609412573,277.2188251459979 318.08313294400546,288.2658880109928 383,283 C 447.91686705599454,277.7341119890072 504.834077636551,256.1552731020268 581,209 C 657.165922363449,161.8447268979732 752.5805565097904,89.11301958090007 834,132 C 915.4194434902096,174.88698041909993 982.8436963242871,333.392648574373 1048,389 C 1113.156303675713,444.607351425627 1176.0446581930607,397.31638612160776 1241,359 C 1305.9553418069393,320.68361387839224 1372.9776709034695,291.3418069391961 1440,262 L 1440,700 L 0,700 Z"
                                     stroke="none" stroke-width="0" fill="#3863A0" fill-opacity="1"
@@ -918,7 +918,7 @@
 
         <!-- Download the app -->
         <section
-            class="download-area py-[60px] pb-[20px] bg-[#fbfbfb] mb-[70px] lg:mb-[100px] relative before:absolute before:w-[50%] before:h-[70px] before:bg-[#fbfbfb] before:right-0 before:bottom-[0] before:z-[1] overflow-hidden before:hidden before:lg:block">
+            class="download-area py-[60px] pb-[20px] bg-[#fbfbfb] mb-[70px] lg:mb-[100px] relative before:absolute before:w-[50%] before:h-[70px] before:bg-[#fbfbfb] rtl:before:left-0 ltr:before:right-0 before:bottom-[0] before:z-[1] overflow-hidden before:hidden before:lg:block">
             <div class="container max-w-2lg mx-auto px-4">
                 <div class="grid grid-cols-12">
                     <div class="col-span-12 lg:col-span-7 flex flex-col h-full justify-center" data-aos="fade-right"
@@ -949,17 +949,17 @@
 
                                         <a href="#"
                                             class="group relative overflow-hidden text-sm font-medium text-white h-[40px] bg-primary1-600 rounded-[8px] flex items-center justify-center px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700 pr-[18px]">
-                                            <span class="transition-all duration-500 ease-out mr-4">
+                                            <span class="transition-all duration-500 ease-out rtl:ml-4 ltr:mr-4">
                                                 Download
                                             </span>
 
                                             <i
-                                                class="fa-solid fa-download transition-all duration-500 ease-out group-hover:translate-y-[35px]">
+                                                class="fa-solid fa-download transition-all duration-500 ease-out rtl:group-hover:translate-y-0  ltr:group-hover:translate-y-[35px]">
                                             </i>
 
 
                                             <i
-                                                class="fa-solid fa-download transition-all duration-500 ease-out  translate-x-[-14px] translate-y-[-35px] group-hover:translate-y-[0]">
+                                                class="fa-solid fa-download transition-all duration-500 ease-out  translate-x-[-14px] translate-y-[-35px] group-hover:translate-y-[0] rtl:hidden ltr:block">
                                             </i>
                                         </a>
                                     </div>
@@ -979,17 +979,17 @@
 
                                         <a href="#"
                                             class="group relative overflow-hidden text-sm font-medium text-white h-[40px] bg-primary1-600 rounded-[8px] flex items-center justify-center px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700 pr-[18px]">
-                                            <span class="transition-all duration-500 ease-out mr-4">
+                                            <span class="transition-all duration-500 ease-out rtl:ml-4 ltr:mr-4">
                                                 Download
                                             </span>
 
                                             <i
-                                                class="fa-solid fa-download transition-all duration-500 ease-out group-hover:translate-y-[35px]">
+                                                class="fa-solid fa-download transition-all duration-500 ease-out rtl:group-hover:translate-y-0  ltr:group-hover:translate-y-[35px]">
                                             </i>
 
 
                                             <i
-                                                class="fa-solid fa-download transition-all duration-500 ease-out  translate-x-[-14px] translate-y-[-35px] group-hover:translate-y-[0]">
+                                                class="fa-solid fa-download transition-all duration-500 ease-out  translate-x-[-14px] translate-y-[-35px] group-hover:translate-y-[0] rtl:hidden ltr:block">
                                             </i>
                                         </a>
                                     </div>
@@ -1012,17 +1012,17 @@
 
                                         <a href="#"
                                             class="group relative overflow-hidden text-sm font-medium text-white h-[40px] bg-primary1-600 rounded-[8px] flex items-center justify-center px-[34px] transition-all duration-500 ease-out hover:bg-primary1-700 pr-[18px]">
-                                            <span class="transition-all duration-500 ease-out mr-4">
+                                            <span class="transition-all duration-500 ease-out rtl:ml-4 ltr:mr-4">
                                                 Download
                                             </span>
 
                                             <i
-                                                class="fa-solid fa-download transition-all duration-500 ease-out group-hover:translate-y-[35px]">
+                                                class="fa-solid fa-download transition-all duration-500 ease-out rtl:group-hover:translate-y-0  ltr:group-hover:translate-y-[35px]">
                                             </i>
 
 
                                             <i
-                                                class="fa-solid fa-download transition-all duration-500 ease-out  translate-x-[-14px] translate-y-[-35px] group-hover:translate-y-[0]">
+                                                class="fa-solid fa-download transition-all duration-500 ease-out  translate-x-[-14px] translate-y-[-35px] group-hover:translate-y-[0] rtl:hidden ltr:block">
                                             </i>
                                         </a>
                                     </div>
@@ -1035,7 +1035,7 @@
                         class="col-span-12 lg:col-span-5 flex flex-col h-full justify-center">
                         <div class="phone-img w-[200px] xl:w-full flex translate-y-[20px]">
                             <img class="h-max mt-auto" src="./assets/images/download/small-phone.png" alt="">
-                            <img class="ml-[-70px]" src="./assets/images/download/big-phone.png" alt="">
+                            <img class="rtl:mr-[-70px] ltr:ml-[-70px]" src="./assets/images/download/big-phone.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -1492,7 +1492,7 @@
                             </li>
 
                             <li>
-                                <a href="#"
+                                <a href="./pages/privacy-policy.html"
                                     class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden inline-block hover:text-white before:bg-white">
                                     <span class="explore-text" data-text="Privacy Policy">Privacy Policy</span>
                                 </a>
@@ -1540,19 +1540,19 @@
                         </ul>
 
                         <div class="social-area flex items-center gap-[10px]">
-                            <a href="#"
+                            <a href="https://www.facebook.com/razinsoft" target="_blank"
                                 class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
                                 <i class="fa-brands fa-facebook text-xl"></i>
                             </a>
-                            <a href="#"
+                           <a href="https://x.com/razinsoft" target="_blank"
                                 class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
                                 <i class="fa-brands fa-square-x-twitter text-xl rounded-full"></i>
                             </a>
-                            <a href="#"
+                            <a href="https://www.youtube.com/@razinsoft.dev " target="_blank" 
                                 class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
                                 <i class="fa-brands fa-youtube text-xl"></i>
                             </a>
-                            <a href="#"
+                            <a href="https://www.pinterest.com/razin_soft/" target="_blank" 
                                 class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
                                 <i class="fa-brands fa-pinterest text-xl"></i>
                             </a>
@@ -1588,6 +1588,7 @@
     <script src="./js/Swiper.js"></script>
     <script src="./js/offcanvas.js"></script>
     <script src="./js/scrool-to-top.js"></script>
+    <script src="./js/rtl.js"></script>
 
     <!-- aos JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

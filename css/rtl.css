@@ -1,0 +1,52 @@
+body {
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+body[dir] {
+    visibility: visible;
+}
+
+/* RTL page */
+body[dir="rtl"] .common-btn .group i:first-child {
+    transform: translateX(6px);
+}
+
+body[dir="rtl"] .common-btn .group span {
+    transform: translateX(10px);
+}
+
+body[dir="rtl"] .common-btn .group i:last-child {
+    transform: translateX(6px);
+}
+
+/* Hover effects */
+body[dir="rtl"] .common-btn .group:hover i:first-child {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+body[dir="rtl"] .common-btn .group:hover span {
+    transform: translateX(-2px);
+}
+
+body[dir="rtl"] .common-btn .group:hover i:last-child {
+    transform: translateX(0);
+    opacity: 0;
+}
+
+body[dir="rtl"] .count-item::before {
+    display: none;
+}
+
+body[dir="rtl"] .tp-offcanvas-area {
+    left: 0;
+    right: auto;
+    transform: translatex(-100%);
+}
+
+body[dir="rtl"] .tp-offcanvas-area.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}

@@ -27,7 +27,8 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/offcanvas.css">
     <link rel="stylesheet" href="../css/blog.css">
-    <link rel="stylesheet" href="../css/scrool-to-top.css">
+   <link rel="stylesheet" href="../css/scrool-to-top.css">
+    <link rel="stylesheet" href="../css/rtl.css">
 
     <!-- aos css -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -35,7 +36,7 @@
 
 </head>
 
-<body>
+<body class="transition-all duration-300">
 
     <!-- scrollToTop -->
     <div class="scrollToTop active-progress">
@@ -230,7 +231,7 @@
                                         <i class="fa-solid fa-angle-down"></i>
                                     </a>
                                     <ul
-                                        class="absolute left-0 z-[99] grid grid-cols-2 w-max gap-6 bg-white p-4 rounded-[8px] border border-gray-100 drop__down">
+                                        class="absolute rtl:r-0 ltr:left-0 z-[99] grid grid-cols-2 w-max gap-6 bg-white p-4 rounded-[8px] border border-gray-100 drop__down">
                                         <li class="col-span-1 hover:translate-x-1 transition duration-300">
                                             <a href="../pages/sevice-car.html"
                                                 class="list__item flex items-center gap-2  font-normal text-[15px]">
@@ -325,7 +326,7 @@
                 </div>
 
                 <!-- lang-btn -->
-                <div class="col-span-6 md:col-span-2 flex items-center gap-4 ml-auto">
+                <div class="col-span-6 md:col-span-2 flex items-center gap-4 rtl:mr-auto ltr:ml-auto">
                     <div class="lang text-end custom__dropdown relative">
                         <button class="lang-btn flex items-center gap-[6px] text-base font-normal relative">
                             English
@@ -334,13 +335,13 @@
                         <ul
                             class="drop__down flex flex-col items-start gap-2 absolute top-[25px] left-0 bg-gray-50 p-2 rounded-[6px] min-w-max shadow-[0_1px_4px_0_rgba(0,0,0,0.06)]">
                             <li>
-                                <a href="#" class="text-base font-normal custom__border active">English</a>
+                                <button class="text-base font-normal custom__border active ltr__btn">English</button>
+                            </li>
+                           <li>
+                                <button type="button" class="text-base font-normal custom__border ltr__btn">Bangla</button>
                             </li>
                             <li>
-                                <a href="#" class="text-base font-normal custom__border">Bangla</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-base font-normal custom__border">Arabic</a>
+                                <button type="button" class="text-base font-normal custom__border rtl__btn">Arabic</button>
                             </li>
                         </ul>
                     </div>
@@ -364,13 +365,13 @@
                     <div class="col-span-12 lg:col-span-12 " data-aos="fade-right" data-aos-duration="1200">
                         <div class="hero-content flex flex-col h-full justify-center items-center md:items-center">
                             <h1 class="text-2xl md:text-3xl xl:text-[40px] font-semibold !leading-[125%]  mb-2 lg:mb-6">
-                                Privacy Policy
+                                Terms & Condition
                             </h1>
                             <p class="text-xl text-center font-normal text-gray-700">
-                                At RazinSoft, we are committed to protecting your privacy and ensuring a safe online
-                                experience. This Privacy Policy
-                                outlines how we collect, use, and safeguard your personal information when you visit our
-                                website <a href="#" class="text-primary1-600 hover:underline">www.razinsoft.com.</a>
+                                Welcome to RazinSoft. By accessing and using our website www.razinsoft.com, you agree to
+                                the following terms and conditions.
+                                Please read them carefully. <a href="#"
+                                    class="text-primary1-600 hover:underline">www.razinsoft.com.</a>
                             </p>
                         </div>
                     </div>
@@ -381,141 +382,104 @@
 
     </main>
 
-    <!-- privacy-policy -->
-    <section class="rs-privacy-policy-area max-w-2lg mx-auto px-4">
+    <!-- Terms & Condition -->
+    <section class="terms-condition-area max-w-2lg mx-auto px-4">
         <div class="rs-privacy-policy-content">
-            <!-- 1. Information We Collect -->
-            <h2 class="text-2xl font-semibold font-poppins mb-4">1. Information We Collect</h2>
+
+            <!-- 1. Acceptance of Terms -->
+            <h2 class="text-2xl font-semibold font-poppins mb-4">1. Acceptance of Terms</h2>
             <ul class="mb-8 list-disc list-inside">
-                <li class="font-medium text-lg mb-2">
-                    Personal Information:
-                    <p class="font-normal text-lg text-gray-600 leading-[1.44] mt-[3px]">
-                        We may collect personal information such as your name, email address, phone number, and payment
-                        details when you contact us, purchase our services, or sign up for our newsletter.
-                    </p>
-                </li>
-                <li class="font-medium text-lg mb-2">
-                    Usage Data:
-                    <p class="font-normal text-lg text-gray-600 leading-[1.44] mt-[3px]">
-                        We collect information about your interaction with our website, including IP address, browser
-                        type, and pages visited. This helps us understand how our website is used and improve your
-                        experience.
-                    </p>
+                <li class="font-normal  text-lg text-gray-600   leading-[1.44]">
+                    By using our services, you agree to comply with these Terms of Service. If you do not agree to these
+                    terms, please do not use our website or services.
                 </li>
             </ul>
 
-            <!-- 2. How We Use Your Information -->
-            <h2 class="text-2xl font-semibold font-poppins mb-4">2. How We Use Your Information</h2>
+            <!-- 2. Services -->
+            <h2 class="text-2xl font-semibold font-poppins mb-4">2. Services</h2>
             <ul class="mb-8 list-disc list-inside">
-                <li class="font-medium text-lg mb-2">
-                    To Provide and Improve Services:
-                    <p class="font-normal text-lg text-gray-600 leading-[1.44] mt-[3px]">
-                        We use your personal information to process orders, provide customer support, and enhance our
-                        services.
-                    </p>
-                </li>
-                <li class="font-medium text-lg mb-2">
-                    To Communicate with You:
-                    <p class="font-normal text-lg text-gray-600 leading-[1.44] mt-[3px]">
-                        We may use your contact information to send you updates, promotional materials, or other
-                        information related to our services. You can opt out of these communications at any time.
-                    </p>
-                </li>
-                <li class="font-medium text-lg mb-2">
-                    To Analyze Website Usage:
-                    <p class="font-normal text-lg text-gray-600 leading-[1.44] mt-[3px]">
-                        We use usage data to analyze trends, track user activity, and improve our website’s
-                        functionality and user experience.
-                    </p>
+                <li class="font-normal  text-lg text-gray-600  leading-[1.44]">
+                    RazinSoft offers software development, customization, and related services. Detailed information
+                    about our services can be found on our website.
                 </li>
             </ul>
 
-            <!-- 3. Sharing Your Information -->
-            <h2 class="text-2xl font-semibold font-poppins mb-4">3. Sharing Your Information</h2>
+            <!-- 3. User Responsibilities -->
+            <h2 class="text-2xl font-semibold font-poppins mb-4">3. User Responsibilities</h2>
             <ul class="mb-8 list-disc list-inside">
-                <li class="font-medium text-lg mb-2">
-                    Third-Party Service Providers:
-                    <p class="font-normal text-lg text-gray-600 leading-[1.44] mt-[3px]">
-                        We may share your information with third-party service providers who assist us in operating our
-                        website, processing payments, or delivering services. These providers are obligated to protect
-                        your information and use it only for the purposes specified by us.
-                    </p>
-                </li>
-                <li class="font-medium text-lg mb-2">
-                    Legal Requirements:
-                    <p class="font-normal text-lg text-gray-600 leading-[1.44] mt-[3px]">
-                        We may disclose your information if required by law or in response to valid requests by public
-                        authorities.
-                    </p>
+                <li class="font-normal  text-lg text-[rgba(255,255,255,07)] leading-[1.44] list-none">
+                    When using our website, you agree to:
+                    <ul class="list-disc list-inside mt-2 ml-[10px]">
+                        <li class="text-[#9ca3af] ">Provide accurate and up-to-date information.</li>
+                        <li class="text-[#9ca3af] ">Use our services for lawful purposes only.</li>
+                        <li class="text-[#9ca3af] ">Respect the intellectual property rights of RazinSoft
+                            and others.</li>
+                    </ul>
                 </li>
             </ul>
 
-            <!-- 4. Data Security -->
-            <h2 class="text-2xl font-semibold font-poppins mb-4">4. Data Security</h2>
+            <!-- 4. Payment and Pricing -->
+            <h2 class="text-2xl font-semibold font-poppins mb-4">4. Payment and Pricing</h2>
             <ul class="mb-8 list-disc list-inside">
-                <li class="font-normal text-lg text-gray-600 leading-[1.44]">
-                    We implement reasonable security measures to protect your personal information from unauthorized
-                    access, use, or disclosure. However, no data transmission over the internet or electronic storage is
-                    completely secure, and we cannot guarantee absolute security.
+                <li class="font-normal  text-lg text-gray-600   leading-[1.44]">
+                    All payments for services must be made in accordance with the terms specified during the purchase.
+                    Our pricing information can be found on the relevant service pages on our website.
                 </li>
             </ul>
 
-            <!-- 5. Cookies and Tracking Technologies -->
-            <h2 class="text-2xl font-semibold font-poppins mb-4">5. Cookies and Tracking Technologies</h2>
+            <!-- 5. Refund Policy -->
+            <h2 class="text-2xl font-semibold font-poppins mb-4">5. Refund Policy</h2>
             <ul class="mb-8 list-disc list-inside">
-                <li class="font-normal text-lg text-gray-600 leading-[1.44]">
-                    Our website may use cookies and similar tracking technologies to enhance user experience and gather
-                    information about website usage. You can control cookies through your browser settings, but
-                    disabling cookies may affect your ability to use certain features of our website.
+                <li class="font-normal  text-lg text-gray-600   leading-[1.44]">
+                    Please refer to our Refund Policy for details on eligibility and how to request a refund.
                 </li>
             </ul>
 
-            <!-- 6. Your Rights -->
-            <h2 class="text-2xl font-semibold font-poppins mb-4">6. Your Rights</h2>
+            <!-- 6. Intellectual Property -->
+            <h2 class="text-2xl font-semibold font-poppins mb-4">6. Intellectual Property</h2>
             <ul class="mb-8 list-disc list-inside">
-                <li class="font-medium text-lg mb-2">
-                    Access and Correction:
-                    <p class="font-normal text-lg text-gray-600 leading-[1.44] mt-[3px]">
-                        You have the right to access and correct your personal information. To do so, please contact us
-                        at <a href="https://razinsoft.com/contact-us"
-                            class="text-primary1-600 underline">support@razinsoft.com</a>.
-                    </p>
-                </li>
-                <li class="font-medium text-lg mb-2">
-                    Opt-Out:
-                    <p class="font-normal text-lg text-gray-600 leading-[1.44] mt-[3px]">
-                        You may opt out of receiving promotional communications from us by following the unsubscribe
-                        instructions in the emails or contacting us directly.
-                    </p>
+                <li class="font-normal  text-lg text-gray-600   leading-[1.44]">
+                    All content on the RazinSoft website, including text, graphics, logos, and software, is the property
+                    of RazinSoft and is protected by intellectual property laws. You may not reproduce, distribute, or
+                    create derivative works from any content without our express permission.
                 </li>
             </ul>
 
-            <!-- 7. Third-Party Links -->
-            <h2 class="text-2xl font-semibold font-poppins mb-4">7. Third-Party Links</h2>
-            <ul class="mb-8 ">
-                <li class="font-normal text-lg text-gray-600 leading-[1.44]">
-                    Our website may contain links to third-party websites. We are not responsible for the privacy
-                    practices or content of these external sites. We encourage you to review the privacy policies of any
-                    third-party sites you visit.
+            <!-- 7. Limitation of Liability -->
+            <h2 class="text-2xl font-semibold font-poppins mb-4">7. Limitation of Liability</h2>
+            <ul class="mb-8 list-disc list-inside">
+                <li class="font-normal  text-lg text-gray-600   leading-[1.44]">
+                    RazinSoft is not liable for any indirect, incidental, or consequential damages arising from the use
+                    of our services or website. Our liability is limited to the amount you paid for the service in
+                    question.
                 </li>
             </ul>
 
-            <!-- 8. Changes to This Privacy Policy -->
-            <h2 class="text-2xl font-semibold font-poppins mb-4">8. Changes to This Privacy Policy</h2>
-            <ul class="mb-8 ">
-                <li class="font-normal text-lg text-gray-600 leading-[1.44]">
-                    We may update this Privacy Policy from time to time. Any changes will be posted on our website, and
-                    your continued use of our website constitutes acceptance of the revised policy.
+            <!-- 8. Changes to Terms -->
+            <h2 class="text-2xl font-semibold font-poppins mb-4">8. Changes to Terms</h2>
+            <ul class="mb-8 list-disc list-inside">
+                <li class="font-normal  text-lg text-gray-600   leading-[1.44]">
+                    RazinSoft reserves the right to update or modify these Terms of Service at any time. Changes will be
+                    posted on our website, and your continued use of our services constitutes acceptance of the revised
+                    terms.
                 </li>
             </ul>
 
-            <!-- 9. Contact Us -->
-            <h2 class="text-2xl font-semibold font-poppins mb-4">9. Contact Us</h2>
-            <ul class="mb-8 ">
-                <li class="font-normal text-lg text-gray-600 leading-[1.44]">
-                    If you have any questions or concerns about this Privacy Policy, please contact us at <a
-                        href="https://razinsoft.com/contact-us"
-                        class="text-primary1-600 underline">support@razinsoft.com</a>.
+            <!-- 9. Termination -->
+            <h2 class="text-2xl font-semibold font-poppins mb-4">9. Termination</h2>
+            <ul class="mb-8 list-disc list-inside">
+                <li class="font-normal  text-lg text-gray-600   leading-[1.44]">
+                    We reserve the right to terminate or suspend your access to our services if you violate these terms
+                    or engage in any unlawful activity.
+                </li>
+            </ul>
+
+            <!-- 10. Contact Information -->
+            <h2 class="text-2xl font-semibold font-poppins mb-4">10. Contact Information</h2>
+            <ul class="mb-8 list-disc list-inside">
+                <li class="font-normal  text-lg text-gray-600   leading-[1.44]">
+                    If you have any questions about these Terms of Service, please contact us at <a
+                        href="mailto:support@razinsoft.com" class="text-primary underline">support@razinsoft.com</a>
                 </li>
             </ul>
         </div>
@@ -628,7 +592,7 @@
                             </li>
 
                             <li>
-                                <a href="#"
+                                <a href="privacy-policy.html"
                                     class="text-base font-normal text-[#9ca3af] custom__border overflow-hidden inline-block hover:text-white before:bg-white">
                                     <span class="explore-text" data-text="Privacy Policy">Privacy Policy</span>
                                 </a>
@@ -676,19 +640,19 @@
                         </ul>
 
                         <div class="social-area flex items-center gap-[10px]">
-                            <a href="#"
+                            <a href="https://www.facebook.com/razinsoft" target="_blank"
                                 class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
                                 <i class="fa-brands fa-facebook text-xl"></i>
                             </a>
-                            <a href="#"
+                           <a href="https://x.com/razinsoft" target="_blank"
                                 class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
                                 <i class="fa-brands fa-square-x-twitter text-xl rounded-full"></i>
                             </a>
-                            <a href="#"
+                            <a href="https://www.youtube.com/@razinsoft.dev " target="_blank" 
                                 class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
                                 <i class="fa-brands fa-youtube text-xl"></i>
                             </a>
-                            <a href="#"
+                            <a href="https://www.pinterest.com/razin_soft/" target="_blank" 
                                 class="flex items-center justify-center w-12 h-12 bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-[12px] transition duration-300 hover:bg-primary1-600">
                                 <i class="fa-brands fa-pinterest text-xl"></i>
                             </a>
@@ -718,13 +682,13 @@
     <script src="../js/active-class-add.js"></script>
     <script src="../js/tab.js"></script>
     <script src="../js/offcanvas.js"></script>
-
+    <script src="../js/rtl.js"></script>
     <script src="../js/scrool-to-top.js"></script>
 
     <!-- aos JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- //======= aos =========// -->
+    <!-- ========= aos =========== -->
     <script>
         AOS.init();
     </script>
