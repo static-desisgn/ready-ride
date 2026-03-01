@@ -29,7 +29,7 @@
 }
 .tab-area button.active::before{
     width: 100%;
-    transition: 4s linear;
+    transition: 7s linear;
 }
 
 .tab__button.active span {

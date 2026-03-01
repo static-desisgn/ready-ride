@@ -56,7 +56,7 @@ function startAutoSwitch() {
     const nextButton = autoButtons[autoIndex];
     const allIndex = Array.from(allButtons).indexOf(nextButton);
     activateTab(allIndex);
-  }, 4000);
+  }, 7000);
 }
 
 // ---------- Initialize ---------- //
