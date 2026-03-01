@@ -1,10 +1,7 @@
 //================ page rtl =========================//
-
 const body = document.body;
-
 const rtlBtn = document.querySelector('.rtl__btn');
 const ltrBtns = document.querySelectorAll('.ltr__btn');
-
 const savedDir = localStorage.getItem('page-direction');
 if (savedDir === 'rtl') {
     setRTL();
@@ -12,7 +9,7 @@ if (savedDir === 'rtl') {
     setLTR();
 }
 
-//  RTL button click
+//  RTL button click //
 if (rtlBtn) {
     rtlBtn.addEventListener('click', () => {
         setRTL();
@@ -20,7 +17,7 @@ if (rtlBtn) {
     });
 }
 
-//  LTR buttons click
+//  LTR buttons click //
 ltrBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         setLTR();
