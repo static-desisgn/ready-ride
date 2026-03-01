@@ -4,20 +4,27 @@ const dropdownButtons = document.querySelectorAll('.drop__down button');
 
 const savedLang = localStorage.getItem('selectedLang');
 
+/* ========== restore active on reload ========== */
 if (savedLang) {
-    langBtn.childNodes[0].nodeValue = savedLang + " ";
     dropdownButtons.forEach(btn => {
-        if (btn.innerText === savedLang) btn.classList.add('active');
+        btn.classList.remove('active');
+
+        if (btn.innerText.trim() === savedLang) {
+            btn.classList.add('active');
+            langBtn.childNodes[0].nodeValue = savedLang + " ";
+        }
     });
 }
 
+/* ===== click handler ===== */
 dropdownButtons.forEach(button => {
     button.addEventListener('click', () => {
-        const lang = button.innerText;
+        const lang = button.innerText.trim();
 
-        langBtn.childNodes[0].nodeValue = lang + " ";
         dropdownButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
+
+        langBtn.childNodes[0].nodeValue = lang + " ";
         localStorage.setItem('selectedLang', lang);
     });
 });
@@ -30,3 +37,5 @@ Array.from(inputItems).forEach(item => {
         item.classList.add('active');
     });
 });
+
+
