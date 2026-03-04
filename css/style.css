@@ -434,3 +434,6 @@ a:hover .explore-text::before {
     width: 300px;
 }
 
+.wave-bg{
+    fill: var(--primary-1-600);
+}
